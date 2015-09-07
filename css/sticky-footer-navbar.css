@@ -1,0 +1,66 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 120px;
+}
+
+body {
+  /* Offset navbar from content */
+  padding-top: 70px;
+}
+
+/* Background color */
+.navbar-default {
+  background-color: #ffffff;
+  border: none;
+}
+
+/* Normal text color */
+.navbar-header .navbar-brand, .navbar-default .navbar-nav .navbar-links {
+  color: #333;
+}
+
+/* Hover text color */
+.navbar-header .navbar-brand:hover, .navbar-default .navbar-nav .navbar-links:hover {
+  color: #777;
+}
+
+.navbar-brand {
+  font-weight:bold;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 120px;
+  background-color: #111;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+/*center content in footer*/
+.footer-container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.footer-text {
+  color: #f5f5f5;
+}
+
+.site-owner, .site-owner:hover {
+  color: inherit;
+}
