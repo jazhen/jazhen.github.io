@@ -1,7 +1,17 @@
 html {
-  background: url("../images/index/logo_3.png") no-repeat center center fixed;
+  background: url("../images/index/index-bg.png") no-repeat center center fixed;
+  background-size: contain;
+}
+
+html:hover {
+  background-color: #f5f5f5;
 }
 
 body {
   color: #333;
+  padding: 0;
+}
+
+.navbar-default {
+  background-color: transparent;
 }

@@ -1,4 +1,17 @@
 .proj-sample-img {
-  max-width: 1157px;
+  max-width: 100%;
   border: 1px solid #999;
 }
+
+.carousel-control.left, .carousel-control.right {
+  background-image: none;
+}
+
+.carousel-indicators li {
+  background-color: black;
+}
+
+.carousel-indicators .active {
+  background-color: red;
+}
+
