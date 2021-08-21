@@ -1,6 +1,6 @@
-import { StaticImage } from "gatsby-plugin-image";
-import * as React from "react";
+import React from "react";
 import styled from "styled-components";
+import H3 from "../components/Base/H3";
 import Card from "../components/Card";
 import HeroSection from "../components/HeroSection";
 import GroovetownIcon from "../components/Icons/GroovetownIcon";
@@ -8,18 +8,25 @@ import MamasHelperIcon from "../components/Icons/MamasHelperIcon";
 import SnackPackIcon from "../components/Icons/SnackPackIcon";
 import Layout from "../components/Layout";
 
-const Container = styled.div`
+const MainContentContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const MainContent = styled.div`
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 clamp(1em, 0.7241379310344828em + 1.3793103448275863vw, 1.5em);
 `;
 
 const ProjectsContainer = styled.div`
-  display: grid;
+  ${
+    "" /* display: grid;
   gap: 2em;
 
   @media (min-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
+  } */
   }
 `;
 
@@ -77,23 +84,25 @@ const IndexPage = () => (
   <Layout>
     <HeroSection />
 
-    <Container>
-      <h2>Experience</h2>
-      <Card
-        title="Computer Science For Kids"
-        image="https://jazhen.github.io/images/cs4k.png"
-      />
+    <MainContentContainer>
+      <MainContent>
+        <H3>Experience</H3>
+        <Card
+          title="Computer Science For Kids"
+          image="https://jazhen.github.io/images/cs4k.png"
+        />
 
-      <h2>Open Source Projects</h2>
-      <Card title="Water The Trees" />
+        <H3>Open Source Projects</H3>
+        <Card title="Water The Trees" />
 
-      <h2>Personal Projects</h2>
-      <Projects />
+        <H3>Personal Projects</H3>
+        <Projects />
 
-      <h2>Education</h2>
-      <Card />
-      <Card />
-    </Container>
+        <H3>Education</H3>
+        <Card />
+        <Card />
+      </MainContent>
+    </MainContentContainer>
   </Layout>
 );
 

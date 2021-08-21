@@ -1,7 +1,8 @@
-import { StaticImage } from "gatsby-plugin-image";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
+import H4 from "./Base/H4";
+import H6 from "./Base/H6";
 import Image from "./Base/Image";
 import Link from "./Base/Link";
 import IconButton from "./IconButton";
@@ -16,17 +17,6 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-`;
-
-const CardContent = styled.div`
-  padding: 1em;
-`;
-
-const CardActions = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  gap: 1em;
-  padding: 0.5em;
 `;
 
 const CardButton = styled(Link)`
@@ -54,14 +44,24 @@ const CardButton = styled(Link)`
   }
 `;
 
+const CardContent = styled.div`
+  padding: clamp(0.5em, 0.25em + 1.25vw, 1em);
+`;
+
+const CardActions = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+  padding: clamp(0.5em, 0.25em + 1.25vw, 1em);
+`;
+
 const Card = ({ title, description, websiteUrl, githubUrl, image }) => (
   <CardContainer>
     <CardButton href={websiteUrl}>
       <Image src={image} />
-      {/* <StaticImage src={image} alt="" layout="fullWidth" /> */}
       <CardContent>
-        <h3>{title}</h3>
-        <p>{description}</p>
+        <H4>{title}</H4>
+        <H6>{description}</H6>
       </CardContent>
     </CardButton>
     <CardActions>

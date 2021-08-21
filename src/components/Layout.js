@@ -3,7 +3,6 @@ import React from "react";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-
   :root {
     --color-primary: rgba(255, 255, 255, 0.7);
     --color-secondary: #fff;
@@ -14,11 +13,15 @@ const GlobalStyle = createGlobalStyle`
     --color-background-paper: #424242;
     --color-white: #fff;
     --color-black: #000;
-    --elevation-01: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+    --elevation-01: 0px 2px 1px -1px rgba(0,0,0,0.2),
+                    0px 1px 1px 0px rgba(0,0,0,0.14),
+                    0px 1px 3px 0px rgba(0,0,0,0.12);
   }
 
   *, *:before, *:after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
   html {
@@ -26,9 +29,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    line-height: 1.5;
     background-color: var(--color-background-default);
     color: var(--color-primary);
-    margin: 0;
   }
 `;
 

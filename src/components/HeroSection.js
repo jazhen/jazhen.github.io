@@ -1,53 +1,45 @@
-import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import styled from "styled-components";
-import H1 from "./Base/H1";
-import H3 from "./Base/H3";
+import H2 from "./Base/H2";
+import H4 from "./Base/H4";
 import Image from "./Base/Image";
 
 const HeroContainer = styled.div`
+  min-width: 100vw;
   min-height: 100vh;
-  width: 100%;
+
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: center;
 
-  color: var(--color-white);
-  background-color: var(--color-black);
-`;
-
-const ContentContainer = styled.div`
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  // padding: 2em;
-
-  @media (min-width: 600px) {
-    // flex-direction: row;
-  }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 `;
 
 const Avatar = styled(Image)`
+  ${"" /* min-width: clamp(1rem, 0.5rem + 6.6667vw, 3rem); */}
+  max-width: 400px;
   border-radius: 50%;
 `;
 
 const HeroContent = styled.div`
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
   text-align: center;
+  color: var(--color-white);
 `;
 
 const HeroSection = () => (
   <HeroContainer>
-    <ContentContainer>
-      <HeroContent>
-        <H1>Jason Zhen</H1>
-        <H3>Full Stack Software Engineer</H3>
-      </HeroContent>
-      <Avatar src="https://jazhen.github.io/images/Jason_Zhen.png" />
-    </ContentContainer>
+    <Avatar src="https://jazhen.github.io/images/Jason_Zhen.png" />
+
+    <HeroContent>
+      <H2>Jason Zhen</H2>
+      <H4>Full Stack Software Engineer</H4>
+    </HeroContent>
   </HeroContainer>
 );
 
