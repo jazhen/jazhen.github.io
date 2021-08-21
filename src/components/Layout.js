@@ -30,57 +30,6 @@ const GlobalStyle = createGlobalStyle`
     color: var(--color-primary);
     margin: 0;
   }
-
-  h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
-    font-family: "Poppins", "Helvetica", "Arial", sans-serif;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    // margin-bottom: 0.35em;
-  }
-
-  h1 {
-    font-size: 93px;
-    font-weight: 300;
-    letter-spacing: -1.5px;
-  }
-
-  h2 {
-    font-size: 58px;
-    font-weight: 400;
-    letter-spacing: -0.5px;
-  }
-
-  h3 {
-    font-size: 47px;
-    font-weight: 400;
-    letter-spacing: 0px;
-  }
-
-  h4 {
-    font-size: 33px;
-    font-weight: 400;
-    letter-spacing: 0.25px;
-  }
-
-  h5 {
-    font-size: 23px;
-    font-weight: 400;
-    letter-spacing: 0px;
-  }
-
-  h6 {
-    font-size: 19px;
-    font-weight: 500;
-    letter-spacing: 0.15px;
-  }
-
-  p {
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-  }
 `;
 
 const Layout = ({ children }) => (
