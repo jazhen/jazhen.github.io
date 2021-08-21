@@ -5,10 +5,20 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-styled-components",
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/images/`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
+      },
+    },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Roboto\:300, 400, 500`],
+        fonts: [`Poppins\:300, 400, 500`],
         display: "swap",
       },
     },

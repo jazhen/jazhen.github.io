@@ -12,7 +12,13 @@ const GlobalStyle = createGlobalStyle`
     --color-button-selected: rgba(255, 255, 255, 0.16);
     --color-background-default: #303030;
     --color-background-paper: #424242;
+    --color-white: #fff;
+    --color-black: #000;
     --elevation-01: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+  }
+
+  *, *:before, *:after {
+    box-sizing: border-box;
   }
 
   html {
@@ -22,36 +28,56 @@ const GlobalStyle = createGlobalStyle`
   body {
     background-color: var(--color-background-default);
     color: var(--color-primary);
-    margin: 2em;
-    display: flex;
-    justify-content: center;
+    margin: 0;
   }
 
-  h1, h2, h3, p {
+  h1, h2, h3, h4, h5, h6, p {
     margin: 0;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    // margin-bottom: 0.35em;
   }
 
   h1 {
-    font-size: 3rem;
-    font-weight: 400;
-    letter-spacing: 0;
+    font-size: 93px;
+    font-weight: 300;
+    letter-spacing: -1.5px;
   }
 
   h2 {
-    font-size: 2.125rem;
+    font-size: 58px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+  }
+
+  h3 {
+    font-size: 47px;
+    font-weight: 400;
+    letter-spacing: 0px;
+  }
+
+  h4 {
+    font-size: 33px;
     font-weight: 400;
     letter-spacing: 0.25px;
   }
 
-  h3 {
-    font-size: 1.5rem;
+  h5 {
+    font-size: 23px;
     font-weight: 400;
-    letter-spacing: 0;
+    letter-spacing: 0px;
+  }
+
+  h6 {
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 0.15px;
   }
 
   p {
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.5px;
   }

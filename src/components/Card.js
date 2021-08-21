@@ -1,3 +1,4 @@
+import { StaticImage } from "gatsby-plugin-image";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
@@ -48,7 +49,7 @@ const CardButton = styled(Link)`
   &:hover:after,
   &:active:before,
   &:active:after {
-    opacity: 0.1;
+    opacity: 0.05;
     transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   }
 `;
@@ -57,6 +58,7 @@ const Card = ({ title, description, websiteUrl, githubUrl, image }) => (
   <CardContainer>
     <CardButton href={websiteUrl}>
       <Image src={image} />
+      {/* <StaticImage src={image} alt="" layout="fullWidth" /> */}
       <CardContent>
         <h3>{title}</h3>
         <p>{description}</p>

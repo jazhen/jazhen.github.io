@@ -1,22 +1,25 @@
+import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import styled from "styled-components";
 import Card from "../components/Card";
+import HeroSection from "../components/HeroSection";
 import GroovetownIcon from "../components/Icons/GroovetownIcon";
 import MamasHelperIcon from "../components/Icons/MamasHelperIcon";
 import SnackPackIcon from "../components/Icons/SnackPackIcon";
 import Layout from "../components/Layout";
-import UserProfile from "../components/UserProfile";
 
 const Container = styled.div`
   max-width: 900px;
+  margin: 0 auto;
 `;
 
 const ProjectsContainer = styled.div`
   display: grid;
-  gap: 1em;
+  gap: 2em;
 
   @media (min-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
   }
 `;
 
@@ -72,10 +75,24 @@ const Projects = () => {
 
 const IndexPage = () => (
   <Layout>
+    <HeroSection />
+
     <Container>
-      <UserProfile />
-      <h2>Projects</h2>
+      <h2>Experience</h2>
+      <Card
+        title="Computer Science For Kids"
+        image="https://jazhen.github.io/images/cs4k.png"
+      />
+
+      <h2>Open Source Projects</h2>
+      <Card title="Water The Trees" />
+
+      <h2>Personal Projects</h2>
       <Projects />
+
+      <h2>Education</h2>
+      <Card />
+      <Card />
     </Container>
   </Layout>
 );
