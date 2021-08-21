@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import Image from "./Image";
+import Image from "./Base/Image";
 
 const Container = styled.div`
-  display: flex;
-  background-color: #242424;
+  @media (min-width: 600px) {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 1em;
+  }
 `;
 
 const Avatar = styled(Image)``;
@@ -17,11 +20,7 @@ const UserProfile = () => (
         Software engineering is the dream job that child me always wanted but
         never discovered until much later. During my last year of college at UC
         Davis, I took a communication course that involved simulating social
-        phenomena using the programmable modeling environment NetLogo. I was
-        instantly hooked on programming. This class sparked my desire to shift
-        my career trajectory from communications to software engineering. I
-        attended App Academy to achieve my goal, completing their 16-week
-        immersive software engineering program.
+        phenomena using the programmable modeling environment NetLogo.
       </p>
       <Avatar src="https://jazhen.github.io/images/Jason_Zhen.png" />
     </Container>

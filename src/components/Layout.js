@@ -3,78 +3,57 @@ import React from "react";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+
   :root {
-    --gray-50: #fafafa;
-    --gray-100: #f5f5f5;
-    --gray-200: #eeeeee;
-    --gray-300: #e0e0e0;
-    --gray-400: #bdbdbd;
-    --gray-500: #9e9e9e;
-    --gray-600: #757575;
-    --gray-700: #616161;
-    --gray-800: #424242;
-    --gray-900: #212121;
-    --black: #121212;
+    --color-primary: rgba(255, 255, 255, 0.7);
+    --color-secondary: #fff;
+    --color-button-active: #fff;
+    --color-button-hover: rgba(255, 255, 255, 0.8);
+    --color-button-selected: rgba(255, 255, 255, 0.16);
+    --color-background-default: #303030;
+    --color-background-paper: #424242;
+    --elevation-01: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
   }
 
   html {
-    font-size: 100%;
+    font-size: 16px;
   }
 
   body {
-    background-color: var(--black);
-    color: var(--gray-400);
-    display: flex;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    justify-content: center;
-    line-height: 1.75;
+    background-color: var(--color-background-default);
+    color: var(--color-primary);
     margin: 2em;
+    display: flex;
+    justify-content: center;
   }
 
-  p {
-    margin-bottom: 1rem;
-    max-width: 70ch;
-  }
-
-  h1, h2, h3, h4, h5 {
-    margin: 3rem 0 1.38rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    line-height: 1.3;
+  h1, h2, h3, p {
+    margin: 0;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   }
 
   h1 {
-    margin-top: 0;
-    font-size: 3.052rem;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0;
   }
 
   h2 {
-    font-size: 2.441rem;
+    font-size: 2.125rem;
+    font-weight: 400;
+    letter-spacing: 0.25px;
   }
 
   h3 {
-    font-size: 1.953rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0;
   }
 
-  h4 {
-    font-size: 1.563rem;
-  }
-
-  h5 {
-    font-size: 1.25rem;
-  }
-
-  small, .text_small {
-    font-size: 0.8rem;
-  }
-
-  a {
-    color: blue;
-  }
-
-  a:hover {
-    color: red;
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
   }
 `;
 

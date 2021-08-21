@@ -1,111 +1,84 @@
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
+import Image from "./Base/Image";
+import Link from "./Base/Link";
 import IconButton from "./IconButton";
 import ExternalLinkIcon from "./Icons/ExternalLinkIcon";
 import GithubIcon from "./Icons/GithubIcon";
-import Image from "./Image";
 
 const CardContainer = styled.div`
-  position: relative;
+  background-color: var(--color-background-paper);
+  box-shadow: var(--elevation-01);
+  border-radius: 4px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
-const CardBackgroundImage = styled(Image)`
-  opacity: 0.3;
-  transform: ${(props) => (props.isHovered ? "scale(1.10)" : false)};
-`;
-
-const Caption = styled.caption`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  width: 100%;
-`;
-
-const CardCaptionTitle = styled.h1`
-  transform: ${(props) =>
-    props.isHovered ? "translateY(-0.25em)" : "translateY(0)"};
-  transition: ${(props) =>
-    props.isHovered
-      ? "transform 0.3s cubic-bezier(0.19, 1, 0.22, 1)"
-      : "transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1)"};
-`;
-
-const CardCaptionLogo = styled.div`
-  animation: ${(props) => (props.isHovered ? "spin 0.5s linear" : false)};
-
-  @keyframes spin {
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-`;
-
-const CardCaptionDescription = styled.p`
-  transform: ${(props) =>
-    props.isHovered ? "translateY(0.25em)" : "translateY(0)"};
-  transition: ${(props) =>
-    props.isHovered
-      ? "transform 0.3s cubic-bezier(0.19, 1, 0.22, 1)"
-      : "transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1)"};
+const CardContent = styled.div`
+  padding: 1em;
 `;
 
 const CardActions = styled.div`
-  background-color: #000;
-  position: absolute;
-  top: 0;
-  right: 1em;
   display: flex;
-  padding: 0.2em 0.8em;
-  gap: 0.5em;
-  transform-origin: 0 0;
-  transform: ${(props) => (props.isHovered ? "scaleY(1)" : "scaleY(0)")};
-  transition: ${(props) =>
-    props.isHovered
-      ? "transform 0.3s cubic-bezier(0.19, 1, 0.22, 1)"
-      : "transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1)"};
+  justify-content: flex-end;
+  gap: 1em;
+  padding: 0.5em;
 `;
 
-const Card = ({ title, description, githubUrl, websiteUrl, logo, image }) => {
-  const [isHovered, setIsHovered] = useState(false);
+const CardButton = styled(Link)`
+  display: block;
+  position: relative;
 
-  return (
-    <CardContainer
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <CardBackgroundImage src={image} isHovered={isHovered} />
+  &:before,
+  &:after {
+    background-color: var(--color-button-hover);
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+  }
 
-      <Caption>
-        <CardCaptionTitle isHovered={isHovered}>{title}</CardCaptionTitle>
-        <CardCaptionLogo isHovered={isHovered}>{logo}</CardCaptionLogo>
-        <CardCaptionDescription isHovered={isHovered}>
-          {description}
-        </CardCaptionDescription>
-      </Caption>
+  &:hover:before,
+  &:hover:after,
+  &:active:before,
+  &:active:after {
+    opacity: 0.1;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
+`;
 
-      <CardActions isHovered={isHovered}>
-        <IconButton href={githubUrl}>
-          <GithubIcon />
-        </IconButton>
-        <IconButton href={websiteUrl}>
-          <ExternalLinkIcon />
-        </IconButton>
-      </CardActions>
-    </CardContainer>
-  );
-};
+const Card = ({ title, description, websiteUrl, githubUrl, image }) => (
+  <CardContainer>
+    <CardButton href={websiteUrl}>
+      <Image src={image} />
+      <CardContent>
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </CardContent>
+    </CardButton>
+    <CardActions>
+      <IconButton href={githubUrl}>
+        <GithubIcon />
+      </IconButton>
+      <IconButton href={websiteUrl}>
+        <ExternalLinkIcon />
+      </IconButton>
+    </CardActions>
+  </CardContainer>
+);
 
 Card.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  githubUrl: PropTypes.string,
-  websiteUrl: PropTypes.string,
-  logo: PropTypes.node,
   image: PropTypes.string,
+  websiteUrl: PropTypes.string,
+  githubUrl: PropTypes.string,
 };
 
 Card.defaultProps = {
@@ -115,10 +88,9 @@ Card.defaultProps = {
                 necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing
                 elit. Repellendus sapiente harum soluta excepturi ut temporibus, at
                 amet corporis id asperiores.`,
-  githubUrl: "#",
-  websiteUrl: "#",
-  logo: null,
   image: "https://via.placeholder.com/320x180?text=16:9",
+  websiteUrl: "#",
+  githubUrl: "#",
 };
 
 export default Card;

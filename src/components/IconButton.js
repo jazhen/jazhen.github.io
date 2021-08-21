@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 import React from "react";
+import Link from "./Base/Link";
 
 const IconButton = ({ href, children }) => (
-  <a href={href} target="_blank" rel="noopener noreferrer">
+  <Link href={href} target="_blank" rel="noopener noreferrer">
     {children}
-  </a>
+  </Link>
 );
 
 IconButton.propTypes = {

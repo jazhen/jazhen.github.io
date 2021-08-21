@@ -27,24 +27,27 @@ const Projects = () => {
       description: "A music sharing and streaming platform",
       githubUrl: "https://github.com/jazhen/groove_town",
       websiteUrl: "https://groovetown.herokuapp.com",
-      logo: <GroovetownIcon size="x-large" />,
-      image: "https://jazhen.github.io/images/Jason_Zhen.png",
+      logo: <GroovetownIcon size="medium" />,
+      image:
+        "https://user-images.githubusercontent.com/6326660/102150215-e8c68080-3e24-11eb-92f2-40ce2b72686b.jpg",
     },
     {
       title: "Mama's Helper",
-      description: "A management assistence tool",
+      description: "A management assistance tool",
       githubUrl: "https://github.com/jmcbgaston/mamas_helper",
       websiteUrl: "https://mamas-helper.herokuapp.com",
-      logo: <MamasHelperIcon size="x-large" />,
-      image: "https://jazhen.github.io/images/Jason_Zhen.png",
+      logo: <MamasHelperIcon size="medium" />,
+      image:
+        "https://user-images.githubusercontent.com/6326660/103400725-0bca8300-4afb-11eb-8311-d57e261238c4.gif",
     },
     {
       title: "Snack Pack",
       description: "A minigame compilation HTML5 game",
       githubUrl: "https://github.com/jazhen/snack-pack",
       websiteUrl: "https://jazhen.github.io/snack-pack",
-      logo: <SnackPackIcon size="x-large" />,
-      image: "https://jazhen.github.io/images/Jason_Zhen.png",
+      logo: <SnackPackIcon size="medium" />,
+      image:
+        "https://user-images.githubusercontent.com/6326660/103401194-c8711400-4afc-11eb-89c5-d5c424f788e5.gif",
     },
   ];
 
@@ -53,6 +56,7 @@ const Projects = () => {
       {projects.map(
         ({ title, description, githubUrl, websiteUrl, logo, image }) => (
           <Card
+            key={title}
             title={title}
             description={description}
             githubUrl={githubUrl}
