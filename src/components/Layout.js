@@ -4,13 +4,13 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --color-primary: rgba(255, 255, 255, 0.7);
-    --color-secondary: #fff;
+    --color-primary: rgba(255, 255, 255, 0.87);
+    --color-secondary: rgba(255, 255, 255, 0.7);
     --color-button-active: #fff;
     --color-button-hover: rgba(255, 255, 255, 0.8);
     --color-button-selected: rgba(255, 255, 255, 0.16);
-    --color-background-default: #303030;
-    --color-background-paper: #424242;
+    --color-background-default: #121212;
+    --color-background-paper: #303030;
     --color-white: #fff;
     --color-black: #000;
     --elevation-01: 0px 2px 1px -1px rgba(0,0,0,0.2),
@@ -26,13 +26,10 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 16px;
+    scrollbar-width: thin;
   }
 
   body {
-    min-height: 100vh;
-    width: 100%;
-    display: grid;
-    place-items: center;
     line-height: 1.5;
     background-color: var(--color-background-default);
     color: var(--color-primary);

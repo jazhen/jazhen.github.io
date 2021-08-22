@@ -1,45 +1,63 @@
 import React from "react";
 import styled from "styled-components";
+import H1 from "./Base/H1";
 import H2 from "./Base/H2";
-import H4 from "./Base/H4";
 import Image from "./Base/Image";
+import P from "./Base/P";
 
 const HeroContainer = styled.div`
-  min-width: 100vw;
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  padding: 2em;
 `;
 
 const Avatar = styled(Image)`
-  ${"" /* min-width: clamp(1rem, 0.5rem + 6.6667vw, 3rem); */}
-  max-width: 400px;
+  min-width: 100%;
   border-radius: 50%;
 `;
 
 const HeroContent = styled.div`
   text-align: center;
-  color: var(--color-white);
 `;
+
+const HeroActions = styled.div``;
+
+const HeroContentContainer = styled.div``;
 
 const HeroSection = () => (
   <HeroContainer>
-    <Avatar src="https://jazhen.github.io/images/Jason_Zhen.png" />
+    <HeroContentContainer>
+      <Avatar src="https://jazhen.github.io/images/Jason_Zhen.png" />
 
-    <HeroContent>
-      <H2>Jason Zhen</H2>
-      <H4>Full Stack Software Engineer</H4>
-    </HeroContent>
+      <HeroContent>
+        <H1>Jason Zhen</H1>
+        <H2>Full Stack Software Engineer</H2>
+        <P>
+          Alumini @UC Davis, @App Academy. Currently available for
+          opportunities.
+        </P>
+        <HeroActions>
+          <button
+            type="button"
+            style={{
+              padding: "0.5em 1em",
+              textTransform: "uppercase",
+            }}
+          >
+            contact
+          </button>
+          <button
+            type="button"
+            style={{ padding: "0.5em 1em", textTransform: "uppercase" }}
+          >
+            résumé
+          </button>
+        </HeroActions>
+      </HeroContent>
+    </HeroContentContainer>
   </HeroContainer>
 );
 
