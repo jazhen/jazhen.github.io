@@ -61,7 +61,7 @@ const Button = styled.button`
   text-transform: uppercase;
 
   background: transparent;
-  border-radius: 4px;
+  border-radius: var(--border-radius-rounded);
   border: 2px solid #6200ee;
   color: #6200ee;
   font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
