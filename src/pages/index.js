@@ -19,14 +19,12 @@ const MainContent = styled.div`
 `;
 
 const ProjectsContainer = styled.div`
-  ${
-    "" /* display: grid;
+  display: grid;
   gap: 2em;
 
   @media (min-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
-  } */
   }
 `;
 

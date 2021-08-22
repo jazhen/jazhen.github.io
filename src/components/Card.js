@@ -48,6 +48,21 @@ const CardContent = styled.div`
   padding: clamp(0.5em, 0.25em + 1.25vw, 1em);
 `;
 
+const TechnologyContainer = styled.div`
+  display: flex;
+  gap: 0.5em;
+`;
+
+const Technology = styled.span`
+  background-color: #2d3748;
+  color: var(--color-secondary);
+  padding: 0.25em 0.5em;
+  border-radius: 4px;
+
+  font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+`;
+
 const CardActions = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -64,6 +79,11 @@ const Card = ({ title, description, websiteUrl, githubUrl, image }) => (
         <H6>{description}</H6>
       </CardContent>
     </CardButton>
+    <TechnologyContainer>
+      <Technology>React</Technology>
+      <Technology>React</Technology>
+      <Technology>React</Technology>
+    </TechnologyContainer>
     <CardActions>
       <IconButton href={githubUrl}>
         <GithubIcon />
@@ -85,11 +105,7 @@ Card.propTypes = {
 
 Card.defaultProps = {
   title: "Title",
-  description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-                sint perspiciatis deleniti ab possimus ut? Ducimus fugiat hic velit
-                necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Repellendus sapiente harum soluta excepturi ut temporibus, at
-                amet corporis id asperiores.`,
+  description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
   image: "https://via.placeholder.com/320x180?text=16:9",
   websiteUrl: "#",
   githubUrl: "#",
