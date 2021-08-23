@@ -2,10 +2,10 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 import Link from "./Base/A";
-import H5 from "./Base/H5";
-import H6 from "./Base/H6";
 import Img from "./Base/Img";
-import IconButton from "./IconButton";
+import IconButton from "./Buttons/IconButton";
+import H5 from "./Headers/H5";
+import H6 from "./Headers/H6";
 import ExternalLinkIcon from "./Icons/ExternalLinkIcon";
 import GithubIcon from "./Icons/GithubIcon";
 

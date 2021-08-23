@@ -1,11 +1,16 @@
 import PropTypes from "prop-types";
 import React from "react";
-import A from "./Base/A";
+import styled from "styled-components";
+import A from "../Base/A";
+
+const IconButtonLink = styled(A)`
+  display: flex;
+`;
 
 const IconButton = ({ href, children }) => (
-  <A href={href} target="_blank" rel="noopener noreferrer">
+  <IconButtonLink href={href} target="_blank" rel="noopener noreferrer">
     {children}
-  </A>
+  </IconButtonLink>
 );
 
 IconButton.propTypes = {

@@ -35,7 +35,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
     line-height: 1.3;
     background-color: var(--color-background-default);
-    color: var(--color-white-secondary);
   }
 `;
 

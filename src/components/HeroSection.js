@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import ContainedButton from "./Base/ContainedButton";
-import H1 from "./Base/H1";
-import H2 from "./Base/H2";
-import H3 from "./Base/H3";
 import Img from "./Base/Img";
-import OutlineButton from "./Base/OutlineButton";
+import ContainedLinkButton from "./Buttons/ContainedLinkButton";
+import OutlineLinkButton from "./Buttons/OutlineLinkButton";
+import H1 from "./Headers/H1";
+import H2 from "./Headers/H2";
+import H3 from "./Headers/H3";
 
 const HeroContainer = styled.div`
   min-height: 100vh;
@@ -83,8 +83,20 @@ const HeroSection = () => (
         <H2>Full Stack Software Engineer</H2>
         <H3>Recent graduate of UC&nbsp;Davis &amp; App&nbsp;Academy</H3>
         <HeroActions>
-          <OutlineButton>contact</OutlineButton>
-          <ContainedButton>résumé</ContainedButton>
+          <OutlineLinkButton
+            href="mailto:jasonzhen.mail@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            contact
+          </OutlineLinkButton>
+          <ContainedLinkButton
+            href="https://google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            résumé
+          </ContainedLinkButton>
         </HeroActions>
       </HeroContent>
     </HeroContentContainer>

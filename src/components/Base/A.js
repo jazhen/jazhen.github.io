@@ -1,15 +1,13 @@
 import styled from "styled-components";
 
 const A = styled.a`
-  display: flex;
-  align-items: center;
+  color: var(--color-white-secondary);
 
   &:link,
   &:visited,
   &:hover,
   &:active {
     text-decoration: none;
-    color: inherit;
   }
 
   &:hover,
