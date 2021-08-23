@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import H3 from "../components/Base/H3";
+import H4 from "../components/Base/H4";
 import Card from "../components/Card";
 import HeroSection from "../components/HeroSection";
 import GroovetownIcon from "../components/Icons/GroovetownIcon";
@@ -14,17 +14,22 @@ const MainContentContainer = styled.div`
 `;
 
 const MainContent = styled.div`
-  max-width: 900px;
-  margin: 0 clamp(1em, 0.7241379310344828em + 1.3793103448275863vw, 1.5em);
+  /* max-width: 75rem; */
+  /* margin: 0 clamp(1em, 0.7241379310344828em + 1.3793103448275863vw, 1.5em); */
 `;
 
 const ProjectsContainer = styled.div`
   display: grid;
-  gap: 2em;
+  gap: clamp(1em, -0.1428571428571428em + 5.714285714285714vw, 2em);
 
   @media (min-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1em;
+    gap: clamp(1em, 0em + 2.666666666666667vw, 2em);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1.5em, 0em + 2vw, 2em);
   }
 `;
 
@@ -84,21 +89,17 @@ const IndexPage = () => (
 
     <MainContentContainer>
       <MainContent>
-        <H3>Experience</H3>
+        {/* <H3>Experience</H3>
         <Card
           title="Computer Science For Kids"
           image="https://jazhen.github.io/images/cs4k.png"
-        />
+        /> */}
 
-        <H3>Open Source Projects</H3>
-        <Card title="Water The Trees" />
+        {/* <H4>Open Source Projects</H4>
+        <Card title="Water The Trees" /> */}
 
-        <H3>Personal Projects</H3>
+        <H4>Personal Projects</H4>
         <Projects />
-
-        <H3>Education</H3>
-        <Card />
-        <Card />
       </MainContent>
     </MainContentContainer>
   </Layout>

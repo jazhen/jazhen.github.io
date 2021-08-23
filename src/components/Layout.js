@@ -31,9 +31,15 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    line-height: 1.5;
     background-color: var(--color-background-default);
     color: var(--color-primary);
+
+    max-width: 100rem;
+
+    margin: 0 auto;
+    padding: 0 4%;
+
+    line-height: 1.3;
   }
 `;
 

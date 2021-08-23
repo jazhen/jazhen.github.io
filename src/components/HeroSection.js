@@ -11,15 +11,14 @@ const HeroContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: clamp(1em, 0.4em + 3vw, 4em);
 `;
 
 const Avatar = styled(Image)`
   border-radius: 50%;
-  max-width: 60%;
+  max-width: min(60%, 20rem);
 
   @media (min-width: 50rem) {
-    max-width: min(40%, 25em);
+    max-width: min(30%, 100%);
   }
 `;
 
@@ -29,29 +28,6 @@ const HeroContent = styled.div`
   @media (min-width: 50rem) {
     text-align: inherit;
   }
-`;
-
-const HeroH1 = styled(H1)`
-  font-size: clamp(2.827rem, 1.7937999999999998rem + 5.166vw, 7.993rem);
-  line-height: 1.167;
-  color: #6200ee;
-`;
-
-const HeroH2 = styled(H2)`
-  font-size: clamp(1.999rem, 1.5992000000000002rem + 1.999vw, 3.998rem);
-  line-height: 1.2;
-  opacity: 0.87;
-  margin-bottom: 0.25em;
-
-  @media (min-width: 50rem) {
-    margin-bottom: 0.125em;
-  }
-`;
-
-const HeroH3 = styled(H3)`
-  font-size: clamp(1rem, 0.8002rem + 0.9990000000000001vw, 1.999rem);
-  opacity: 0.87;
-  margin-bottom: 1em;
 `;
 
 const HeroActions = styled.div``;
@@ -64,8 +40,9 @@ const Button = styled.button`
   border-radius: var(--border-radius-rounded);
   border: 2px solid #6200ee;
   color: #6200ee;
-  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
-  letter-spacing: 0.02857em;
+  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 0.6666666666666667rem + 0.6666666666666665vw, 1rem);
+  letter-spacing: 0.0625em;
   font-weight: 500;
 
   &:hover {
@@ -76,12 +53,16 @@ const Button = styled.button`
   &:not(:first-child) {
     margin-left: 1em;
   }
+
+  @media (min-width: 50rem) {
+  }
 `;
 
 const HeroContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: clamp(1em, 0.4em + 3vw, 4em);
 
   @media (min-width: 50rem) {
@@ -95,12 +76,9 @@ const HeroSection = () => (
       <Avatar src="https://jazhen.github.io/images/Jason_Zhen.png" />
 
       <HeroContent>
-        <HeroH1>Jason Zhen</HeroH1>
-        <HeroH2>Full Stack Software Engineer</HeroH2>
-        <HeroH3>
-          Recent graduate of @UC&nbsp;Davis, @App&nbsp;Academy. Currently
-          available for opportunities.
-        </HeroH3>
+        <H1>Jason Zhen</H1>
+        <H2>Full Stack Software Engineer</H2>
+        <H3>Recent graduate of UC&nbsp;Davis &amp; App&nbsp;Academy</H3>
         <HeroActions>
           <Button>contact</Button>
           <Button>résumé</Button>
