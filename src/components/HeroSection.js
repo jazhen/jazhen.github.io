@@ -11,6 +11,23 @@ const HeroContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  background-attachment: fixed;
+  background-image: url("https://jazhen.github.io/images/profile-background.jpg");
+  background-position: center center;
+  background-size: cover;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background-image: -moz-linear-gradient(
+      rgba(23, 24, 32, 0.95),
+      rgba(23, 24, 32, 0.95)
+    );
+  }
 `;
 
 const Avatar = styled(Image)`
@@ -64,6 +81,9 @@ const HeroContentContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: clamp(1em, 0.4em + 3vw, 4em);
+
+  position: relative;
+  z-index: 1;
 
   @media (min-width: 50rem) {
     flex-direction: row;

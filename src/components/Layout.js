@@ -31,15 +31,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    margin: 0 auto;
+    line-height: 1.3;
     background-color: var(--color-background-default);
     color: var(--color-primary);
-
-    max-width: 100rem;
-
-    margin: 0 auto;
-    padding: 0 4%;
-
-    line-height: 1.3;
   }
 `;
 

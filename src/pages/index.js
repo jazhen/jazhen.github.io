@@ -11,11 +11,11 @@ import Layout from "../components/Layout";
 const MainContentContainer = styled.div`
   display: flex;
   justify-content: center;
+  padding: 0 4%;
 `;
 
 const MainContent = styled.div`
-  /* max-width: 75rem; */
-  /* margin: 0 clamp(1em, 0.7241379310344828em + 1.3793103448275863vw, 1.5em); */
+  max-width: 100rem;
 `;
 
 const ProjectsContainer = styled.div`
