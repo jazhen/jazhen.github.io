@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Link = styled.a`
+const A = styled.a`
   display: flex;
   align-items: center;
 
@@ -16,8 +16,8 @@ const Link = styled.a`
   &:active,
   &:focus {
     cursor: pointer;
-    color: var(--color-secondary);
+    color: var(--color-primary);
   }
 `;
 
-export default Link;
+export default A;

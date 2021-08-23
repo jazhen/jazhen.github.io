@@ -11,6 +11,7 @@ const H5 = styled.h5`
   font-weight: 400;
   letter-spacing: 0px;
   margin-bottom: 0.5em;
+  color: var(--color-white-primary);
 
   @media (min-width: 37.5rem) {
     font-size: clamp(1.25rem, 0.937rem + 0.8346666666666666vw, 1.563rem);

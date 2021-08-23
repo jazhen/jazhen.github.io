@@ -10,6 +10,7 @@ const H1 = styled.h1`
   );
   font-weight: 700;
   letter-spacing: -1.5px;
+  line-height: 1;
   margin-bottom: 0.25em;
   color: #6200ee;
 

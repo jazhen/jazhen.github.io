@@ -4,9 +4,10 @@ const H3 = styled.h3`
   font-family: "Poppins", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
   font-size: clamp(1rem, 0.8333333333333334rem + 0.8333333333333334vw, 1.25rem);
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0px;
   margin-bottom: 2em;
+  color: var(--color-white-primary);
 
   @media (min-width: 50rem) {
     font-size: 1.25rem;

@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
+import Link from "./Base/A";
 import H5 from "./Base/H5";
 import H6 from "./Base/H6";
-import Image from "./Base/Image";
-import Link from "./Base/Link";
+import Img from "./Base/Img";
 import IconButton from "./IconButton";
 import ExternalLinkIcon from "./Icons/ExternalLinkIcon";
 import GithubIcon from "./Icons/GithubIcon";
@@ -80,7 +80,7 @@ const Technology = styled.span`
   border-radius: var(--border-radius-rounded);
 
   background-color: #2d3748;
-  color: var(--color-secondary);
+  color: var(--color-white-secondary);
 
   @media (min-width: 37.5rem) {
     font-size: clamp(
@@ -117,7 +117,7 @@ const CardActions = styled.div`
 const Card = ({ title, description, websiteUrl, githubUrl, image }) => (
   <CardContainer>
     <CardButton href={websiteUrl}>
-      <Image src={image} />
+      <Img src={image} />
     </CardButton>
     <CardContentContainer>
       <CardContent>

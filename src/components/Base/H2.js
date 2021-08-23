@@ -7,6 +7,7 @@ const H2 = styled.h2`
   font-weight: 400;
   letter-spacing: -0.5px;
   margin-bottom: 0.5em;
+  color: var(--color-white-primary);
 
   @media (min-width: 50rem) {
     font-size: 1.953rem;
