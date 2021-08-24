@@ -1,3 +1,4 @@
+import { useStaticQuery, graphql } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 import Img from "./Base/Img";
@@ -6,6 +7,23 @@ import OutlineLinkButton from "./Buttons/OutlineLinkButton";
 import H1 from "./Headers/H1";
 import H2 from "./Headers/H2";
 import H3 from "./Headers/H3";
+
+const useAssetsQuery = () => {
+  const useAssetsData = useStaticQuery(graphql`
+    {
+      allFile(filter: { sourceInstanceName: { eq: "assets" } }) {
+        edges {
+          node {
+            publicURL
+            name
+          }
+        }
+      }
+    }
+  `);
+
+  return useAssetsData;
+};
 
 const HeroContainer = styled.div`
   min-height: 100vh;
@@ -74,33 +92,48 @@ const HeroActions = styled.div`
   }
 `;
 
-const HeroSection = () => (
-  <HeroContainer>
-    <HeroContentContainer>
-      <Avatar src="https://jazhen.github.io/images/Jason_Zhen.png" />
-      <HeroContent>
-        <H1>Jason Zhen</H1>
-        <H2>Full Stack Software Engineer</H2>
-        <H3>Recent graduate of UC&nbsp;Davis &amp; App&nbsp;Academy</H3>
-        <HeroActions>
-          <OutlineLinkButton
-            href="mailto:jasonzhen.mail@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            contact
-          </OutlineLinkButton>
-          <ContainedLinkButton
-            href="https://google.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            résumé
-          </ContainedLinkButton>
-        </HeroActions>
-      </HeroContent>
-    </HeroContentContainer>
-  </HeroContainer>
-);
+const HeroSection = () => {
+  const getAssets = () => {
+    const assets = {};
+    const data = useAssetsQuery();
+
+    for (const file of data.allFile.edges) {
+      assets[file.node.name] = file.node.publicURL;
+    }
+
+    return assets;
+  };
+
+  const assets = getAssets();
+
+  return (
+    <HeroContainer>
+      <HeroContentContainer>
+        <Avatar src="https://jazhen.github.io/images/Jason_Zhen.png" />
+        <HeroContent>
+          <H1>Jason Zhen</H1>
+          <H2>Full Stack Software Engineer</H2>
+          <H3>Recent graduate of UC&nbsp;Davis &amp; App&nbsp;Academy</H3>
+          <HeroActions>
+            <OutlineLinkButton
+              href="mailto:jasonzhen.mail@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              contact
+            </OutlineLinkButton>
+            <ContainedLinkButton
+              href={assets.Jason_Zhen_Resume}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              résumé
+            </ContainedLinkButton>
+          </HeroActions>
+        </HeroContent>
+      </HeroContentContainer>
+    </HeroContainer>
+  );
+};
 
 export default HeroSection;
