@@ -14,7 +14,7 @@ const darkTheme = {
     paper: "rgba(48, 48, 48, 1)",
     primary: "rgba(98, 0, 238, 1)",
     secondary: "rgba(3, 218, 198, 1)",
-    onPimary: "rgba(18, 18, 18, 1)",
+    onPrimary: "rgba(255, 255, 255, 0.87)",
     white: "rgba(255, 255, 255, 1)",
     gray: "rgba(255, 255, 255, 0.87)",
   },

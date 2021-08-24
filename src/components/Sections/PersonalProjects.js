@@ -11,7 +11,7 @@ const PersonalProjects = () => {
       githubURL: "https://github.com/jazhen/groove_town",
       websiteURL: "https://groovetown.herokuapp.com",
       image:
-        "https://user-images.githubusercontent.com/6326660/102150215-e8c68080-3e24-11eb-92f2-40ce2b72686b.jpg",
+        "https://user-images.githubusercontent.com/6326660/130603129-876d985d-2400-454d-a5eb-91ec37ec24b7.png",
       technologies: [
         "React",
         "Redux",
@@ -27,7 +27,7 @@ const PersonalProjects = () => {
       githubURL: "https://github.com/jmcbgaston/mamas_helper",
       websiteURL: "https://mamas-helper.herokuapp.com",
       image:
-        "https://user-images.githubusercontent.com/6326660/103400725-0bca8300-4afb-11eb-8311-d57e261238c4.gif",
+        "https://user-images.githubusercontent.com/6326660/130603108-06f92f2b-1cc0-41af-b86d-219c9a6aff0f.png",
       technologies: ["React", "Redux", "Node", "MongoDB", "Sendgrid"],
     },
     {
@@ -36,7 +36,7 @@ const PersonalProjects = () => {
       githubURL: "https://github.com/jazhen/snack-pack",
       websiteURL: "https://jazhen.github.io/snack-pack",
       image:
-        "https://user-images.githubusercontent.com/6326660/103401194-c8711400-4afc-11eb-89c5-d5c424f788e5.gif",
+        "https://user-images.githubusercontent.com/6326660/130603139-af572975-2fe1-4157-9742-5ac0a7bdb211.png",
       technologies: ["JavaScript", "HTML", "CSS", "Webpack"],
     },
   ];

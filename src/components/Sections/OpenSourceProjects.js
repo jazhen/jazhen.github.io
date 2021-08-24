@@ -13,6 +13,8 @@ const OpenSourceProjects = () => {
       websiteURL: "https://waterthetrees.com",
       githubURL: "https://github.com/waterthetrees",
       technologies: ["React", "React-Query", "Node", "Mapbox", "Docker"],
+      image:
+        "https://user-images.githubusercontent.com/6326660/130603096-36a7d113-ee72-4fb2-9b3b-d8eb094d6098.png",
     },
   ];
 
