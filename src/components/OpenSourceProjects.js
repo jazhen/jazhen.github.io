@@ -12,6 +12,7 @@ const OpenSourceProjects = () => {
       and Public Works.`,
       websiteURL: "https://waterthetrees.com",
       githubURL: "https://github.com/waterthetrees",
+      technologies: ["React", "React-Query", "Node", "Mapbox", "Docker"],
     },
   ];
 

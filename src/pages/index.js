@@ -10,7 +10,7 @@ import useAssetsQuery from "../hooks/useAssetsQuery";
 const MainContentContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 0 4%;
+  padding: 0 6%;
 `;
 
 const MainContent = styled.div`
@@ -23,12 +23,10 @@ const IndexPage = () => {
   return (
     <Layout>
       <HeroSection avatar={assets.avatar} resume={assets.Jason_Zhen_Resume} />
-
       <MainContentContainer>
         <MainContent>
           <Experience />
           <OpenSourceProjects />
-
           <PersonalProjects />
         </MainContent>
       </MainContentContainer>
