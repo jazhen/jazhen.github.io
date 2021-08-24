@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 import Experience from "../components/Sections/Experience";
 import Footer from "../components/Sections/Footer";
 import Hero from "../components/Sections/Hero";
@@ -52,6 +53,7 @@ const IndexPage = () => {
 
   return (
     <ThemeProvider theme={darkTheme}>
+      <SEO />
       <Layout>
         <Hero avatar={assets.avatar} resume={assets.Jason_Zhen_Resume} />
         <MainContentContainer>

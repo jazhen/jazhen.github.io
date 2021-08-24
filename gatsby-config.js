@@ -2,11 +2,13 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://jazhen.github.io",
     title: "Jason Zhen",
+    description: "Jason Zhen's Software Engineering Portfolio",
   },
   plugins: [
     "gatsby-plugin-styled-components",
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
