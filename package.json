@@ -1,11 +1,13 @@
 {
-  "name": "jason-zhen",
+  "name": "jazhen.github.io",
   "version": "1.0.0",
   "private": true,
-  "description": "Jason Zhen",
+  "description": "Jason Zhen's Portfolio Website",
   "author": "Jason Zhen",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "react",
+    "styled components"
   ],
   "scripts": {
     "develop": "gatsby develop",
@@ -27,6 +29,7 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-is": "^17.0.2",
     "styled-components": "^5.3.0"
   },
   "devDependencies": {
