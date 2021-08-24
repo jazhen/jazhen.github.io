@@ -16,7 +16,7 @@ const HeroContainer = styled.div`
   justify-content: center;
 
   background-attachment: fixed;
-  background-image: url("https://jazhen.github.io/images/profile-background.jpg");
+  background-image: url("https://user-images.githubusercontent.com/6326660/130702222-52d30705-acb3-4722-a92b-31168f8df24b.jpg");
   background-position: center center;
   background-size: cover;
 
