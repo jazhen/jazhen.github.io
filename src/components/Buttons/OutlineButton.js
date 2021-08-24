@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const OutlineButton = styled(Button)`
   background: transparent;
-  color: var(--color-primary);
+  color: ${({ theme }) => theme.color.primary};
 `;
 
 export default OutlineButton;

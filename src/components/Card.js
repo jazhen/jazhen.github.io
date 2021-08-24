@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import Link from "./Base/A";
 import Img from "./Base/Img";
+import Span from "./Base/Span";
 import IconButton from "./Buttons/IconButton";
 import H5 from "./Headers/H5";
 import H6 from "./Headers/H6";
@@ -13,9 +14,11 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border-radius: var(--border-radius-rounded);
-  background-color: var(--color-background-paper);
-  box-shadow: var(--elevation-01);
+  border-radius: ${({ theme }) => theme.borderRadius};
+  background-color: ${({ theme }) => theme.color.paper};
+  background-color: ${({ theme }) => theme.color.paper};
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 `;
 
 const CardButton = styled(Link)`
@@ -24,7 +27,7 @@ const CardButton = styled(Link)`
 
   &:before,
   &:after {
-    background-color: var(--color-button-hover);
+    background-color: ${({ theme }) => theme.color.primary};
     content: "";
     position: absolute;
     top: 0;
@@ -39,7 +42,7 @@ const CardButton = styled(Link)`
   &:active:before,
   &:active:after {
     opacity: 0.1;
-    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: opacity 0.5s ease;
   }
 `;
 
@@ -56,47 +59,23 @@ const CardContent = styled.div``;
 const TechnologyContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 1em;
-
   gap: 0.64rem;
   gap: clamp(0.64rem, 0.45714285714285713rem + 0.9142857142857144vw, 0.8rem);
+  margin-bottom: 1em;
 
-  @media (min-width: 37.5rem) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
     gap: clamp(0.64rem, 0.48rem + 0.42666666666666675vw, 0.8rem);
   }
 
-  @media (min-width: 75rem) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     gap: clamp(0.64rem, 0.15999999999999992rem + 0.6400000000000001vw, 0.8rem);
   }
 `;
 
-const Technology = styled.span`
-  font-family: "Poppins", "Helvetica", "Arial", sans-serif;
-  font-size: 0.8rem;
-  font-size: clamp(0.8rem, 0.5714285714285715rem + 1.1428571428571426vw, 1rem);
-  font-weight: 400;
-
+const Technology = styled(Span)`
   padding: 0.25em 0.5em;
-  border-radius: var(--border-radius-rounded);
-
+  border-radius: ${({ theme }) => theme.borderRadius};
   background-color: #2d3748;
-  color: var(--color-white-secondary);
-
-  @media (min-width: 37.5rem) {
-    font-size: clamp(
-      0.8rem,
-      0.6000000000000001rem + 0.5333333333333332vw,
-      1rem
-    );
-  }
-
-  @media (min-width: 75rem) {
-    font-size: clamp(
-      0.8rem,
-      0.20000000000000018rem + 0.7999999999999998vw,
-      1rem
-    );
-  }
 `;
 
 const CardActions = styled.div`
@@ -105,11 +84,11 @@ const CardActions = styled.div`
   gap: 0.8em;
   gap: clamp(0.8em, 0.5714285714285715em + 1.1428571428571426vw, 1em);
 
-  @media (min-width: 37.5rem) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
     gap: clamp(0.8em, 0.6000000000000001em + 0.5333333333333332vw, 1em);
   }
 
-  @media (min-width: 75rem) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     gap: clamp(0.8em, 0.20000000000000018em + 0.7999999999999998vw, 1em);
   }
 `;

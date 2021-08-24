@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const A = styled.a`
-  color: var(--color-white-secondary);
+  color: ${({ theme }) => theme.color.gray};
 
   &:link,
   &:visited,
@@ -14,11 +14,7 @@ const A = styled.a`
   &:active,
   &:focus {
     cursor: pointer;
-    color: var(--color-primary);
-  }
-
-  &:disabled {
-    cursor: inherit;
+    color: ${({ theme }) => theme.color.primary};
   }
 `;
 

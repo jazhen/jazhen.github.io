@@ -7,10 +7,9 @@ import GithubIcon from "./Icons/GithubIcon";
 import LinkedInIcon from "./Icons/LinkedInIcon";
 
 const FooterContainer = styled.div`
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
+  background-color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.onPrimary};
   padding: 4em;
-
   display: flex;
   flex-direction: column;
   align-items: center;
