@@ -14,7 +14,8 @@ const A = styled.a`
   &:active,
   &:focus {
     cursor: pointer;
-    color: ${({ theme }) => theme.color.primary};
+    color: ${({ theme, onPrimary }) =>
+      onPrimary ? theme.color.secondary : theme.color.primary};
   }
 `;
 

@@ -28,13 +28,13 @@ const FooterCopy = styled(H6)`
 const Footer = () => (
   <FooterContainer>
     <IconsContainer>
-      <IconButton href="https://github.com/jazhen">
+      <IconButton href="https://github.com/jazhen" onPrimary>
         <GithubIcon />
       </IconButton>
-      <IconButton href="https://www.linkedin.com/in/jazhen/">
+      <IconButton href="https://www.linkedin.com/in/jazhen/" onPrimary>
         <LinkedInIcon />
       </IconButton>
-      <IconButton href="mailto:jasonzhen.mail@gmail.com">
+      <IconButton href="mailto:jasonzhen.mail@gmail.com" onPrimary>
         <EmailIcon />
       </IconButton>
     </IconsContainer>
