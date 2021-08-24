@@ -23,7 +23,7 @@ GithubIcon.propTypes = {
 
 GithubIcon.defaultProps = {
   strokeWidth: "1.5",
-  width: "30",
+  width: "32",
 };
 
 export default GithubIcon;

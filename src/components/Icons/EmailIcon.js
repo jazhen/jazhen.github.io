@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-const ExternalLinkIcon = ({ strokeWidth, width }) => (
+const EmailIcon = ({ strokeWidth, width }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -12,18 +12,19 @@ const ExternalLinkIcon = ({ strokeWidth, width }) => (
     height="auto"
   >
     <path stroke="none" d="M0 0h24v24H0z" />
-    <path d="M11 7H6a2 2 0 00-2 2v9a2 2 0 002 2h9a2 2 0 002-2v-5M10 14L20 4M15 4h5v5" />
+    <rect width="18" height="14" x="3" y="5" rx="2" />
+    <path d="M3 7l9 6 9-6" />
   </svg>
 );
 
-ExternalLinkIcon.propTypes = {
+EmailIcon.propTypes = {
   strokeWidth: PropTypes.string,
   width: PropTypes.string,
 };
 
-ExternalLinkIcon.defaultProps = {
+EmailIcon.defaultProps = {
   strokeWidth: "1.5",
   width: "32",
 };
 
-export default ExternalLinkIcon;
+export default EmailIcon;

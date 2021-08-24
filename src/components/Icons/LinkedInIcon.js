@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-const ExternalLinkIcon = ({ strokeWidth, width }) => (
+const LinkedInIcon = ({ strokeWidth, width }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -12,18 +12,19 @@ const ExternalLinkIcon = ({ strokeWidth, width }) => (
     height="auto"
   >
     <path stroke="none" d="M0 0h24v24H0z" />
-    <path d="M11 7H6a2 2 0 00-2 2v9a2 2 0 002 2h9a2 2 0 002-2v-5M10 14L20 4M15 4h5v5" />
+    <rect width="16" height="16" x="4" y="4" rx="2" />
+    <path d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 00-4 0" />
   </svg>
 );
 
-ExternalLinkIcon.propTypes = {
+LinkedInIcon.propTypes = {
   strokeWidth: PropTypes.string,
   width: PropTypes.string,
 };
 
-ExternalLinkIcon.defaultProps = {
+LinkedInIcon.defaultProps = {
   strokeWidth: "1.5",
   width: "32",
 };
 
-export default ExternalLinkIcon;
+export default LinkedInIcon;
