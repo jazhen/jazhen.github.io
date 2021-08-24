@@ -1,11 +1,13 @@
 {
-  "name": "jason-zhen",
+  "name": "jazhen.github.io",
   "version": "1.0.0",
   "private": true,
-  "description": "Jason Zhen",
+  "description": "Jason Zhen's Portfolio Website",
   "author": "Jason Zhen",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "react",
+    "styled components"
   ],
   "scripts": {
     "develop": "gatsby develop",
@@ -36,5 +38,8 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "peerDependencies": {
+    "react-is": "^17.0.2"
   }
 }
