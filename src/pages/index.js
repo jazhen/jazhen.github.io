@@ -1,11 +1,11 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import Experience from "../components/Experience";
-import Footer from "../components/Footer";
-import HeroSection from "../components/HeroSection";
 import Layout from "../components/Layout";
-import OpenSourceProjects from "../components/OpenSourceProjects";
-import PersonalProjects from "../components/PersonalProjects";
+import Experience from "../components/Sections/Experience";
+import Footer from "../components/Sections/Footer";
+import Hero from "../components/Sections/Hero";
+import OpenSourceProjects from "../components/Sections/OpenSourceProjects";
+import PersonalProjects from "../components/Sections/PersonalProjects";
 import useAssetsQuery from "../hooks/useAssetsQuery";
 
 const darkTheme = {
@@ -52,7 +52,7 @@ const IndexPage = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <Layout>
-        <HeroSection avatar={assets.avatar} resume={assets.Jason_Zhen_Resume} />
+        <Hero avatar={assets.avatar} resume={assets.Jason_Zhen_Resume} />
         <MainContentContainer>
           <MainContent>
             <Experience />

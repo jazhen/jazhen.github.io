@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "./Card";
-import TwoColumnContainer from "./Containers/TwoColumnContainer";
-import H4 from "./Headers/H4";
+import Card from "../Card";
+import TwoColumnContainer from "../Containers/TwoColumnContainer";
+import H4 from "../Headers/H4";
 
 const OpenSourceProjects = () => {
   const openSourceProjects = [

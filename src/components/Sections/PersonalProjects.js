@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "./Card";
-import ThreeColumnContainer from "./Containers/ThreeColumnContainer";
-import H4 from "./Headers/H4";
+import Card from "../Card";
+import ThreeColumnContainer from "../Containers/ThreeColumnContainer";
+import H4 from "../Headers/H4";
 
 const PersonalProjects = () => {
   const personalProjects = [

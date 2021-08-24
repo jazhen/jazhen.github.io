@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
-import Img from "./Base/Img";
-import ContainedLinkButton from "./Buttons/ContainedLinkButton";
-import OutlineLinkButton from "./Buttons/OutlineLinkButton";
-import H1 from "./Headers/H1";
-import H2 from "./Headers/H2";
-import H3 from "./Headers/H3";
+import Img from "../Base/Img";
+import ContainedLinkButton from "../Buttons/ContainedLinkButton";
+import OutlineLinkButton from "../Buttons/OutlineLinkButton";
+import H1 from "../Headers/H1";
+import H2 from "../Headers/H2";
+import H3 from "../Headers/H3";
 
 const HeroContainer = styled.div`
   min-height: 100vh;
@@ -75,7 +75,7 @@ const HeroActions = styled.div`
   }
 `;
 
-const HeroSection = ({ avatar, resume }) => (
+const Hero = ({ avatar, resume }) => (
   <HeroContainer>
     <HeroContentContainer>
       <Avatar src={avatar} />
@@ -104,11 +104,11 @@ const HeroSection = ({ avatar, resume }) => (
   </HeroContainer>
 );
 
-HeroSection.propTypes = {
+Hero.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   avatar: PropTypes.any.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   resume: PropTypes.any.isRequired,
 };
 
-export default HeroSection;
+export default Hero;

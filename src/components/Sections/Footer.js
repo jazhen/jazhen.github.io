@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import IconButton from "./Buttons/IconButton";
-import H6 from "./Headers/H6";
-import EmailIcon from "./Icons/EmailIcon";
-import GithubIcon from "./Icons/GithubIcon";
-import LinkedInIcon from "./Icons/LinkedInIcon";
+import IconButton from "../Buttons/IconButton";
+import H6 from "../Headers/H6";
+import EmailIcon from "../Icons/EmailIcon";
+import GithubIcon from "../Icons/GithubIcon";
+import LinkedInIcon from "../Icons/LinkedInIcon";
 
 const FooterContainer = styled.div`
   background-color: ${({ theme }) => theme.color.primary};
