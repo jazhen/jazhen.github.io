@@ -114,9 +114,16 @@ const CardActions = styled.div`
   }
 `;
 
-const Card = ({ title, description, websiteUrl, githubUrl, image }) => (
+const Card = ({
+  title,
+  description,
+  websiteURL,
+  githubURL,
+  image,
+  technologies,
+}) => (
   <CardContainer>
-    <CardButton href={websiteUrl}>
+    <CardButton href={githubURL}>
       <Img src={image} />
     </CardButton>
     <CardContentContainer>
@@ -124,21 +131,22 @@ const Card = ({ title, description, websiteUrl, githubUrl, image }) => (
         <H5>{title}</H5>
         <H6>{description}</H6>
         <TechnologyContainer>
-          <Technology>React</Technology>
-          <Technology>Redux</Technology>
-          <Technology>Node.js</Technology>
-          <Technology>Ruby on Rails</Technology>
-          <Technology>Docker</Technology>
+          {technologies.map((technology) => (
+            <Technology>{technology}</Technology>
+          ))}
         </TechnologyContainer>
       </CardContent>
-
       <CardActions>
-        <IconButton href={githubUrl}>
-          <GithubIcon />
-        </IconButton>
-        <IconButton href={websiteUrl}>
-          <ExternalLinkIcon />
-        </IconButton>
+        {githubURL && (
+          <IconButton href={githubURL}>
+            <GithubIcon />
+          </IconButton>
+        )}
+        {websiteURL && (
+          <IconButton href={websiteURL}>
+            <ExternalLinkIcon />
+          </IconButton>
+        )}
       </CardActions>
     </CardContentContainer>
   </CardContainer>
@@ -148,16 +156,18 @@ Card.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
-  websiteUrl: PropTypes.string,
-  githubUrl: PropTypes.string,
+  websiteURL: PropTypes.string,
+  githubURL: PropTypes.string,
+  technologies: PropTypes.array,
 };
 
 Card.defaultProps = {
   title: "Title",
   description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
   image: "https://via.placeholder.com/320x180?text=16:9",
-  websiteUrl: "#",
-  githubUrl: "#",
+  websiteURL: "#",
+  githubURL: "#",
+  technologies: [],
 };
 
 export default Card;

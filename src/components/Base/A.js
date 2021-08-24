@@ -16,6 +16,10 @@ const A = styled.a`
     cursor: pointer;
     color: var(--color-primary);
   }
+
+  &:disabled {
+    cursor: inherit;
+  }
 `;
 
 export default A;

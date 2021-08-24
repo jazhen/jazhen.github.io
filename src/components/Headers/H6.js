@@ -8,6 +8,7 @@ const H6 = styled.h6`
   letter-spacing: 0.15px;
   margin-bottom: 1em;
   color: var(--color-white-primary);
+  max-width: 60ch;
 
   @media (min-width: 37.5rem) {
     font-size: clamp(1rem, 0.75rem + 0.6666666666666667vw, 1.25rem);
