@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const A = styled.a`
-  font-family: ${({ theme }) => theme.fontFamily.secondary};
+  font-family: ${({ theme }) => theme.fontFamily.primary};
   font-size: 1.5rem;
   font-weight: ${({ theme }) => theme.fontWeight.medium};
   color: ${({ theme }) => theme.color.secondaryText};
@@ -18,8 +18,7 @@ const A = styled.a`
   &:active,
   &:focus {
     cursor: pointer;
-    color: ${({ theme, onPrimary }) =>
-      onPrimary ? theme.color.secondary : theme.color.primary};
+    color: ${({ theme }) => theme.color.primary};
   }
 `;
 

@@ -15,7 +15,7 @@ const NavList = styled.ul`
 
 const Header = () => (
   <Nav>
-    <A src="#">🥶&nbsp;Jason&nbsp;Zhen</A>
+    <A src="#">JZ</A>
     <NavList>
       <LinkButton>work</LinkButton>
       <LinkButton>about</LinkButton>

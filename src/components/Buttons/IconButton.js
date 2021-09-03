@@ -5,6 +5,13 @@ import A from "../Base/A";
 
 const IconButtonLink = styled(A)`
   display: flex;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: ${({ theme, onPrimary }) =>
+      onPrimary ? theme.color.secondary : theme.color.primary};
+  }
 `;
 
 const IconButton = ({ href, onPrimary, children }) => (
