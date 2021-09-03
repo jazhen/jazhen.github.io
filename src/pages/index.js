@@ -6,7 +6,6 @@ import Experience from "../components/Sections/Experience";
 import Footer from "../components/Sections/Footer";
 import Header from "../components/Sections/Header";
 import Hero from "../components/Sections/Hero";
-import OpenSourceProjects from "../components/Sections/OpenSourceProjects";
 import Projects from "../components/Sections/Projects";
 import useAssetsQuery from "../hooks/useAssetsQuery";
 
@@ -42,11 +41,11 @@ const darkTheme = {
 const MainContentContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 0 6% 6%;
 `;
 
 const MainContent = styled.div`
   max-width: 100rem;
+  margin: 0 6% 6%;
 `;
 
 const IndexPage = () => {
@@ -62,7 +61,6 @@ const IndexPage = () => {
             <Hero />
             <Projects />
             {/* <Experience /> */}
-            {/* <OpenSourceProjects /> */}
           </MainContent>
         </MainContentContainer>
         <Footer />

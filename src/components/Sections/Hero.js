@@ -9,7 +9,7 @@ const HeroContainer = styled.div`
   min-height: calc(100vh - 78px);
   display: grid;
 
-  @media (min-width: 50rem) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     text-align: inherit;
 
     align-items: center;
@@ -26,7 +26,7 @@ const HeroTextContainer = styled.div`
   text-align: center;
   align-self: flex-end;
 
-  @media (min-width: 50rem) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     text-align: inherit;
   }
 `;
@@ -35,7 +35,7 @@ const HeroActions = styled.div`
   text-align: center;
   align-self: center;
 
-  @media (min-width: 50rem) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     text-align: inherit;
   }
 `;
@@ -43,7 +43,7 @@ const HeroActions = styled.div`
 const Avatar = styled(HeroImage)`
   display: none;
 
-  @media (min-width: 50rem) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     display: block;
     max-width: 100%;
   }

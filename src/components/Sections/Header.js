@@ -6,7 +6,7 @@ import LinkButton from "../Buttons/LinkButton";
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-  padding: 1em 0;
+  padding: 2em 0;
 `;
 
 const NavList = styled.ul`
@@ -15,12 +15,12 @@ const NavList = styled.ul`
 
 const Header = () => (
   <Nav>
-    <A src="#">JASON ZHEN</A>
+    <A src="#">JASON&nbsp;ZHEN</A>
     <NavList>
-      <LinkButton>projects</LinkButton>
+      <LinkButton href="#projects">projects</LinkButton>
       <LinkButton>about</LinkButton>
       <LinkButton>contact</LinkButton>
-      <LinkButton src="Personal Projects">résumé</LinkButton>
+      <LinkButton>résumé</LinkButton>
     </NavList>
   </Nav>
 );
