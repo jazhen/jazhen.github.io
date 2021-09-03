@@ -2,6 +2,7 @@ import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
+import About from "../components/Sections/About";
 import Experience from "../components/Sections/Experience";
 import Footer from "../components/Sections/Footer";
 import Header from "../components/Sections/Header";
@@ -61,6 +62,7 @@ const IndexPage = () => {
             <Hero />
             <Projects />
             {/* <Experience /> */}
+            <About />
           </MainContent>
         </MainContentContainer>
         <Footer />

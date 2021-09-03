@@ -54,7 +54,7 @@ const Hero = () => (
     <HeroContent>
       <HeroTextContainer>
         <H3>👋 Hi, I&apos;m Jason Zhen</H3>
-        <H1>I build effective applications across the full stack</H1>
+        <H1>I build effective applications across the full&nbsp;stack</H1>
       </HeroTextContainer>
       <HeroActions>
         <ContainedLinkButton href="#projects">

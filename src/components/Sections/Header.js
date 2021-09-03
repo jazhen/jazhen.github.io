@@ -18,7 +18,7 @@ const Header = () => (
     <A src="#">JASON&nbsp;ZHEN</A>
     <NavList>
       <LinkButton href="#projects">projects</LinkButton>
-      <LinkButton>about</LinkButton>
+      <LinkButton href="#about">about</LinkButton>
       <LinkButton>contact</LinkButton>
       <LinkButton>résumé</LinkButton>
     </NavList>
