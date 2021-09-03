@@ -116,10 +116,10 @@ const Card = ({
         </TechnologyContainer>
       </CardContent>
       <CardActions>
-        <IconButton href={githubURL}>
+        <IconButton href={githubURL} target="_blank" rel="noopener noreferrer">
           <GithubIcon />
         </IconButton>
-        <IconButton href={websiteURL}>
+        <IconButton href={websiteURL} target="_blank" rel="noopener noreferrer">
           <ExternalLinkIcon />
         </IconButton>
       </CardActions>
