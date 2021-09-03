@@ -8,14 +8,11 @@ import H1 from "../Headers/H1";
 import H3 from "../Headers/H3";
 
 const HeroContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(1em, 0.4em + 3vw, 4em);
-
   @media (min-width: 50rem) {
-    flex-direction: row;
+    display: grid;
+    align-items: center;
+    grid-auto-flow: row;
+    grid-template-columns: 3fr 2fr;
   }
 `;
 
@@ -24,7 +21,7 @@ const Avatar = styled(HeroImage)`
 
   @media (min-width: 50rem) {
     display: block;
-    min-width: 40%;
+    max-width: 100%;
   }
 `;
 
