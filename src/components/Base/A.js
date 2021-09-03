@@ -3,7 +3,8 @@ import styled from "styled-components";
 const A = styled.a`
   font-family: ${({ theme }) => theme.fontFamily.primary};
   font-size: 1.5rem;
-  font-weight: ${({ theme }) => theme.fontWeight.medium};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  font-style: italic;
   color: ${({ theme }) => theme.color.secondaryText};
   align-self: center;
 
