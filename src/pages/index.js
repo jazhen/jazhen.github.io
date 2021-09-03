@@ -7,7 +7,7 @@ import Footer from "../components/Sections/Footer";
 import Header from "../components/Sections/Header";
 import Hero from "../components/Sections/Hero";
 import OpenSourceProjects from "../components/Sections/OpenSourceProjects";
-import PersonalProjects from "../components/Sections/PersonalProjects";
+import Projects from "../components/Sections/Projects";
 import useAssetsQuery from "../hooks/useAssetsQuery";
 
 const darkTheme = {
@@ -59,10 +59,10 @@ const IndexPage = () => {
         <MainContentContainer>
           <MainContent>
             <Header />
-            <Hero resume={assets.Jason_Zhen_Resume} />
-            <Experience />
-            <OpenSourceProjects />
-            <PersonalProjects />
+            <Hero />
+            <Projects />
+            {/* <Experience /> */}
+            {/* <OpenSourceProjects /> */}
           </MainContent>
         </MainContentContainer>
         <Footer />

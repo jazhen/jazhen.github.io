@@ -1,18 +1,42 @@
-import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 import HeroImage from "../../assets/images/heroImage.svg";
 import ContainedLinkButton from "../Buttons/ContainedLinkButton";
-import OutlineLinkButton from "../Buttons/OutlineLinkButton";
 import H1 from "../Headers/H1";
 import H3 from "../Headers/H3";
 
 const HeroContainer = styled.div`
+  min-height: calc(100vh - 78px);
+  display: grid;
+
   @media (min-width: 50rem) {
-    display: grid;
+    text-align: inherit;
+
     align-items: center;
     grid-auto-flow: row;
     grid-template-columns: 3fr 2fr;
+  }
+`;
+
+const HeroContent = styled.div`
+  display: grid;
+`;
+
+const HeroTextContainer = styled.div`
+  text-align: center;
+  align-self: flex-end;
+
+  @media (min-width: 50rem) {
+    text-align: inherit;
+  }
+`;
+
+const HeroActions = styled.div`
+  text-align: center;
+  align-self: center;
+
+  @media (min-width: 50rem) {
+    text-align: inherit;
   }
 `;
 
@@ -25,52 +49,21 @@ const Avatar = styled(HeroImage)`
   }
 `;
 
-const HeroContent = styled.div`
-  text-align: center;
-
-  @media (min-width: 50rem) {
-    text-align: inherit;
-  }
-`;
-
-const HeroActions = styled.div`
-  display: flex;
-  gap: 2em;
-  justify-content: center;
-
-  @media (min-width: 50rem) {
-    justify-content: inherit;
-  }
-`;
-
-const Hero = ({ resume }) => (
+const Hero = () => (
   <HeroContainer>
     <HeroContent>
-      <H3>👋 Hi, I&apos;m Jason Zhen</H3>
-      <H1>I build effective applications across the full stack</H1>
+      <HeroTextContainer>
+        <H3>👋 Hi, I&apos;m Jason Zhen</H3>
+        <H1>I build effective applications across the full stack</H1>
+      </HeroTextContainer>
       <HeroActions>
-        <OutlineLinkButton
-          href="mailto:jasonzhen.mail@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          contact
-        </OutlineLinkButton>
-        <ContainedLinkButton
-          href={resume}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          résumé
+        <ContainedLinkButton href="#projects">
+          👇 View my projects 👇
         </ContainedLinkButton>
       </HeroActions>
     </HeroContent>
     <Avatar />
   </HeroContainer>
 );
-
-Hero.propTypes = {
-  resume: PropTypes.string.isRequired,
-};
 
 export default Hero;

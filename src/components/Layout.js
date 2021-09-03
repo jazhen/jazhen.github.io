@@ -11,12 +11,13 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 16px;
+    scroll-behavior: smooth;
     scrollbar-width: thin;
   }
 
   body {
     margin: 0 auto;
-    line-height: 1.3;
+    line-height: 1.5;
     background-color: ${({ theme }) => theme.color.background};
   }
 `;

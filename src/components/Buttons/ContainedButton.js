@@ -3,13 +3,13 @@ import Button from "./Button";
 
 const ContainedButton = styled(Button)`
   background: ${({ theme }) => theme.color.primary};
-  color: black;
+  color: ${({ theme }) => theme.color.secondaryText};
   border-radius: ${({ theme }) => theme.borderRadius};
 
   &:hover,
   &:active,
   &:focus {
-    color: ${({ theme }) => theme.color.secondaryText};
+    color: black;
   }
 `;
 
