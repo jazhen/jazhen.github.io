@@ -7,7 +7,7 @@ const H2 = styled.h2`
   font-weight: ${({ theme }) => theme.fontWeight.regular};
   letter-spacing: -0.5px;
   margin-bottom: 0.5em;
-  color: ${({ theme }) => theme.color.white};
+  color: ${({ theme }) => theme.color.primaryText};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     font-size: 1.953rem;

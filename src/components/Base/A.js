@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const A = styled.a`
-  color: ${({ theme }) => theme.color.gray};
+  color: ${({ theme }) => theme.color.secondaryText};
 
   &:link,
   &:visited,

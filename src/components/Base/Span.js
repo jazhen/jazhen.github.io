@@ -5,7 +5,7 @@ const Span = styled.span`
   font-size: 0.8rem;
   font-size: clamp(0.8rem, 0.5714285714285715rem + 1.1428571428571426vw, 1rem);
   font-weight: ${({ theme }) => theme.fontWeight.regular};
-  color: ${({ theme }) => theme.color.gray};
+  color: ${({ theme }) => theme.color.secondaryText};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
     font-size: clamp(

@@ -11,8 +11,8 @@ const H1 = styled.h1`
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   letter-spacing: -1.5px;
   line-height: 1;
-  margin-bottom: 0.25em;
-  color: ${({ theme }) => theme.color.primary};
+  margin-bottom: 1.5em;
+  color: ${({ theme }) => theme.color.primaryText};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     font-size: 3.052rem;

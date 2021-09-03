@@ -7,7 +7,7 @@ const H6 = styled.h6`
   font-weight: ${({ theme }) => theme.fontWeight.light};
   letter-spacing: 0.15px;
   margin-bottom: 1em;
-  color: ${({ theme }) => theme.color.white};
+  color: ${({ theme }) => theme.color.primaryText};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
     font-size: clamp(1rem, 0.75rem + 0.6666666666666667vw, 1.25rem);

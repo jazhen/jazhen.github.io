@@ -11,7 +11,7 @@ const H5 = styled.h5`
   font-weight: ${({ theme }) => theme.fontWeight.regular};
   letter-spacing: 0px;
   margin-bottom: 0.5em;
-  color: ${({ theme }) => theme.color.white};
+  color: ${({ theme }) => theme.color.primaryText};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
     font-size: clamp(1.25rem, 0.937rem + 0.8346666666666666vw, 1.563rem);

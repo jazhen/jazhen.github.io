@@ -13,11 +13,11 @@ const darkTheme = {
   color: {
     background: "rgba(18, 18, 18, 1)",
     paper: "rgba(48, 48, 48, 1)",
-    primary: "rgba(98, 0, 238, 1)",
+    primary: "rgba(107, 99, 255, 1)",
     secondary: "rgba(3, 218, 198, 1)",
     onPrimary: "rgba(255, 255, 255, 0.87)",
-    white: "rgba(255, 255, 255, 1)",
-    gray: "rgba(255, 255, 255, 0.87)",
+    primaryText: "rgba(255, 255, 255, 1)",
+    secondaryText: "rgba(255, 255, 255, 0.87)",
   },
   fontFamily: {
     primary: "'Poppins', 'Helvetica', 'Arial', sans-serif",
@@ -41,7 +41,7 @@ const darkTheme = {
 const MainContentContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 0 6% 4%;
+  padding: 6%;
 `;
 
 const MainContent = styled.div`
@@ -55,9 +55,9 @@ const IndexPage = () => {
     <ThemeProvider theme={darkTheme}>
       <SEO />
       <Layout>
-        <Hero avatar={assets.avatar} resume={assets.Jason_Zhen_Resume} />
         <MainContentContainer>
           <MainContent>
+            <Hero resume={assets.Jason_Zhen_Resume} />
             <Experience />
             <OpenSourceProjects />
             <PersonalProjects />

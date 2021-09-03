@@ -6,8 +6,8 @@ const H3 = styled.h3`
   font-size: clamp(1rem, 0.8333333333333334rem + 0.8333333333333334vw, 1.25rem);
   font-weight: ${({ theme }) => theme.fontWeight.light};
   letter-spacing: 0px;
-  margin-bottom: 2em;
-  color: ${({ theme }) => theme.color.white};
+  margin-bottom: 1.5em;
+  color: ${({ theme }) => theme.color.primaryText};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     font-size: 1.25rem;

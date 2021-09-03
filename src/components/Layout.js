@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0 auto;
     line-height: 1.3;
-    background-color: ${({ theme }) => theme.color.background}
+    background-color: ${({ theme }) => theme.color.background};
   }
 `;
 

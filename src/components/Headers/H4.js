@@ -12,7 +12,7 @@ const H4 = styled.h4`
   letter-spacing: 0.25px;
   margin: clamp(2em, 1.75em + 1.25vw, 3em) 0
     clamp(1em, 0.875em + 0.625vw, 1.5em);
-  color: ${({ theme }) => theme.color.white};
+  color: ${({ theme }) => theme.color.primaryText};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
     font-size: clamp(
