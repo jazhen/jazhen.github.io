@@ -9,31 +9,17 @@ const IconButtonLink = styled(A)`
   &:hover,
   &:active,
   &:focus {
-    color: ${({ theme, onPrimary }) =>
-      onPrimary ? theme.color.secondary : theme.color.primary};
+    color: ${({ theme, isOnPrimary }) =>
+      isOnPrimary ? theme.color.secondary : theme.color.primary};
   }
 `;
 
-const IconButton = ({ href, onPrimary, children }) => (
-  <IconButtonLink
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    onPrimary={onPrimary}
-  >
-    {children}
-  </IconButtonLink>
+const IconButton = ({ children, ...props }) => (
+  <IconButtonLink {...props}>{children}</IconButtonLink>
 );
 
 IconButton.propTypes = {
-  href: PropTypes.string,
-  onPrimary: PropTypes.bool,
   children: PropTypes.node.isRequired,
-};
-
-IconButton.defaultProps = {
-  href: "#",
-  onPrimary: false,
 };
 
 export default IconButton;

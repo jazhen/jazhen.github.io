@@ -111,21 +111,17 @@ const Card = ({
         <H6>{description}</H6>
         <TechnologyContainer>
           {technologies.map((technology) => (
-            <Technology>{technology}</Technology>
+            <Technology key={technology}>{technology}</Technology>
           ))}
         </TechnologyContainer>
       </CardContent>
       <CardActions>
-        {githubURL && (
-          <IconButton href={githubURL}>
-            <GithubIcon />
-          </IconButton>
-        )}
-        {websiteURL && (
-          <IconButton href={websiteURL}>
-            <ExternalLinkIcon />
-          </IconButton>
-        )}
+        <IconButton href={githubURL}>
+          <GithubIcon />
+        </IconButton>
+        <IconButton href={websiteURL}>
+          <ExternalLinkIcon />
+        </IconButton>
       </CardActions>
     </CardContentContainer>
   </CardContainer>

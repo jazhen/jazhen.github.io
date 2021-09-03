@@ -15,8 +15,8 @@ const Button = styled.button`
   &:active,
   &:focus {
     cursor: pointer;
-    color: ${({ theme, onPrimary }) =>
-      onPrimary ? theme.color.secondary : theme.color.primary};
+    color: ${({ theme, isOnPrimary }) =>
+      isOnPrimary ? theme.color.secondary : theme.color.primary};
   }
 `;
 
