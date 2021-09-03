@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import Experience from "../components/Sections/Experience";
 import Footer from "../components/Sections/Footer";
+import Header from "../components/Sections/Header";
 import Hero from "../components/Sections/Hero";
 import OpenSourceProjects from "../components/Sections/OpenSourceProjects";
 import PersonalProjects from "../components/Sections/PersonalProjects";
@@ -41,7 +42,7 @@ const darkTheme = {
 const MainContentContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 6%;
+  padding: 0 6% 6%;
 `;
 
 const MainContent = styled.div`
@@ -57,6 +58,7 @@ const IndexPage = () => {
       <Layout>
         <MainContentContainer>
           <MainContent>
+            <Header />
             <Hero resume={assets.Jason_Zhen_Resume} />
             <Experience />
             <OpenSourceProjects />

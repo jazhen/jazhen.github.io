@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
 const A = styled.a`
+  font-family: ${({ theme }) => theme.fontFamily.secondary};
+  font-size: 1.5rem;
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
   color: ${({ theme }) => theme.color.secondaryText};
+  align-self: center;
 
   &:link,
   &:visited,

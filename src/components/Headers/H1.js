@@ -10,7 +10,7 @@ const H1 = styled.h1`
   );
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   letter-spacing: -1.5px;
-  line-height: 1;
+  line-height: 1.2;
   margin-bottom: 1.5em;
   color: ${({ theme }) => theme.color.primaryText};
 

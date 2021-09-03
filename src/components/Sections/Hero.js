@@ -70,8 +70,7 @@ const Hero = ({ resume }) => (
 );
 
 Hero.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  resume: PropTypes.any.isRequired,
+  resume: PropTypes.string.isRequired,
 };
 
 export default Hero;
