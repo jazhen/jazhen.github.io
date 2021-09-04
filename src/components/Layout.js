@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
+    font-family: 'Poppins', 'Helvetica', 'Arial', sans-serif;
     font-size: 16px;
     scroll-behavior: smooth;
     scrollbar-width: thin;

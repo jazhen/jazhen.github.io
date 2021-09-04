@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from "styled-components";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import About from "../components/Sections/About";
+import Contact from "../components/Sections/Contact";
 import Experience from "../components/Sections/Experience";
 import Footer from "../components/Sections/Footer";
 import Header from "../components/Sections/Header";
@@ -63,6 +64,7 @@ const IndexPage = () => {
             <Projects />
             {/* <Experience /> */}
             <About />
+            <Contact />
           </MainContent>
         </MainContentContainer>
         <Footer />

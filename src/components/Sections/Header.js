@@ -19,8 +19,7 @@ const Header = () => (
     <NavList>
       <LinkButton href="#projects">projects</LinkButton>
       <LinkButton href="#about">about</LinkButton>
-      <LinkButton>contact</LinkButton>
-      <LinkButton>résumé</LinkButton>
+      <LinkButton href="#contact">contact</LinkButton>
     </NavList>
   </Nav>
 );

@@ -18,6 +18,7 @@
     "deploy": "gatsby build && gh-pages -d public -b main"
   },
   "dependencies": {
+    "@formspree/react": "^2.2.3",
     "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^3.11.1",
     "gatsby-plugin-google-fonts": "^1.0.1",

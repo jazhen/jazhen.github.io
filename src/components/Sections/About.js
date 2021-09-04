@@ -2,11 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import Img from "../Base/Img";
 import Span from "../Base/Span";
-import ContainedButton from "../Buttons/ContainedButton";
 import ContainedLinkButton from "../Buttons/ContainedLinkButton";
+import OutlineLinkButton from "../Buttons/OutlineLinkButton";
 import H2 from "../Headers/H2";
 import H5 from "../Headers/H5";
-import H6 from "../Headers/H6";
 
 const TwoColumnContainer = styled.div`
   display: grid;
@@ -51,6 +50,7 @@ const About = () => (
           During my free time, I enjoy reading comic books and listening to
           music.
         </H5>
+        <OutlineLinkButton href="#">My résumé</OutlineLinkButton>
         <ContainedLinkButton href="#contact">Hire Me</ContainedLinkButton>
       </div>
     </TwoColumnContainer>
