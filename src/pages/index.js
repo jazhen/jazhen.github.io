@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import Layout from "../components/Layout";
+import GlobalStyles from "../components/GlobalStyles";
 import SEO from "../components/SEO";
 import About from "../components/Sections/About";
 import Contact from "../components/Sections/Contact";
@@ -56,19 +56,18 @@ const IndexPage = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <SEO />
-      <Layout>
-        <MainContentContainer>
-          <MainContent>
-            <Header />
-            <Hero />
-            <Projects />
-            {/* <Experience /> */}
-            <About />
-            <Contact />
-          </MainContent>
-        </MainContentContainer>
-        <Footer />
-      </Layout>
+      <GlobalStyles />
+      <MainContentContainer>
+        <MainContent>
+          <Header />
+          <Hero />
+          <Projects />
+          {/* <Experience /> */}
+          <About />
+          <Contact />
+        </MainContent>
+      </MainContentContainer>
+      <Footer />
     </ThemeProvider>
   );
 };

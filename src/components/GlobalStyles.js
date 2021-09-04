@@ -1,8 +1,6 @@
-import PropTypes from "prop-types";
-import React from "react";
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   *, *:before, *:after {
     box-sizing: border-box;
     margin: 0;
@@ -23,15 +21,4 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const Layout = ({ children }) => (
-  <>
-    <GlobalStyle />
-    {children}
-  </>
-);
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-export default Layout;
+export default GlobalStyles;
