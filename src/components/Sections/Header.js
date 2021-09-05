@@ -1,27 +1,51 @@
 import React from "react";
 import styled from "styled-components";
-import A from "../Base/A";
-import LinkButton from "../Buttons/LinkButton";
+
+const Header = () => (
+  <Nav>
+    <Logo src="#">JASON&nbsp;ZHEN</Logo>
+    <NavList>
+      <A href="#projects">projects</A>
+      <A href="#about">about</A>
+      <A href="#contact">contact</A>
+    </NavList>
+  </Nav>
+);
 
 const Nav = styled.nav`
+  grid-area: header;
   display: flex;
   justify-content: space-between;
-  padding: 2em 0;
+  align-items: center;
+  padding: 1em 0;
 `;
 
 const NavList = styled.ul`
   display: flex;
+  gap: 3em;
 `;
 
-const Header = () => (
-  <Nav>
-    <A src="#">JASON&nbsp;ZHEN</A>
-    <NavList>
-      <LinkButton href="#projects">projects</LinkButton>
-      <LinkButton href="#about">about</LinkButton>
-      <LinkButton href="#contact">contact</LinkButton>
-    </NavList>
-  </Nav>
-);
+const A = styled.a`
+  text-decoration: none;
+  font-size: 1rem;
+  color: ${({ theme }) => theme.color.secondaryText};
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: ${({ theme }) => theme.color.primary};
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
+    font-size: 1.125rem;
+  }
+`;
+
+const Logo = styled(A)`
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: ${({ theme }) => theme.color.primaryText};
+`;
 
 export default Header;

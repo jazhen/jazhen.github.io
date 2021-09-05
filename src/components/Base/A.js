@@ -1,25 +1,18 @@
 import styled from "styled-components";
 
 const A = styled.a`
-  font-family: ${({ theme }) => theme.fontFamily.primary};
-  font-size: 1.5rem;
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
-  font-style: italic;
+  text-decoration: none;
+  font-size: 1rem;
   color: ${({ theme }) => theme.color.secondaryText};
-  align-self: center;
-
-  &:link,
-  &:visited,
-  &:hover,
-  &:active {
-    text-decoration: none;
-  }
 
   &:hover,
-  &:active,
   &:focus {
     cursor: pointer;
     color: ${({ theme }) => theme.color.primary};
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
+    font-size: 1.125rem;
   }
 `;
 

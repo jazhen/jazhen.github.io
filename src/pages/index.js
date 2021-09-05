@@ -2,13 +2,9 @@ import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import GlobalStyles from "../components/GlobalStyles";
 import SEO from "../components/SEO";
-import About from "../components/Sections/About";
-import Contact from "../components/Sections/Contact";
-import Experience from "../components/Sections/Experience";
 import Footer from "../components/Sections/Footer";
 import Header from "../components/Sections/Header";
-import Hero from "../components/Sections/Hero";
-import Projects from "../components/Sections/Projects";
+import Main from "../components/Sections/Main";
 import useAssetsQuery from "../hooks/useAssetsQuery";
 
 const darkTheme = {
@@ -36,18 +32,37 @@ const darkTheme = {
     sm: "50rem",
     md: "75rem",
     lg: "100rem",
+    tabletPortrait: "600px",
+    tabletLandscape: "900px",
+    desktop: "1200px",
+    desktopLarge: "1800px",
   },
   borderRadius: "4px",
 };
 
-const MainContentContainer = styled.div`
-  display: flex;
-  justify-content: center;
-`;
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: 4% auto 4%;
+  grid-template-areas:
+    ". header ."
+    ". main ."
+    "footer footer footer";
 
-const MainContent = styled.div`
-  max-width: 100rem;
-  margin: 0 6% 6%;
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletPortrait}) {
+    grid-template-columns: 6% auto 6%;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
+    grid-template-columns: 8% auto 8%;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    grid-template-columns: 12% auto 12%;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
+    grid-template-columns: 18% auto 18%;
+  }
 `;
 
 const IndexPage = () => {
@@ -57,17 +72,11 @@ const IndexPage = () => {
     <ThemeProvider theme={darkTheme}>
       <SEO />
       <GlobalStyles />
-      <MainContentContainer>
-        <MainContent>
-          <Header />
-          <Hero />
-          <Projects />
-          {/* <Experience /> */}
-          <About />
-          <Contact />
-        </MainContent>
-      </MainContentContainer>
-      <Footer />
+      <Container>
+        <Header />
+        {/* <Main /> */}
+        <Footer />
+      </Container>
     </ThemeProvider>
   );
 };
