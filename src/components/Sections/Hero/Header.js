@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ChevronDown from "./chevron-down.inline.svg";
 
 const Header = () => (
   <Container>
@@ -7,7 +8,10 @@ const Header = () => (
     <Headline>
       I build effective applications across the full&nbsp;stack
     </Headline>
-    <ContainedButton href="#projects">👇 View my projects 👇</ContainedButton>
+    <ContainedButton href="#projects">
+      View my projects
+      <ChevronDown />
+    </ContainedButton>
   </Container>
 );
 
@@ -49,20 +53,22 @@ const Headline = styled.h1`
   }
 `;
 
-const ContainedButton = styled.button`
-  background: transparent;
-  border: none;
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.25em;
+const ContainedButton = styled.a`
+  min-width: 3rem;
   padding: 1em 2em;
   margin: 0.25em 0.5em;
-  min-width: 4rem;
-
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
   background: ${({ theme }) => theme.color.primary};
   color: ${({ theme }) => theme.color.secondaryText};
   border-radius: ${({ theme }) => theme.borderRadius};
+  font-family: ${({ theme }) => theme.fontFamily.primary};
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  display: inline-flex;
+  gap: 0.5em;
 
   &:hover,
   &:focus {
