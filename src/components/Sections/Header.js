@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import * as Styled from "./styles";
 
 const Header = () => (
   <Nav>
     <Logo src="#">JASON&nbsp;ZHEN</Logo>
     <NavList>
-      <A href="#projects">projects</A>
-      <A href="#about">about</A>
-      <A href="#contact">contact</A>
+      <Styled.A href="#projects">projects</Styled.A>
+      <Styled.A href="#about">about</Styled.A>
+      <Styled.A href="#contact">contact</Styled.A>
     </NavList>
   </Nav>
 );
@@ -25,23 +26,7 @@ const NavList = styled.ul`
   gap: 3em;
 `;
 
-const A = styled.a`
-  text-decoration: none;
-  font-size: 1rem;
-  color: ${({ theme }) => theme.color.secondaryText};
-
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    color: ${({ theme }) => theme.color.primary};
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
-    font-size: 1.125rem;
-  }
-`;
-
-const Logo = styled(A)`
+const Logo = styled(Styled.A)`
   font-size: 1.5rem;
   font-weight: 700;
   font-style: italic;

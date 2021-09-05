@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const A = styled.a`
+export const A = styled.a`
   text-decoration: none;
   font-size: 1rem;
   color: ${({ theme }) => theme.color.secondaryText};
@@ -15,5 +15,3 @@ const A = styled.a`
     font-size: 1.125rem;
   }
 `;
-
-export default A;

@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import IconButton from "../../Buttons/IconButton";
 import EmailIcon from "../../Icons/EmailIcon";
 import GithubIcon from "../../Icons/GithubIcon";
 import LinkedInIcon from "../../Icons/LinkedInIcon";
+import * as Styled from "../styles";
 
 const Container = styled.div`
   grid-area: socials;
@@ -11,32 +11,39 @@ const Container = styled.div`
   gap: 1em;
 `;
 
+const Link = styled(Styled.A)`
+  display: flex;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: ${({ theme }) => theme.color.secondary};
+  }
+`;
+
 const Socials = () => (
   <Container>
-    <IconButton
+    <Link
       href="https://github.com/jazhen"
       target="_blank"
       rel="noopener noreferrer"
-      isOnPrimary
     >
       <GithubIcon />
-    </IconButton>
-    <IconButton
+    </Link>
+    <Link
       href="https://www.linkedin.com/in/jazhen/"
       target="_blank"
       rel="noopener noreferrer"
-      isOnPrimary
     >
       <LinkedInIcon />
-    </IconButton>
-    <IconButton
+    </Link>
+    <Link
       href="mailto:jasonzhen.mail@gmail.com"
       target="_blank"
       rel="noopener noreferrer"
-      isOnPrimary
     >
       <EmailIcon />
-    </IconButton>
+    </Link>
   </Container>
 );
 
