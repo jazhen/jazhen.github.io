@@ -58,21 +58,29 @@ const ContainedButton = styled.a`
   padding: 1em 2em;
   margin: 0.25em 0.5em;
   border: none;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: ${({ theme }) => theme.color.primary};
-  color: ${({ theme }) => theme.color.secondaryText};
   border-radius: ${({ theme }) => theme.borderRadius};
+  background-color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.secondaryText};
   font-family: ${({ theme }) => theme.fontFamily.primary};
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-decoration: none;
   display: inline-flex;
   gap: 0.5em;
 
   &:hover,
   &:focus {
     cursor: pointer;
+  }
+
+  &:hover {
+    opacity: 0.92;
+  }
+
+  &:focus {
+    opacity: 0.76;
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
