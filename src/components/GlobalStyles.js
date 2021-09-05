@@ -8,9 +8,9 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html {
-    font-family: ${({ theme }) => theme.fontFamily.primary};
+    ${"" /* font-family: ${({ theme }) => theme.fontFamily.primary}; */}
     font-size: 16px;
-    color: ${({ theme }) => theme.color.primaryText};
+    ${"" /* color: ${({ theme }) => theme.color.primaryText}; */}
     scroll-behavior: smooth;
     scrollbar-width: thin;
   }

@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const A = styled.a`
-  text-decoration: none;
+  font-family: ${({ theme }) => theme.fontFamily.primary};
   font-size: 1rem;
   color: ${({ theme }) => theme.color.secondaryText};
+  text-decoration: none;
 
   &:hover,
   &:focus {

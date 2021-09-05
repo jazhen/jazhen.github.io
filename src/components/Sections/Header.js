@@ -28,7 +28,7 @@ const NavList = styled.ul`
 
 const Logo = styled(Styled.A)`
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   font-style: italic;
   color: ${({ theme }) => theme.color.primaryText};
 `;

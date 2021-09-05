@@ -6,18 +6,19 @@ import Experience from "./Experience";
 import Hero from "./Hero";
 import Projects from "./Projects";
 
-const Container = styled.div`
-  /* margin: 0 6% 6%; */
-`;
-
 const Main = () => (
   <Container>
     <Hero />
-    <Projects />
-    <Experience />
-    <About />
-    <Contact />
+    {/* <Projects /> */}
+    {/* <Experience /> */}
+    {/* <About /> */}
+    {/* <Contact /> */}
   </Container>
 );
+
+const Container = styled.div`
+  /* margin: 0 6% 6%; */
+  grid-area: main;
+`;
 
 export default Main;

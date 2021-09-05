@@ -2,6 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import Socials from "./Socials";
 
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <Container>
+      <Socials />
+      <Copy>&copy; {currentYear} Jason Zhen</Copy>
+    </Container>
+  );
+};
+
 const Container = styled.div`
   grid-area: footer;
   display: grid;
@@ -27,16 +38,5 @@ const P = styled.p`
 const Copy = styled(P)`
   grid-area: copy;
 `;
-
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
-  return (
-    <Container>
-      <Socials />
-      <Copy>&copy; {currentYear} Jason Zhen</Copy>
-    </Container>
-  );
-};
 
 export default Footer;

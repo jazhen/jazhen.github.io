@@ -28,16 +28,28 @@ const darkTheme = {
     bold: 700,
   },
   breakpoints: {
-    xs: "37.5rem",
-    sm: "50rem",
-    md: "75rem",
-    lg: "100rem",
     tabletPortrait: "600px",
     tabletLandscape: "900px",
     desktop: "1200px",
     desktopLarge: "1800px",
   },
   borderRadius: "4px",
+};
+
+const IndexPage = () => {
+  const assets = useAssetsQuery();
+
+  return (
+    <ThemeProvider theme={darkTheme}>
+      <SEO />
+      <GlobalStyles />
+      <Container>
+        <Header />
+        <Main />
+        <Footer />
+      </Container>
+    </ThemeProvider>
+  );
 };
 
 const Container = styled.div`
@@ -64,21 +76,5 @@ const Container = styled.div`
     grid-template-columns: 18% auto 18%;
   }
 `;
-
-const IndexPage = () => {
-  const assets = useAssetsQuery();
-
-  return (
-    <ThemeProvider theme={darkTheme}>
-      <SEO />
-      <GlobalStyles />
-      <Container>
-        <Header />
-        {/* <Main /> */}
-        <Footer />
-      </Container>
-    </ThemeProvider>
-  );
-};
 
 export default IndexPage;
