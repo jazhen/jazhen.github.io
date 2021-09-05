@@ -9,7 +9,7 @@ import Projects from "./Projects";
 const Main = () => (
   <Container>
     <Hero />
-    {/* <Projects /> */}
+    <Projects />
     {/* <Experience /> */}
     {/* <About /> */}
     {/* <Contact /> */}

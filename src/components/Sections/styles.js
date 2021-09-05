@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const A = styled.a`
   font-family: ${({ theme }) => theme.fontFamily.primary};
   font-size: 1rem;
-  color: ${({ theme }) => theme.color.secondaryText};
+  text-transform: uppercase;
   text-decoration: none;
+  color: ${({ theme }) => theme.color.secondaryText};
 
   &:hover,
   &:focus {

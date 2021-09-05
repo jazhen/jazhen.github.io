@@ -10,8 +10,8 @@ const Hero = () => (
   </Container>
 );
 
-const Container = styled.div`
-  min-height: 90vh;
+const Container = styled.section`
+  min-height: 95vh;
   display: grid;
   place-items: center;
 
