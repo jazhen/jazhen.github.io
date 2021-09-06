@@ -4,16 +4,21 @@ import H2 from "../../Headers/H2";
 import ContactForm from "./ContactForm";
 import ContactHeader from "./ContactHeader";
 
-const Container = styled.div`
-  background-color: white;
-  border-radius: 4px;
+const Container = styled.section`
+  display: grid;
+  gap: 2em;
+  padding: 2em;
+  margin-bottom: 8em;
+  background-color: ${({ theme }) => theme.color.primary};
+  border-radius: ${({ theme }) => theme.borderRadius};
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-    display: grid;
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
+    grid-auto-flow: column;
+    grid-template-columns: 2fr 3fr;
+  }
 
-    align-items: center;
-    grid-auto-flow: row;
-    grid-template-columns: 1fr 1fr;
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    max-width: 140ch;
   }
 `;
 

@@ -12,7 +12,7 @@ const Main = () => (
     <Projects />
     {/* <Experience /> */}
     {/* <About /> */}
-    {/* <Contact /> */}
+    <Contact />
   </Container>
 );
 

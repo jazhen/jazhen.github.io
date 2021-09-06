@@ -1,6 +1,8 @@
 import { useForm, ValidationError } from "@formspree/react";
 import React from "react";
 import styled from "styled-components";
+import * as Styled from "../styles";
+import Send from "./send.inline.svg";
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("mnqllbqw");
@@ -16,65 +18,82 @@ const ContactForm = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <FormFieldsContainer>
-        <Label htmlFor="email">Email Address</Label>
-        <Input
-          id="email"
-          type="email"
-          name="email"
-          placeholder="name@gmail.com"
-        />
-        <ValidationError prefix="Email" field="email" errors={state.errors} />
-        <Label htmlFor="message">Message</Label>
-        <TextArea
-          id="message"
-          name="message"
-          placeholder="Hi, Jason..."
-          cols="10"
-          rows="5"
-        />
-        <ValidationError
-          prefix="Message"
-          field="message"
-          errors={state.errors}
-        />
-      </FormFieldsContainer>
-      <button type="submit" disabled={state.submitting}>
-        Submit
-      </button>
+      <Label htmlFor="email">Email</Label>
+      <Input
+        id="email"
+        type="email"
+        name="email"
+        placeholder="name@gmail.com"
+      />
+      <ValidationError prefix="Email" field="email" errors={state.errors} />
+      <Label htmlFor="message">Message</Label>
+      <TextArea
+        id="message"
+        name="message"
+        placeholder="Hi, Jason..."
+        cols="10"
+        rows="5"
+      />
+      <ValidationError prefix="Message" field="message" errors={state.errors} />
+      <Button
+        type="submit"
+        disabled={state.submitting}
+        style={{ placeSelf: "end" }}
+      >
+        Send
+        <Send />
+      </Button>
     </Form>
   );
 };
 
 const Form = styled.form`
-  background: white;
-  border: none;
-  padding: 2em;
-`;
-
-const FormFieldsContainer = styled.div`
   display: grid;
+  padding: 2em;
+  background-color: white;
+  border-radius: ${({ theme }) => theme.borderRadius};
 `;
 
 const Label = styled.label`
-  font-size: 1.25rem;
-  margin-top: 2em;
+  margin-bottom: 0.5em;
+  font-family: ${({ theme }) => theme.fontFamily.primary};
+  font-size: 1rem;
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  color: black;
 `;
 
 const Input = styled.input`
-  border-style: none none solid;
-  border-color: gray;
   min-height: 3em;
+  padding: 0.25em 0.5em;
+  border: 1px solid black;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  margin-bottom: 2em;
+  font-family: ${({ theme }) => theme.fontFamily.primary};
   font-size: 1rem;
+  font-weight: ${({ theme }) => theme.fontWeight.light};
+  color: black;
 `;
 
 const TextArea = styled.textarea`
-  border-style: solid;
-  border-color: gray;
-  font-size: 1rem;
-
-  margin-bottom: 3em;
+  min-height: 3em;
+  padding: 0.25em 0.5em;
+  border: 1px solid black;
+  border-radius: ${({ theme }) => theme.borderRadius};
   resize: vertical;
+  margin-bottom: 2em;
+  font-family: ${({ theme }) => theme.fontFamily.primary};
+  font-size: 1rem;
+  font-weight: ${({ theme }) => theme.fontWeight.light};
+  color: black;
+`;
+
+const Button = styled(Styled.TextButton)`
+  background-color: ${({ theme }) => theme.color.primary};
+
+  &:hover,
+  &:focus {
+    color: ${({ theme }) => theme.color.secondaryText};
+  }
 `;
 
 export default ContactForm;
