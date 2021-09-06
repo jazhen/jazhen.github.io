@@ -11,6 +11,19 @@ export const BodyText = styled.p`
   }
 `;
 
+export const IconLink = styled.a`
+  min-width: 3rem;
+  display: inline-flex;
+  padding: 0.5em;
+  margin: 0.25em;
+  color: ${({ theme }) => theme.color.secondaryText};
+
+  &:hover,
+  &:focus {
+    color: ${({ theme }) => theme.color.secondary};
+  }
+`;
+
 export const TextLink = styled.a`
   min-width: 3rem;
   min-height: 3rem;
@@ -25,6 +38,7 @@ export const TextLink = styled.a`
   text-decoration: none;
   color: ${({ theme }) => theme.color.secondaryText};
   display: inline-flex;
+  place-items: center;
   gap: 0.5em;
 
   &:hover,

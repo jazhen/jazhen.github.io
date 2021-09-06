@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
+import GithubIcon from "../../icons/github.inline.svg";
 import * as Styled from "../../styles";
 import ExternalLinkIcon from "./external-link.inline.svg";
-import GithubIcon from "./github.inline.svg";
 
 const Content = ({ header, body, technologies, websiteURL, githubURL }) => (
   <Container>
