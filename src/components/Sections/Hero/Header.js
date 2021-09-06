@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import * as Styled from "../styles";
 import ChevronDown from "./chevron-down.inline.svg";
 
 const Header = () => (
@@ -53,38 +54,12 @@ const Headline = styled.h1`
   }
 `;
 
-const ContainedButton = styled.a`
-  min-width: 3rem;
-  padding: 1em 2em;
-  margin: 0.25em 0.5em;
-  border: none;
-  border-radius: ${({ theme }) => theme.borderRadius};
+const ContainedButton = styled(Styled.A)`
   background-color: ${({ theme }) => theme.color.primary};
-  color: ${({ theme }) => theme.color.secondaryText};
-  font-family: ${({ theme }) => theme.fontFamily.primary};
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-flex;
-  gap: 0.5em;
 
   &:hover,
   &:focus {
-    cursor: pointer;
-  }
-
-  &:hover {
-    opacity: 0.92;
-  }
-
-  &:focus {
-    opacity: 0.76;
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    font-size: 1.125rem;
+    color: ${({ theme }) => theme.color.secondaryText};
   }
 `;
 

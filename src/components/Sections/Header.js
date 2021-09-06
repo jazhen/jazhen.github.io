@@ -23,14 +23,12 @@ const Nav = styled.nav`
 
 const NavList = styled.ul`
   display: flex;
-  gap: 3em;
 `;
 
 const Logo = styled(Styled.A)`
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   font-style: italic;
-  color: ${({ theme }) => theme.color.primaryText};
 `;
 
 export default Header;
