@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import H2 from "../../Headers/H2";
 import Card from "./Card";
+import ChevronDown from "./chevron-down.inline.svg";
 import projects from "./projects.json";
 
 const Projects = () => {
@@ -26,7 +27,7 @@ const Projects = () => {
 
       {haveAllProjectsLoaded ? null : (
         <LoadMoreProjectsButton onClick={loadMoreProjects}>
-          view more projects
+          view more projects <ChevronDown />
         </LoadMoreProjectsButton>
       )}
     </>

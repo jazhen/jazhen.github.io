@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import * as Styled from "../styles";
-import ChevronDown from "./chevron-down.inline.svg";
+import ChevronsDown from "./chevrons-down.inline.svg";
 
 const Header = () => (
   <Container>
@@ -11,7 +11,7 @@ const Header = () => (
     </Headline>
     <ContainedButton href="#projects">
       View my projects
-      <ChevronDown />
+      <ChevronsDown />
     </ContainedButton>
   </Container>
 );
