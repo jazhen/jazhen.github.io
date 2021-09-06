@@ -32,6 +32,7 @@ const darkTheme = {
     tabletLandscape: "900px",
     desktop: "1200px",
     desktopLarge: "1800px",
+    desktopExtraLarge: "2400px",
   },
   borderRadius: "4px",
 };
@@ -58,19 +59,19 @@ const Container = styled.div`
     ". main ."
     "footer footer footer";
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.tabletPortrait}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
     grid-template-columns: 6% auto 6%;
   }
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     grid-template-columns: 8% auto 8%;
   }
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
     grid-template-columns: 12% auto 12%;
   }
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktopExtraLarge}) {
     grid-template-columns: 18% auto 18%;
   }
 `;
