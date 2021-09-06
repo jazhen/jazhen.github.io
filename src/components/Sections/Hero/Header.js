@@ -25,41 +25,26 @@ const Container = styled.div`
 `;
 
 const Overline = styled.h2`
-  font-family: ${({ theme }) => theme.fontFamily.secondary};
-  font-size: 1.25rem;
+  font-family:var(--font-family-primary)};
+  font-size: var(--font-size-1);
   font-weight: 400;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   color: ${({ theme }) => theme.color.primaryText};
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    font-size: 1.5rem;
-  }
 `;
 
 const Headline = styled.h1`
-  font-family: ${({ theme }) => theme.fontFamily.secondary};
-  font-size: 3rem;
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  font-family:var(--font-family-primary)};
+  font-size: var(--font-size-4);
+  font-weight: 700};
   letter-spacing: -0.0125em;
   line-height: 1.2;
   margin-bottom: 1em;
   color: ${({ theme }) => theme.color.primaryText};
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
-    font-size: 3.5rem;
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    font-size: 4rem;
-  }
 `;
 
 const Button = styled(Styled.ContainedLink)`
-  font-size: 0.875rem;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    font-size: 1rem;
-  }
+  font-size: var(--font-size-0);
 `;
 
 export default Header;

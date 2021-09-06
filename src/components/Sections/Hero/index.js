@@ -1,17 +1,28 @@
 import React from "react";
 import styled from "styled-components";
+import Nav from "../Nav";
+import * as Styled from "../styles";
 import Header from "./Header";
 import HeroImage from "./hero.inline.svg";
 
 const Hero = () => (
   <Container>
-    <Header />
-    <Image />
+    <Nav />
+    <HeroContainer>
+      <Header />
+      <Image />
+    </HeroContainer>
   </Container>
 );
 
-const Container = styled.section`
-  min-height: 95vh;
+const Container = styled(Styled.Section)`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+`;
+
+const HeroContainer = styled.div`
+  margin: auto;
   display: grid;
   place-items: center;
 

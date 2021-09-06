@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import H2 from "../../Headers/H2";
 import * as Styled from "../styles";
 import Card from "./Card";
 import ChevronDown from "./chevron-down.inline.svg";
@@ -14,8 +13,8 @@ const Projects = () => {
     setNumProjectsLoaded(Math.min(numProjectsLoaded + 3, projects.length));
 
   return (
-    <>
-      <H2 id="projects">Featured Projects</H2>
+    <Styled.Section>
+      <Styled.SectionTitle id="projects">Featured Projects</Styled.SectionTitle>
 
       <ThreeColumnContainer>
         {loadedProjects.map((props) => {
@@ -31,11 +30,11 @@ const Projects = () => {
           view more projects <ChevronDown />
         </LoadMoreProjectsButton>
       )}
-    </>
+    </Styled.Section>
   );
 };
 
-const ThreeColumnContainer = styled.section`
+const ThreeColumnContainer = styled.div`
   display: grid;
   gap: 2em;
 
@@ -45,12 +44,12 @@ const ThreeColumnContainer = styled.section`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
     grid-template-columns: repeat(3, 1fr);
-    gap: 3em;
   }
 `;
 
 const LoadMoreProjectsButton = styled(Styled.TextButton)`
-  margin: 3em 0;
+  font-size: var(--font-size-0);
+  margin-top: 4em;
 `;
 
 export default Projects;

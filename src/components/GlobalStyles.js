@@ -2,7 +2,6 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    --font-size--2: clamp(0.56rem, 0.52rem + 0.13vw, 0.70rem);
     --font-size--1: clamp(0.75rem, 0.69rem + 0.17vw, 0.94rem);
     --font-size-0: clamp(1.00rem, 0.92rem + 0.22vw, 1.25rem);
     --font-size-1: clamp(1.33rem, 1.22rem + 0.30vw, 1.67rem);
@@ -17,10 +16,6 @@ const GlobalStyles = createGlobalStyle`
     --color-black-800: rgba(0, 0, 0, .87);
     --color-white-900: rgba(255, 255, 255, 1);
     --color-white-800: rgba(255, 255, 255, .87);
-    --breakpoint-tablet-portrait: 600px;
-    --breakpoint-tablet-landscape: 900px;
-    --breakpoint-desktop: 1200px;
-    --breakpoint-desktop-large: 1800px;
   }
 
   *, *:before, *:after {

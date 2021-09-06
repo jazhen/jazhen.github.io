@@ -13,7 +13,7 @@ const Card = ({ thumbnail, ...contentProps }) => (
 const Container = styled.div`
   display: grid;
   grid-template-rows: auto 1fr;
-  border-radius: ${({ theme }) => theme.borderRadius};
+  border-radius: var(--border-radius);
   overflow: hidden;
   background-color: ${({ theme }) => theme.color.paper};
 `;

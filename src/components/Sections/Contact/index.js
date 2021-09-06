@@ -1,31 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import * as Styled from "../styles";
 import ContactForm from "./ContactForm";
 import ContactHeader from "./ContactHeader";
 
 const Contact = () => (
-  <Wrapper>
-    <Title id="contact">Contact Me</Title>
+  <Styled.Section>
+    <Styled.SectionTitle id="contact">Contact Me</Styled.SectionTitle>
 
     <Container>
       <ContactHeader />
       <ContactForm />
     </Container>
-  </Wrapper>
+  </Styled.Section>
 );
-
-const Wrapper = styled.section`
-  margin-bottom: 8em;
-`;
-
-const Title = styled.h2`
-  font-family: var(--font-family-secondary);
-  font-size: var(--font-size-3);
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  color: var(--color-white-900);
-  margin-bottom: 2em;
-`;
 
 const Container = styled.div`
   display: grid;

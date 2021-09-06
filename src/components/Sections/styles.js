@@ -9,6 +9,7 @@ export const BodyText = styled.p`
 
 export const IconLink = styled.a`
   min-width: 3rem;
+  min-height: 3rem;
   display: inline-flex;
   padding: 0.5em;
   margin: 0.25em;
@@ -92,4 +93,17 @@ export const ContainedLink = styled(TextLink)`
   &:focus {
     color: var(--color-white-800);
   }
+`;
+
+export const Section = styled.section`
+  margin-bottom: 16em;
+`;
+
+export const SectionTitle = styled.h2`
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-3);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--color-white-900);
+  margin-bottom: 2em;
 `;

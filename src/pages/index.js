@@ -3,8 +3,8 @@ import styled, { ThemeProvider } from "styled-components";
 import GlobalStyles from "../components/GlobalStyles";
 import SEO from "../components/SEO";
 import Footer from "../components/Sections/Footer";
-import Header from "../components/Sections/Header";
 import Main from "../components/Sections/Main";
+import Nav from "../components/Sections/Nav";
 import useAssetsQuery from "../hooks/useAssetsQuery";
 
 const darkTheme = {
@@ -44,7 +44,6 @@ const IndexPage = () => {
       <SEO />
       <GlobalStyles />
       <Container>
-        <Header />
         <Main />
         <Footer />
       </Container>
@@ -56,7 +55,6 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: 4% auto 4%;
   grid-template-areas:
-    ". header ."
     ". main ."
     "footer footer footer";
 

@@ -54,7 +54,7 @@ const Label = styled.label`
   margin-bottom: 0.5em;
   font-family: var(--font-family-primary);
   font-size: 1rem;
-  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  font-weight: 400};
   color: black;
 `;
 
@@ -67,7 +67,7 @@ const Input = styled.input`
   margin-bottom: 2em;
   font-family: var(--font-family-primary);
   font-size: 1rem;
-  font-weight: ${({ theme }) => theme.fontWeight.light};
+  font-weight: 300};
   color: black;
 `;
 
@@ -81,7 +81,7 @@ const TextArea = styled.textarea`
   margin-bottom: 2em;
   font-family: var(--font-family-primary);
   font-size: 1rem;
-  font-weight: ${({ theme }) => theme.fontWeight.light};
+  font-weight: 300};
   color: black;
 `;
 

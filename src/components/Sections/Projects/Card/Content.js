@@ -8,89 +8,69 @@ import ExternalLinkIcon from "./external-link.inline.svg";
 const Content = ({ header, body, technologies, websiteURL, githubURL }) => (
   <Container>
     <Header>{header}</Header>
-    <Body>{body}</Body>
+    <Styled.BodyText>{body}</Styled.BodyText>
     <TechnologyContainer>
       {technologies.map((technology) => (
         <Technology key={technology}>{technology}</Technology>
       ))}
     </TechnologyContainer>
-    <Links>
-      <GuthubLink href={githubURL} target="_blank" rel="noopener noreferrer">
+    <LinksContainer>
+      <Styled.TextLink
+        href={githubURL}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <GithubIcon />
         code
-      </GuthubLink>
-      <WebsiteLink href={websiteURL} target="_blank" rel="noopener noreferrer">
+      </Styled.TextLink>
+      <Styled.TextLink
+        href={websiteURL}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <ExternalLinkIcon />
         demo
-      </WebsiteLink>
-    </Links>
+      </Styled.TextLink>
+    </LinksContainer>
   </Container>
 );
 
 const Container = styled.div`
   display: grid;
   grid-template-rows: auto 1fr auto auto;
-  place-items: start;
-  padding: 1em;
+  padding: 2em;
+  gap: 2em;
 `;
 
 const Header = styled.h2`
-  font-family: ${({ theme }) => theme.fontFamily.primary};
-  font-size: 1.5rem;
-  font-weight: ${({ theme }) => theme.fontWeight.medium};
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-2);
+  font-weight: 500;
   line-height: 1.2;
-  margin-bottom: 1em;
   color: ${({ theme }) => theme.color.primaryText};
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
-    font-size: 1.75rem;
-  }
-`;
-
-const Body = styled(Styled.BodyText)`
-  margin-bottom: 1em;
 `;
 
 const TechnologyContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5em;
-  margin-bottom: 1em;
+  gap: 1em;
 `;
 
 const Technology = styled.span`
-  padding: 0.25em 0.5em;
-  border-radius: ${({ theme }) => theme.borderRadius};
+  padding: 0.375em 0.75em;
+  border-radius: var(border-radius);
   background-color: #2d3748;
-  font-family: ${({ theme }) => theme.fontFamily.primary};
-  font-size: 0.75rem;
-  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size--1);
+  font-weight: 400};
   color: ${({ theme }) => theme.color.secondaryText};
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
-    font-size: 0.875rem;
-  }
 `;
 
-const Links = styled.div`
+const LinksContainer = styled.div`
   display: flex;
-  gap: 1em;
+  gap: 2em;
   justify-self: end;
 `;
-
-const Link = styled(Styled.TextLink)`
-  font-size: 0.75rem;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
-    font-size: 0.875rem;
-  }
-`;
-
-const GuthubLink = styled(Link)`
-  justify-self: end;
-`;
-
-const WebsiteLink = styled(Link)``;
 
 Content.propTypes = {
   header: PropTypes.string.isRequired,

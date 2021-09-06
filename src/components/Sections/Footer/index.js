@@ -9,27 +9,20 @@ const Footer = () => {
   return (
     <Container>
       <Socials />
-      <Copy>&copy; {currentYear} Jason Zhen</Copy>
+      <Styled.BodyText>&copy; {currentYear} Jason Zhen</Styled.BodyText>
     </Container>
   );
 };
 
-const Container = styled.div`
+const Container = styled.section`
   grid-area: footer;
-  display: grid;
-  grid-template-columns: 0 1fr 0;
-  grid-template-areas:
-    ". socials ."
-    ". copy .";
-  gap: 2em 0;
+  display: flex;
+  flex-direction: column;
   place-items: center;
   padding: 4em 0;
+  gap: 2em;
   background-color: ${({ theme }) => theme.color.primary};
   color: ${({ theme }) => theme.color.onPrimary};
-`;
-
-const Copy = styled(Styled.BodyText)`
-  grid-area: copy;
 `;
 
 export default Footer;

@@ -50,7 +50,7 @@ const LinksContainer = styled.div`
 const Header = styled.h2`
   font-family: var(--font-family-primary);
   font-size: var(--font-size-2);
-  font-weight: ${({ theme }) => theme.fontWeight.medium};
+  font-weight: 500;
   line-height: 1.2;
   margin-bottom: 0.5em;
   color: ${({ theme }) => theme.color.primaryText};
@@ -59,7 +59,7 @@ const Header = styled.h2`
 const SubHeader = styled.h3`
   font-family: var(--font-family-primary);
   font-size: var(--font-size-1);
-  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  font-weight: 400};
   line-height: 1.2;
   margin-bottom: 1em;
   color: ${({ theme }) => theme.color.secondaryText};
