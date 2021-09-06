@@ -35,11 +35,7 @@ const ContactForm = () => {
         rows="5"
       />
       <ValidationError prefix="Message" field="message" errors={state.errors} />
-      <Button
-        type="submit"
-        disabled={state.submitting}
-        style={{ placeSelf: "end" }}
-      >
+      <Button type="submit" disabled={state.submitting}>
         Send
         <Send />
       </Button>
@@ -51,37 +47,39 @@ const Form = styled.form`
   display: grid;
   padding: 2em;
   background-color: white;
-  border-radius: ${({ theme }) => theme.borderRadius};
+  border-radius: var(--border-radius);
 `;
 
 const Label = styled.label`
   margin-bottom: 0.5em;
-  font-family: ${({ theme }) => theme.fontFamily.primary};
+  font-family: var(--font-family-primary);
   font-size: 1rem;
   font-weight: ${({ theme }) => theme.fontWeight.regular};
   color: black;
 `;
 
 const Input = styled.input`
+  /* max-width: 60ch; */
   min-height: 3em;
   padding: 0.25em 0.5em;
   border: 1px solid black;
-  border-radius: ${({ theme }) => theme.borderRadius};
+  border-radius: var(--border-radius);
   margin-bottom: 2em;
-  font-family: ${({ theme }) => theme.fontFamily.primary};
+  font-family: var(--font-family-primary);
   font-size: 1rem;
   font-weight: ${({ theme }) => theme.fontWeight.light};
   color: black;
 `;
 
 const TextArea = styled.textarea`
+  /* max-width: 60ch; */
   min-height: 3em;
   padding: 0.25em 0.5em;
   border: 1px solid black;
-  border-radius: ${({ theme }) => theme.borderRadius};
+  border-radius: var(--border-radius);
   resize: vertical;
   margin-bottom: 2em;
-  font-family: ${({ theme }) => theme.fontFamily.primary};
+  font-family: var(--font-family-primary);
   font-size: 1rem;
   font-weight: ${({ theme }) => theme.fontWeight.light};
   color: black;

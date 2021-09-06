@@ -1,36 +1,42 @@
 import React from "react";
 import styled from "styled-components";
-import H2 from "../../Headers/H2";
 import ContactForm from "./ContactForm";
 import ContactHeader from "./ContactHeader";
 
-const Container = styled.section`
-  display: grid;
-  gap: 2em;
-  padding: 2em;
-  margin-bottom: 8em;
-  background-color: ${({ theme }) => theme.color.primary};
-  border-radius: ${({ theme }) => theme.borderRadius};
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
-    grid-auto-flow: column;
-    grid-template-columns: 2fr 3fr;
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    max-width: 140ch;
-  }
-`;
-
 const Contact = () => (
-  <>
-    <H2 id="contact">Contact Me</H2>
+  <Wrapper>
+    <Title id="contact">Contact Me</Title>
 
     <Container>
       <ContactHeader />
       <ContactForm />
     </Container>
-  </>
+  </Wrapper>
 );
+
+const Wrapper = styled.section`
+  margin-bottom: 8em;
+`;
+
+const Title = styled.h2`
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-3);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--color-white-900);
+  margin-bottom: 2em;
+`;
+
+const Container = styled.div`
+  display: grid;
+  gap: 2em;
+  padding: 2em;
+  background-color: ${({ theme }) => theme.color.primary};
+  border-radius: var(--border-radius);
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
+    grid-auto-flow: column;
+  }
+`;
 
 export default Contact;

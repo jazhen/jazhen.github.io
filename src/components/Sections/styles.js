@@ -1,14 +1,10 @@
 import styled from "styled-components";
 
 export const BodyText = styled.p`
-  font-family: ${({ theme }) => theme.fontFamily.primary};
-  font-size: 1rem;
-  font-weight: ${({ theme }) => theme.fontWeight.regular};
-  color: ${({ theme }) => theme.color.secondaryText};
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
-    font-size: 1.125rem;
-  }
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-0);
+  font-weight: 400;
+  color: var(--color-white-800);
 `;
 
 export const IconLink = styled.a`
@@ -16,7 +12,7 @@ export const IconLink = styled.a`
   display: inline-flex;
   padding: 0.5em;
   margin: 0.25em;
-  color: ${({ theme }) => theme.color.secondaryText};
+  color: var(--color-white-800);
 
   &:hover,
   &:focus {
@@ -26,19 +22,20 @@ export const IconLink = styled.a`
 
 export const TextButton = styled.button`
   min-width: 3rem;
-  padding: 0.625em 1.25em;
+  padding: 0.75em 1.5em;
   margin: 0.25em 0.5em;
   background: transparent;
   border: none;
-  border-radius: ${({ theme }) => theme.borderRadius};
-  font-family: ${({ theme }) => theme.fontFamily.primary};
-  font-size: 0.75rem;
+  border-radius: var(--border-radius);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size--1);
   font-weight: 500;
   letter-spacing: 0.025em;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.color.secondaryText};
+  color: var(--color-white-800);
   display: inline-flex;
   gap: 0.5em;
+  place-content: center;
 
   &:hover,
   &:focus {
@@ -53,23 +50,20 @@ export const TextButton = styled.button`
   &:focus {
     opacity: 0.76;
   }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
-    font-size: 0.875rem;
-  }
 `;
 
 export const TextLink = styled.a`
   min-width: 3rem;
   min-height: 3rem;
-  border-radius: ${({ theme }) => theme.borderRadius};
-  font-family: ${({ theme }) => theme.fontFamily.primary};
-  font-size: 0.75rem;
+  width: max-content;
+  border-radius: var(--border-radius);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size--1);
   font-weight: 500;
   letter-spacing: 0.025em;
   text-transform: uppercase;
   text-decoration: none;
-  color: ${({ theme }) => theme.color.secondaryText};
+  color: var(--color-white-800);
   display: inline-flex;
   place-items: center;
   gap: 0.5em;
@@ -87,10 +81,6 @@ export const TextLink = styled.a`
   &:focus {
     opacity: 0.76;
   }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
-    font-size: 0.875rem;
-  }
 `;
 
 export const ContainedLink = styled(TextLink)`
@@ -100,6 +90,6 @@ export const ContainedLink = styled(TextLink)`
 
   &:hover,
   &:focus {
-    color: ${({ theme }) => theme.color.secondaryText};
+    color: var(--color-white-800);
   }
 `;
