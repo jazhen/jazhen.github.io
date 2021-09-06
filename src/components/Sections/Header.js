@@ -6,9 +6,9 @@ const Header = () => (
   <Nav>
     <Logo src="#">JASON&nbsp;ZHEN</Logo>
     <NavList>
-      <Styled.A href="#projects">projects</Styled.A>
-      <Styled.A href="#about">about</Styled.A>
-      <Styled.A href="#contact">contact</Styled.A>
+      <Styled.TextLink href="#projects">projects</Styled.TextLink>
+      <Styled.TextLink href="#about">about</Styled.TextLink>
+      <Styled.TextLink href="#contact">contact</Styled.TextLink>
     </NavList>
   </Nav>
 );
@@ -25,7 +25,7 @@ const NavList = styled.ul`
   display: flex;
 `;
 
-const Logo = styled(Styled.A)`
+const Logo = styled(Styled.TextLink)`
   font-size: 1.5rem;
   font-weight: 700;
   font-style: italic;

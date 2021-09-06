@@ -26,13 +26,6 @@ const Thumbnail = styled.img`
 
 Card.propTypes = {
   thumbnail: PropTypes.string.isRequired,
-  contentProps: PropTypes.shape({
-    header: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-    technologies: PropTypes.array.isRequired,
-    websiteURL: PropTypes.string.isRequired,
-    githubURL: PropTypes.string.isRequired,
-  }).isRequired,
 };
 
 export default Card;

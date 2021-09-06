@@ -87,7 +87,7 @@ const Technology = styled.span`
   }
 `;
 
-const Link = styled(Styled.A)`
+const Link = styled(Styled.TextLink)`
   font-size: 0.75rem;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {

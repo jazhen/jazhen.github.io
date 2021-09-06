@@ -11,12 +11,11 @@ const Container = styled.div`
   gap: 1em;
 `;
 
-const Link = styled(Styled.A)`
+const Link = styled(Styled.TextLink)`
   display: flex;
 
   &:hover,
   &:focus {
-    cursor: pointer;
     color: ${({ theme }) => theme.color.secondary};
   }
 `;

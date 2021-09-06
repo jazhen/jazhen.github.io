@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Button from "../../Buttons/Button";
 import H2 from "../../Headers/H2";
 import Card from "./Card";
 import projects from "./projects.json";
@@ -19,17 +18,17 @@ const Projects = () => {
       <ThreeColumnContainer>
         {loadedProjects.map((props) => {
           // eslint-disable-next-line react/prop-types
-          const { title } = props;
+          const { header } = props;
 
-          return <Card key={title} {...props} />;
+          return <Card key={header} {...props} />;
         })}
       </ThreeColumnContainer>
 
-      {/* {haveAllProjectsLoaded ? null : (
+      {haveAllProjectsLoaded ? null : (
         <LoadMoreProjectsButton onClick={loadMoreProjects}>
           view more projects
         </LoadMoreProjectsButton>
-      )} */}
+      )}
     </>
   );
 };
@@ -48,7 +47,42 @@ const ThreeColumnContainer = styled.div`
   }
 `;
 
-const LoadMoreProjectsButton = styled(Button)`
+const TextButton = styled.button`
+  min-width: 3rem;
+  padding: 0.625em 1.25em;
+  margin: 0.25em 0.5em;
+  background: transparent;
+  border: none;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  font-family: ${({ theme }) => theme.fontFamily.primary};
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  color: ${({ theme }) => theme.color.secondaryText};
+  display: inline-flex;
+  gap: 0.5em;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: ${({ theme }) => theme.color.primary};
+  }
+
+  &:hover {
+    opacity: 0.92;
+  }
+
+  &:focus {
+    opacity: 0.76;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
+    font-size: 1.125rem;
+  }
+`;
+
+const LoadMoreProjectsButton = styled(TextButton)`
   margin: 3em 0;
 `;
 

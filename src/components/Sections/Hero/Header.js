@@ -54,7 +54,7 @@ const Headline = styled.h1`
   }
 `;
 
-const ContainedButton = styled(Styled.A)`
+const ContainedButton = styled(Styled.TextLink)`
   background-color: ${({ theme }) => theme.color.primary};
 
   &:hover,

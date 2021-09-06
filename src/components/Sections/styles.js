@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const A = styled.a`
+export const TextLink = styled.a`
   min-width: 3rem;
   padding: 0.625em 1.25em;
   margin: 0.25em 0.5em;
