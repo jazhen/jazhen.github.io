@@ -52,17 +52,9 @@ const Header = styled.h2`
   }
 `;
 
-const Body = styled.p`
+const Body = styled(Styled.BodyText)`
   grid-area: body;
-  font-family: ${({ theme }) => theme.fontFamily.primary};
-  font-size: 1rem;
-  font-weight: ${({ theme }) => theme.fontWeight.regular};
   margin-bottom: 1em;
-  color: ${({ theme }) => theme.color.secondaryText};
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
-    font-size: 1.125rem;
-  }
 `;
 
 const TechnologyContainer = styled.div`

@@ -1,5 +1,16 @@
 import styled from "styled-components";
 
+export const BodyText = styled.p`
+  font-family: ${({ theme }) => theme.fontFamily.primary};
+  font-size: 1rem;
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  color: ${({ theme }) => theme.color.secondaryText};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
+    font-size: 1.125rem;
+  }
+`;
+
 export const TextLink = styled.a`
   min-width: 3rem;
   min-height: 3rem;

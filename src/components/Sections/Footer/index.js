@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import * as Styled from "../styles";
 import Socials from "./Socials";
 
 const Footer = () => {
@@ -27,15 +28,7 @@ const Container = styled.div`
   color: ${({ theme }) => theme.color.onPrimary};
 `;
 
-const P = styled.p`
-  font-size: 1rem;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
-    font-size: 1.125rem;
-  }
-`;
-
-const Copy = styled(P)`
+const Copy = styled(Styled.BodyText)`
   grid-area: copy;
 `;
 
