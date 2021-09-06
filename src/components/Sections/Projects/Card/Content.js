@@ -14,32 +14,27 @@ const Content = ({ header, body, technologies, websiteURL, githubURL }) => (
         <Technology key={technology}>{technology}</Technology>
       ))}
     </TechnologyContainer>
-    <GuthubLink href={githubURL} target="_blank" rel="noopener noreferrer">
-      <GithubIcon />
-      code
-    </GuthubLink>
-    <WebsiteLink href={websiteURL} target="_blank" rel="noopener noreferrer">
-      <ExternalLinkIcon />
-      demo
-    </WebsiteLink>
+    <Links>
+      <GuthubLink href={githubURL} target="_blank" rel="noopener noreferrer">
+        <GithubIcon />
+        code
+      </GuthubLink>
+      <WebsiteLink href={websiteURL} target="_blank" rel="noopener noreferrer">
+        <ExternalLinkIcon />
+        demo
+      </WebsiteLink>
+    </Links>
   </Container>
 );
 
 const Container = styled.div`
   display: grid;
-  grid-template-areas:
-    "header header"
-    "body body"
-    "technology technology"
-    "action1 action2";
   grid-template-rows: auto 1fr auto auto;
-  grid-template-columns: 1fr auto;
   place-items: start;
   padding: 1em;
 `;
 
 const Header = styled.h2`
-  grid-area: header;
   font-family: ${({ theme }) => theme.fontFamily.primary};
   font-size: 1.5rem;
   font-weight: ${({ theme }) => theme.fontWeight.medium};
@@ -53,12 +48,10 @@ const Header = styled.h2`
 `;
 
 const Body = styled(Styled.BodyText)`
-  grid-area: body;
   margin-bottom: 1em;
 `;
 
 const TechnologyContainer = styled.div`
-  grid-area: technology;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
@@ -79,6 +72,12 @@ const Technology = styled.span`
   }
 `;
 
+const Links = styled.div`
+  display: flex;
+  gap: 1em;
+  justify-self: end;
+`;
+
 const Link = styled(Styled.TextLink)`
   font-size: 0.75rem;
 
@@ -88,13 +87,10 @@ const Link = styled(Styled.TextLink)`
 `;
 
 const GuthubLink = styled(Link)`
-  grid-area: action1;
   justify-self: end;
 `;
 
-const WebsiteLink = styled(Link)`
-  grid-area: action2;
-`;
+const WebsiteLink = styled(Link)``;
 
 Content.propTypes = {
   header: PropTypes.string.isRequired,

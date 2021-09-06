@@ -27,11 +27,9 @@ export const IconLink = styled.a`
 export const TextLink = styled.a`
   min-width: 3rem;
   min-height: 3rem;
-  padding: 0.625em 1.25em;
-  margin: 0.25em 0.5em;
   border-radius: ${({ theme }) => theme.borderRadius};
   font-family: ${({ theme }) => theme.fontFamily.primary};
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.025em;
   text-transform: uppercase;
@@ -39,10 +37,12 @@ export const TextLink = styled.a`
   color: ${({ theme }) => theme.color.secondaryText};
   display: inline-flex;
   place-items: center;
+  place-content: center;
   gap: 0.5em;
 
   &:hover,
   &:focus {
+    cursor: pointer;
     color: ${({ theme }) => theme.color.primary};
   }
 
@@ -55,6 +55,6 @@ export const TextLink = styled.a`
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
-    font-size: 1.125rem;
+    font-size: 0.875rem;
   }
 `;

@@ -34,7 +34,7 @@ const Projects = () => {
   );
 };
 
-const ThreeColumnContainer = styled.div`
+const ThreeColumnContainer = styled.section`
   display: grid;
   gap: 2em;
 

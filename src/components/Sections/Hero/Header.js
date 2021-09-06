@@ -9,10 +9,10 @@ const Header = () => (
     <Headline>
       I build effective applications across the full&nbsp;stack
     </Headline>
-    <ContainedButton href="#projects">
+    <Button href="#projects">
       View my projects
       <ChevronsDown />
-    </ContainedButton>
+    </Button>
   </Container>
 );
 
@@ -55,11 +55,21 @@ const Headline = styled.h1`
 `;
 
 const ContainedButton = styled(Styled.TextLink)`
+  padding: 0.75em 1.5em;
+  margin: 0.25em 0.5em;
   background-color: ${({ theme }) => theme.color.primary};
 
   &:hover,
   &:focus {
     color: ${({ theme }) => theme.color.secondaryText};
+  }
+`;
+
+const Button = styled(ContainedButton)`
+  font-size: 0.875rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    font-size: 1rem;
   }
 `;
 
