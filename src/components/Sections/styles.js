@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const TextLink = styled.a`
   min-width: 3rem;
+  min-height: 3rem;
   padding: 0.625em 1.25em;
   margin: 0.25em 0.5em;
   border-radius: ${({ theme }) => theme.borderRadius};
@@ -17,7 +18,6 @@ export const TextLink = styled.a`
 
   &:hover,
   &:focus {
-    cursor: pointer;
     color: ${({ theme }) => theme.color.primary};
   }
 
