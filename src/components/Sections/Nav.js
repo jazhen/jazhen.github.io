@@ -4,7 +4,9 @@ import * as Styled from "./styles";
 
 const Nav = () => (
   <Container>
-    <Logo src="#">JASON&nbsp;ZHEN</Logo>
+    <Logo href="/" target="_self">
+      JASON&nbsp;ZHEN
+    </Logo>
     <NavList>
       <Styled.TextLink href="#projects">projects</Styled.TextLink>
       <Styled.TextLink href="#about">about</Styled.TextLink>
