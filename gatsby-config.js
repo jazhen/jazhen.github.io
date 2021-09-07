@@ -21,8 +21,9 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Poppins\:100,200,300,400,500,600,700,800,900`,
+          `Lato\:100,200,300,400,500,600,700,800,900`,
           `Montserrat\:100,200,300,400,500,600,700,800,900`,
+          `Poppins\:100,200,300,400,500,600,700,800,900`,
         ],
         display: "swap",
       },

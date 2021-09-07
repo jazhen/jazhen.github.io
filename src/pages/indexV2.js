@@ -4,7 +4,6 @@ import GlobalStyles from "../components/GlobalStyles";
 import SEO from "../components/SEO";
 import Footer from "../components/Sections/Footer";
 import Main from "../components/Sections/Main";
-import V3 from "../components/V3";
 import useAssetsQuery from "../hooks/useAssetsQuery";
 
 const darkTheme = {
@@ -44,9 +43,36 @@ const IndexPage = () => {
     <ThemeProvider theme={darkTheme}>
       <SEO />
       <GlobalStyles />
-      <V3 />
+      <Container>
+        <Main />
+        <Footer />
+      </Container>
     </ThemeProvider>
   );
 };
+
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: 4% auto 4%;
+  grid-template-areas:
+    ". main ."
+    "footer footer footer";
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
+    grid-template-columns: 6% auto 6%;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    grid-template-columns: 8% auto 8%;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
+    grid-template-columns: 12% auto 12%;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktopExtraLarge}) {
+    grid-template-columns: 18% auto 18%;
+  }
+`;
 
 export default IndexPage;

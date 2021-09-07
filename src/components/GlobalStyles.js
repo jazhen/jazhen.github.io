@@ -2,14 +2,15 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    --font-size--1: clamp(0.75rem, 0.69rem + 0.17vw, 0.94rem);
-    --font-size-0: clamp(1.00rem, 0.92rem + 0.22vw, 1.25rem);
-    --font-size-1: clamp(1.33rem, 1.22rem + 0.30vw, 1.67rem);
-    --font-size-2: clamp(1.78rem, 1.63rem + 0.40vw, 2.22rem);
-    --font-size-3: clamp(2.37rem, 2.17rem + 0.53vw, 2.96rem);
-    --font-size-4: clamp(3.16rem, 2.89rem + 0.70vw, 3.95rem);
-    --font-size-5: clamp(4.21rem, 3.86rem + 0.94vw, 5.26rem);
-    --font-family-primary: 'Poppins', 'Helvetica', 'Arial', sans-serif;
+    --font-size--1: clamp(0.80rem, 0.72rem + 0.39vw, 1.00rem);
+    --font-size-0: clamp(1.00rem, 0.90rem + 0.49vw, 1.25rem);
+    --font-size-1: clamp(1.25rem, 1.13rem + 0.61vw, 1.56rem);
+    --font-size-2: clamp(1.56rem, 1.41rem + 0.76vw, 1.95rem);
+    --font-size-3: clamp(1.95rem, 1.76rem + 0.95vw, 2.44rem);
+    --font-size-4: clamp(2.44rem, 2.20rem + 1.19vw, 3.05rem);
+    --font-size-5: clamp(3.05rem, 2.75rem + 1.49vw, 3.82rem);
+
+    --font-family-primary: 'Lato', 'Helvetica', 'Arial', sans-serif;
     --font-family-secondary: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
     --border-radius: 4px;
     --color-black-900: rgba(0, 0, 0, 1);
@@ -33,6 +34,10 @@ const GlobalStyles = createGlobalStyle`
   body {
     background-color: ${({ theme }) => theme.color.background};
     line-height: 1.5;
+  }
+
+  svg {
+    max-height: 50vh;
   }
 `;
 
