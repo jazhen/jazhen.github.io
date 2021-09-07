@@ -2,18 +2,14 @@ import { useForm, ValidationError } from "@formspree/react";
 import React from "react";
 import styled from "styled-components";
 import * as Styled from "../styles";
+import SubmitMessage from "./SubmitMessage";
 import Send from "./send.inline.svg";
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("mnqllbqw");
 
   if (state.succeeded) {
-    return (
-      <p>
-        Your message has been received and I will try to get back to you within
-        one business day. I look forward to speaking soon.
-      </p>
-    );
+    return <SubmitMessage />;
   }
 
   return (
@@ -93,6 +89,12 @@ const Button = styled(Styled.TextButton)`
   &:hover,
   &:focus {
     color: ${({ theme }) => theme.color.secondaryText};
+  }
+
+  &:disabled {
+    cursor: default;
+    background-color: #cccccc;
+    color: #888888;
   }
 `;
 
