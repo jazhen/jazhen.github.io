@@ -62,7 +62,7 @@ const Technology = styled.span`
   background-color: #2d3748;
   font-family: var(--font-family-primary);
   font-size: var(--font-size--1);
-  font-weight: 400};
+  font-weight: 400;
   color: ${({ theme }) => theme.color.secondaryText};
 `;
 

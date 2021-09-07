@@ -8,7 +8,7 @@ import * as Styled from "../styles";
 const ContactHeader = () => (
   <div>
     <Header>Let&apos;s Chat</Header>
-    <SubHeader>I am currently open for work opportunities.</SubHeader>
+    <SubHeader>I am currently available for work opportunities.</SubHeader>
     <LinksContainer>
       <Link
         href="mailto:jasonzhen.mail@gmail.com"
@@ -59,7 +59,7 @@ const Header = styled.h2`
 const SubHeader = styled.h3`
   font-family: var(--font-family-primary);
   font-size: var(--font-size-1);
-  font-weight: 400};
+  font-weight: 400;
   line-height: 1.2;
   margin-bottom: 1em;
   color: ${({ theme }) => theme.color.secondaryText};

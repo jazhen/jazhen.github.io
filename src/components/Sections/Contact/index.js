@@ -24,6 +24,8 @@ const Container = styled.div`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
     grid-auto-flow: column;
+    grid-template-columns: auto 1fr;
+    max-width: 190ch;
   }
 `;
 

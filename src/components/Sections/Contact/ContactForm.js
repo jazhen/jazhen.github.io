@@ -23,7 +23,7 @@ const ContactForm = () => {
         id="email"
         type="email"
         name="email"
-        placeholder="name@gmail.com"
+        placeholder="example@email.com"
       />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
       <Label htmlFor="message">Message</Label>
@@ -44,9 +44,10 @@ const ContactForm = () => {
 };
 
 const Form = styled.form`
+  max-width: 105ch;
   display: grid;
   padding: 2em;
-  background-color: white;
+  background-color: var(--color-white-900);
   border-radius: var(--border-radius);
 `;
 
@@ -54,38 +55,39 @@ const Label = styled.label`
   margin-bottom: 0.5em;
   font-family: var(--font-family-primary);
   font-size: 1rem;
-  font-weight: 400};
+  font-weight: 400;
   color: black;
 `;
 
 const Input = styled.input`
-  /* max-width: 60ch; */
+  max-width: 40ch;
   min-height: 3em;
   padding: 0.25em 0.5em;
-  border: 1px solid black;
+  border: 1px solid var(--color-black-900);
   border-radius: var(--border-radius);
   margin-bottom: 2em;
   font-family: var(--font-family-primary);
   font-size: 1rem;
-  font-weight: 300};
-  color: black;
+  font-weight: 300;
+  color: var(--color-black-900);
 `;
 
 const TextArea = styled.textarea`
-  /* max-width: 60ch; */
+  max-width: 80ch;
   min-height: 3em;
   padding: 0.25em 0.5em;
-  border: 1px solid black;
+  border: 1px solid var(--color-black-900);
   border-radius: var(--border-radius);
   resize: vertical;
   margin-bottom: 2em;
   font-family: var(--font-family-primary);
   font-size: 1rem;
-  font-weight: 300};
-  color: black;
+  font-weight: 300;
+  color: var(--color-black-900);
 `;
 
 const Button = styled(Styled.TextButton)`
+  justify-self: end;
   background-color: ${({ theme }) => theme.color.primary};
 
   &:hover,
