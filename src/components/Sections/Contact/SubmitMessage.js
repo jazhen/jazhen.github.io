@@ -45,7 +45,6 @@ const Header = styled(Styled.H4)`
 
 const Body = styled(Styled.BodyText)`
   color: var(--color-black-900);
-  margin-bottom: 1em;
 `;
 
 const Button = styled(Styled.ContainedLink)`

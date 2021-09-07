@@ -5,6 +5,7 @@ export const BodyText = styled.p`
   font-size: var(--font-size-0);
   font-weight: 400;
   color: var(--color-white-800);
+  margin-bottom: 2em;
 `;
 
 export const IconLink = styled.a`

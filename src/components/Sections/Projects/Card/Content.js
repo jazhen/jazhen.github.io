@@ -7,7 +7,7 @@ import ExternalLinkIcon from "./external-link.inline.svg";
 
 const Content = ({ header, body, technologies, websiteURL, githubURL }) => (
   <Container>
-    <Header>{header}</Header>
+    <Styled.H4>{header}</Styled.H4>
     <Styled.BodyText>{body}</Styled.BodyText>
     <TechnologyContainer>
       {technologies.map((technology) => (
@@ -39,21 +39,13 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: auto 1fr auto auto;
   padding: 2em;
-  gap: 2em;
-`;
-
-const Header = styled.h2`
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-2);
-  font-weight: 500;
-  line-height: 1.2;
-  color: ${({ theme }) => theme.color.primaryText};
 `;
 
 const TechnologyContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
+  gap: 0.5em;
+  margin-bottom: 1em;
 `;
 
 const Technology = styled.span`
