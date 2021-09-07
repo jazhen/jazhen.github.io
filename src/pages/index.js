@@ -4,7 +4,6 @@ import GlobalStyles from "../components/GlobalStyles";
 import SEO from "../components/SEO";
 import Footer from "../components/Sections/Footer";
 import Main from "../components/Sections/Main";
-import Nav from "../components/Sections/Nav";
 import useAssetsQuery from "../hooks/useAssetsQuery";
 
 const darkTheme = {
