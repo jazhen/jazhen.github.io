@@ -20,6 +20,7 @@ const ContactForm = () => {
         type="email"
         name="email"
         placeholder="example@email.com"
+        required
       />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
       <Label htmlFor="message">Message</Label>
@@ -27,8 +28,8 @@ const ContactForm = () => {
         id="message"
         name="message"
         placeholder="Hi, Jason..."
-        cols="10"
         rows="5"
+        required
       />
       <ValidationError prefix="Message" field="message" errors={state.errors} />
       <Button type="submit" disabled={state.submitting}>
