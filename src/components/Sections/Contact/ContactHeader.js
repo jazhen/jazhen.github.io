@@ -7,7 +7,7 @@ import * as Styled from "../styles";
 
 const ContactHeader = () => (
   <div>
-    <Header>Let&apos;s Chat</Header>
+    <Styled.H4>Let&apos;s Chat</Styled.H4>
     <SubHeader>I am currently available for work opportunities.</SubHeader>
     <LinksContainer>
       <Link
@@ -45,15 +45,6 @@ const LinksContainer = styled.div`
   @media (min-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
     flex-direction: column;
   }
-`;
-
-const Header = styled.h2`
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-2);
-  font-weight: 500;
-  line-height: 1.2;
-  margin-bottom: 0.5em;
-  color: ${({ theme }) => theme.color.primaryText};
 `;
 
 const SubHeader = styled.h3`

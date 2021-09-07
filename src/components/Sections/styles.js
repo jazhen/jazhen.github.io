@@ -99,11 +99,21 @@ export const Section = styled.section`
   margin-bottom: 16em;
 `;
 
-export const SectionTitle = styled.h2`
+export const SectionTitle = styled.h3`
   font-family: var(--font-family-secondary);
   font-size: var(--font-size-3);
   font-weight: 700;
   letter-spacing: -0.025em;
+  line-height: 1.2;
   color: var(--color-white-900);
   margin-bottom: 2em;
+`;
+
+export const H4 = styled.h4`
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-2);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-white-900);
+  margin-bottom: 0.5em;
 `;

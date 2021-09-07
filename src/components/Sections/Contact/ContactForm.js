@@ -22,7 +22,7 @@ const ContactForm = () => {
         placeholder="example@email.com"
         required
       />
-      <ValidationError prefix="Email" field="email" errors={state.errors} />
+      <Error prefix="Email" field="email" errors={state.errors} />
       <Label htmlFor="message">Message</Label>
       <TextArea
         id="message"
@@ -31,7 +31,7 @@ const ContactForm = () => {
         rows="5"
         required
       />
-      <ValidationError prefix="Message" field="message" errors={state.errors} />
+      <Error prefix="Message" field="message" errors={state.errors} />
       <Button type="submit" disabled={state.submitting}>
         Send
         <Send />
@@ -62,7 +62,7 @@ const Input = styled.input`
   padding: 0.25em 0.5em;
   border: 1px solid var(--color-black-900);
   border-radius: var(--border-radius);
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
   font-family: var(--font-family-primary);
   font-size: 1rem;
   font-weight: 300;
@@ -76,11 +76,16 @@ const TextArea = styled.textarea`
   border: 1px solid var(--color-black-900);
   border-radius: var(--border-radius);
   resize: vertical;
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
   font-family: var(--font-family-primary);
   font-size: 1rem;
   font-weight: 300;
   color: var(--color-black-900);
+`;
+
+const Error = styled(ValidationError)`
+  color: red;
+  margin-bottom: 1em;
 `;
 
 const Button = styled(Styled.TextButton)`

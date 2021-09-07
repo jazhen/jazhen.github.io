@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import LinkedInIcon from "../icons/linkedin.inline.svg";
 import * as Styled from "../styles";
 import CircleCheck from "./circle-check.inline.svg";
 
@@ -11,6 +12,14 @@ const SubmitMessage = () => (
       I have received your message and I will try to get back to you within 1
       business day.
     </Body>
+    <Button
+      href="https://www.linkedin.com/in/jazhen/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <LinkedInIcon />
+      Connect on LinkedIn
+    </Button>
   </Container>
 );
 
@@ -27,18 +36,20 @@ const Container = styled.div`
 const StyledCircleCheck = styled(CircleCheck)`
   max-width: 50%;
   color: #41c300;
+  margin-bottom: 0.5em;
 `;
 
-const Header = styled.h2`
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-2);
-  font-weight: 500;
-  line-height: 1.2;
-  margin: 0.5em 0;
+const Header = styled(Styled.H4)`
+  color: var(--color-black-900);
 `;
 
 const Body = styled(Styled.BodyText)`
   color: var(--color-black-900);
+  margin-bottom: 1em;
+`;
+
+const Button = styled(Styled.ContainedLink)`
+  background-color: #0a66c2;
 `;
 
 export default SubmitMessage;
