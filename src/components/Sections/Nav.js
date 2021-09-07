@@ -17,7 +17,6 @@ const Container = styled.nav`
   grid-area: nav;
   display: flex;
   justify-content: space-between;
-  gap: 8em;
   padding: 2em 0;
 `;
 

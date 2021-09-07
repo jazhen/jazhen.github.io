@@ -40,7 +40,6 @@ const Headline = styled.h1`
   line-height: 1.2;
   margin-bottom: 1em;
   color: ${({ theme }) => theme.color.primaryText};
-
 `;
 
 const Button = styled(Styled.ContainedLink)`

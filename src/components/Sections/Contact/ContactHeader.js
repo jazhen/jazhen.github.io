@@ -40,6 +40,7 @@ const ContactHeader = () => (
 
 const LinksContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   gap: 1em;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
