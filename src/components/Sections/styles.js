@@ -4,6 +4,7 @@ export const BodyText = styled.p`
   font-family: var(--font-family-primary);
   font-size: var(--font-size-0);
   font-weight: 400;
+  max-width: 65ch;
   color: var(--color-white-800);
   margin-bottom: 2em;
 `;
@@ -96,6 +97,18 @@ export const ContainedLink = styled(TextLink)`
   }
 `;
 
+export const OutlinedLink = styled(TextLink)`
+  padding: 0.75em 1.5em;
+  margin: 0.25em 0.5em;
+  border: 2px solid ${({ theme }) => theme.color.primary};
+
+  &:hover,
+  &:focus {
+    color: var(--color-black-900);
+    background-color: ${({ theme }) => theme.color.primary};
+  }
+`;
+
 export const Section = styled.section`
   margin-bottom: 16em;
 `;
@@ -117,4 +130,10 @@ export const H4 = styled.h4`
   line-height: 1.2;
   color: var(--color-white-900);
   margin-bottom: 0.5em;
+`;
+
+export const Img = styled.img`
+  max-width: 100%;
+  height: auto;
+  display: block;
 `;

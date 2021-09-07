@@ -11,13 +11,12 @@ const Main = () => (
     <Hero />
     <Projects />
     {/* <Experience /> */}
-    {/* <About /> */}
+    <About />
     <Contact />
   </Container>
 );
 
 const Container = styled.div`
-  /* margin: 0 6% 6%; */
   grid-area: main;
 `;
 

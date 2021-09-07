@@ -50,7 +50,7 @@ const TechnologyContainer = styled.div`
 
 const Technology = styled.span`
   padding: 0.375em 0.75em;
-  border-radius: var(border-radius);
+  border-radius: var(--border-radius);
   background-color: #2d3748;
   font-family: var(--font-family-primary);
   font-size: var(--font-size--1);
