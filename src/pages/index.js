@@ -1,11 +1,8 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import GlobalStyles from "../components/GlobalStyles";
 import SEO from "../components/SEO";
-import Footer from "../components/Sections/Footer";
-import Main from "../components/Sections/Main";
-import V3 from "../components/V3";
-import useAssetsQuery from "../hooks/useAssetsQuery";
+import Projects from "../components/V3/Projects";
 
 const darkTheme = {
   color: {
@@ -37,16 +34,12 @@ const darkTheme = {
   borderRadius: "4px",
 };
 
-const IndexPage = () => {
-  const assets = useAssetsQuery();
-
-  return (
-    <ThemeProvider theme={darkTheme}>
-      <SEO />
-      <GlobalStyles />
-      <V3 />
-    </ThemeProvider>
-  );
-};
+const IndexPage = () => (
+  <ThemeProvider theme={darkTheme}>
+    <SEO />
+    <GlobalStyles />
+    <Projects />
+  </ThemeProvider>
+);
 
 export default IndexPage;

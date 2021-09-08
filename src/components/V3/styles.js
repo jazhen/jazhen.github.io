@@ -21,7 +21,6 @@ export const H3 = styled.h3`
 export const TextLink = styled.a`
   min-width: 3rem;
   min-height: 3rem;
-  width: max-content;
   border-radius: var(--border-radius);
   font-family: var(--font-family-primary);
   font-size: var(--font-size--1);
@@ -51,4 +50,10 @@ export const TextLink = styled.a`
   & + a {
     margin-left: 1em;
   }
+`;
+
+export const Icon = styled.span`
+  width: 1.25rem;
+  height: auto;
+  line-height: 0;
 `;
