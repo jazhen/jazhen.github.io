@@ -37,7 +37,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   svg {
-    max-height: 50vh;
+    ${"" /* max-height: 400px; */}
   }
 `;
 

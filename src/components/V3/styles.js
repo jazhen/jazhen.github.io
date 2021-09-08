@@ -6,13 +6,13 @@ export const BodyText = styled.p`
   font-weight: 400;
   max-width: 60ch;
   color: var(--color-black-900);
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 `;
 
 export const H3 = styled.h3`
   font-family: var(--font-family-primary);
   font-size: var(--font-size-2);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
   color: var(--color-black-900);
   margin-bottom: 0.5em;
@@ -36,7 +36,7 @@ export const TextLink = styled.a`
   &:hover,
   &:focus {
     cursor: pointer;
-    color: ${({ theme }) => theme.color.primary};
+    text-decoration: underline;
   }
 
   &:hover {
