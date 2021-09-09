@@ -84,7 +84,6 @@ const Content = styled.div`
 `;
 
 const Avatar = styled(Styled.Img)`
-  border-radius: var(--border-radius);
   background-color: #5c6bc0;
 `;
 

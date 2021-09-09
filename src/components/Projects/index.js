@@ -1,28 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import * as Styled from "../styles";
 import Groovetown from "./projects/Groovetown";
 import MamasHelper from "./projects/MamasHelper";
 import WaterTheTrees from "./projects/WaterTheTrees";
 
 const Projects = () => (
-  <Section>
+  <Styled.Section>
     <Container>
       <H1 id="projects">Featured Projects</H1>
       <WaterTheTrees />
       <Groovetown />
       <MamasHelper />
     </Container>
-  </Section>
+  </Styled.Section>
 );
-
-const Section = styled.section`
-  padding: 6em 3em;
-  background-color: var(--color-white-900);
-
-  @media (min-width: 900px) {
-    padding: 8em 4em;
-  }
-`;
 
 const Container = styled.div`
   max-width: 1140px;
