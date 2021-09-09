@@ -4,8 +4,6 @@
   stroke="currentColor"
   stroke-width="2"
   viewBox="0 0 24 24"
-  width="1.5em"
-  height="1.5em"
 >
   <path stroke="none" d="M0 0h24v24H0z" />
   <path d="M0 0h24v24H0z" stroke="none" />

@@ -52,10 +52,6 @@ const Content = styled.div`
   display: grid;
   gap: 4em;
 
-  @media (max-width: 900px) {
-    justify-content: center;
-  }
-
   @media (min-width: 900px) {
     grid-auto-flow: column;
     grid-template-columns: auto 1fr;

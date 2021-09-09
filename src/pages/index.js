@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyles from "../components/GlobalStyles";
 import SEO from "../components/SEO";
 import About from "../components/V3/About";
+import Experience from "../components/V3/Experience";
 import Footer from "../components/V3/Footer";
 import Hero from "../components/V3/Hero";
 import Nav from "../components/V3/Nav";
@@ -45,6 +46,7 @@ const IndexPage = () => (
     <Nav />
     <Hero />
     <Projects />
+    <Experience />
     <About />
     <Footer />
   </ThemeProvider>

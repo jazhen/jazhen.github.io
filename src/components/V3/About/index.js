@@ -85,7 +85,6 @@ const H1 = styled.h1`
 const Content = styled.div`
   display: grid;
   gap: 4em;
-  place-items: center;
 
   @media (min-width: 900px) {
     grid-auto-flow: column;

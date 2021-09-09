@@ -10,6 +10,7 @@ const Nav = () => (
       </Logo>
       <NavList>
         <Styled.TextLink href="#projects">projects</Styled.TextLink>
+        <Styled.TextLink href="#experience">experience</Styled.TextLink>
         <Styled.TextLink href="#about">about</Styled.TextLink>
         <Styled.TextLink href="#contact">contact</Styled.TextLink>
       </NavList>
