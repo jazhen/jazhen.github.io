@@ -65,8 +65,6 @@ const Groovetown = () => {
 };
 
 const Container = styled.div`
-  max-width: 1140px;
-  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 2em;

@@ -14,9 +14,8 @@ const GlobalStyles = createGlobalStyle`
     --font-family-secondary: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
     --border-radius: 4px;
     --color-black-900: rgba(0, 0, 0, 1);
-    --color-black-800: rgba(0, 0, 0, .87);
     --color-white-900: rgba(255, 255, 255, 1);
-    --color-white-800: rgba(255, 255, 255, .87);
+    --color-white-800: rgba(255, 255, 255, .92);
   }
 
   *, *:before, *:after {
@@ -34,10 +33,6 @@ const GlobalStyles = createGlobalStyle`
   body {
     background-color: ${({ theme }) => theme.color.background};
     line-height: 1.5;
-  }
-
-  svg {
-    ${"" /* max-height: 400px; */}
   }
 `;
 

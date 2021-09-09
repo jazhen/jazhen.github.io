@@ -5,22 +5,27 @@ import MamasHelper from "./projects/MamasHelper";
 import WaterTheTrees from "./projects/WaterTheTrees";
 
 const Projects = () => (
-  <Container>
-    <H1>Featured Projects</H1>
-    <WaterTheTrees />
-    <Groovetown />
-    <MamasHelper />
-  </Container>
+  <Section>
+    <Container>
+      <H1>Featured Projects</H1>
+      <WaterTheTrees />
+      <Groovetown />
+      <MamasHelper />
+    </Container>
+  </Section>
 );
 
-const Container = styled.section`
-  background-color: #eee;
-  padding: 2em;
+const Section = styled.section`
+  padding: 4em 2em;
+  background-color: #eeeeee;
+`;
+
+const Container = styled.div`
+  max-width: 1140px;
+  margin: auto;
 `;
 
 const H1 = styled.h1`
-  max-width: 1140px;
-  margin: auto;
   font-family: var(--font-family-primary);
   font-size: var(--font-size-4);
   font-weight: 500;

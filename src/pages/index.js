@@ -2,6 +2,7 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "../components/GlobalStyles";
 import SEO from "../components/SEO";
+import Footer from "../components/V3/Footer";
 import Projects from "../components/V3/Projects";
 
 const darkTheme = {
@@ -39,6 +40,7 @@ const IndexPage = () => (
     <SEO />
     <GlobalStyles />
     <Projects />
+    <Footer />
   </ThemeProvider>
 );
 

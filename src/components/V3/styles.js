@@ -52,8 +52,45 @@ export const TextLink = styled.a`
   }
 `;
 
+export const TextButton = styled.button`
+  min-width: 3rem;
+  background: transparent;
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size--1);
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  color: var(--color-white-900);
+  display: inline-flex;
+  gap: 0.5em;
+  place-content: center;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: ${({ theme }) => theme.color.primary};
+    text-decoration: underline;
+  }
+
+  &:hover {
+    opacity: 0.92;
+  }
+
+  &:focus {
+    opacity: 0.76;
+  }
+`;
+
 export const Icon = styled.span`
   width: 1.25rem;
   height: auto;
   line-height: 0;
+`;
+
+export const Img = styled.img`
+  max-width: 100%;
+  height: auto;
+  display: block;
 `;

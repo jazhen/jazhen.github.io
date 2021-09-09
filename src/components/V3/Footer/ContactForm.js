@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import * as Styled from "../styles";
 import SubmitMessage from "./SubmitMessage";
-import Send from "./send.inline.svg";
+import SendIcon from "./send.inline.svg";
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("mnqllbqw");
@@ -34,56 +34,61 @@ const ContactForm = () => {
       <Error prefix="Message" field="message" errors={state.errors} />
       <Button type="submit" disabled={state.submitting}>
         Send
-        <Send />
+        <Styled.Icon>
+          <SendIcon />
+        </Styled.Icon>
       </Button>
     </Form>
   );
 };
 
 const Form = styled.form`
-  margin: auto;
-  max-width: 105ch;
-  display: grid;
-  padding: 2em;
-  background-color: var(--color-white-900);
-  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
 `;
 
 const Label = styled.label`
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   font-family: var(--font-family-primary);
-  font-size: 1rem;
+  font-size: var(--font-size-0);
   font-weight: 400;
-  color: black;
+  color: var(--color-white-900);
 `;
 
 const Input = styled.input`
   min-width: 20ch;
-  max-width: 40ch;
+  max-width: 60ch;
   min-height: 3em;
   padding: 0.25em 0.5em;
-  border: 1px solid var(--color-black-900);
-  border-radius: var(--border-radius);
-  margin-bottom: 0.5em;
+  border: none;
+  margin-bottom: 2em;
   font-family: var(--font-family-primary);
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--color-black-900);
+
+  &::placeholder {
+    font-weight: 300;
+  }
 `;
 
 const TextArea = styled.textarea`
   min-width: 20ch;
-  max-width: 80ch;
+  max-width: 60ch;
   min-height: 3em;
   padding: 0.25em 0.5em;
-  border: 1px solid var(--color-black-900);
-  border-radius: var(--border-radius);
-  resize: vertical;
+  border: none;
+  resize: none;
   margin-bottom: 0.5em;
   font-family: var(--font-family-primary);
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--color-black-900);
+  margin-bottom: 2em;
+
+  &::placeholder {
+    font-weight: 300;
+  }
 `;
 
 const Error = styled(ValidationError)`
@@ -92,8 +97,7 @@ const Error = styled(ValidationError)`
 `;
 
 const Button = styled(Styled.TextButton)`
-  justify-self: end;
-  background-color: ${({ theme }) => theme.color.primary};
+  align-self: start;
 
   &:hover,
   &:focus {
