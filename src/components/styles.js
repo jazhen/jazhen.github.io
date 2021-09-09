@@ -1,5 +1,14 @@
 import styled from "styled-components";
 
+export const Section = styled.section`
+  padding: 4em 2em;
+  background-color: var(--color-white-900);
+
+  @media (min-width: 900px) {
+    padding: 6em 3em;
+  }
+`;
+
 export const BodyText = styled.p`
   font-family: var(--font-family-primary);
   font-size: var(--font-size-0);

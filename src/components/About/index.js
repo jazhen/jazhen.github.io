@@ -21,7 +21,7 @@ const About = () => {
   const resume = data.allFile.edges[0].node.publicURL;
 
   return (
-    <Section>
+    <Styled.Section>
       <Container>
         <H1 id="about">Who Am I</H1>
         <Content>
@@ -55,18 +55,9 @@ const About = () => {
           </div>
         </Content>
       </Container>
-    </Section>
+    </Styled.Section>
   );
 };
-
-const Section = styled.section`
-  padding: 6em 2em;
-  background-color: var(--color-white-900);
-
-  @media (min-width: 900px) {
-    padding: 6em 4em 10em;
-  }
-`;
 
 const Container = styled.div`
   max-width: 1140px;

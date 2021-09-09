@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import * as Styled from "../styles";
 import ContactForm from "./ContactForm";
 import Profile from "./Profile";
 
@@ -16,13 +17,8 @@ const Footer = () => (
   </Section>
 );
 
-const Section = styled.section`
-  padding: 8em 2em;
-  background-color: #000;
-
-  @media (min-width: 900px) {
-    padding: 8em 4em;
-  }
+const Section = styled(Styled.Section)`
+  background-color: var(--color-black-900);
 `;
 
 const Container = styled.div`

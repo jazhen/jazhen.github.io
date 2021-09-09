@@ -1,24 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import * as Styled from "../styles";
 import CS4K from "./CS4K";
 
 const Experience = () => (
-  <Section>
+  <Styled.Section>
     <Container>
       <H1 id="experience">Relevant Experience</H1>
       <CS4K />
     </Container>
-  </Section>
+  </Styled.Section>
 );
-
-const Section = styled.section`
-  padding: 4em 2em;
-  background-color: var(--color-white-900);
-
-  @media (min-width: 900px) {
-    padding: 4em;
-  }
-`;
 
 const Container = styled.div`
   max-width: 1140px;

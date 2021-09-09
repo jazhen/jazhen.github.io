@@ -20,7 +20,7 @@ const Nav = () => (
 
 const Section = styled.nav`
   background-color: var(--color-white-900);
-  padding: 2em;
+  padding: 2em 3em;
 
   @media (min-width: 900px) {
     padding: 2em 4em;
@@ -33,6 +33,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  column-gap: 1em;
 `;
 
 const Logo = styled(Styled.TextLink)`
@@ -42,7 +43,12 @@ const Logo = styled(Styled.TextLink)`
 
 const NavList = styled.ul`
   display: flex;
-  gap: 2em;
+  flex-wrap: wrap;
+  gap: 1em;
+
+  @media (min-width: 900px) {
+    gap: 2em;
+  }
 `;
 
 export default Nav;

@@ -5,7 +5,7 @@ import * as Styled from "../styles";
 import SVG from "./hero.inline.svg";
 
 const Hero = () => (
-  <Section>
+  <Styled.Section>
     <Container>
       <Content>
         <Overline>👋 Hi, I&apos;m Jason Zhen</Overline>
@@ -19,17 +19,8 @@ const Hero = () => (
       </Content>
       <SVG />
     </Container>
-  </Section>
+  </Styled.Section>
 );
-
-const Section = styled.section`
-  padding: 6em 2em;
-  background-color: var(--color-white-900);
-
-  @media (min-width: 900px) {
-    padding: 6em 4em;
-  }
-`;
 
 const Container = styled.div`
   max-width: 1140px;

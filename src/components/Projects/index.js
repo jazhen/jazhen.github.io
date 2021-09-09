@@ -16,11 +16,11 @@ const Projects = () => (
 );
 
 const Section = styled.section`
-  padding: 4em 2em;
+  padding: 6em 3em;
   background-color: var(--color-white-900);
 
   @media (min-width: 900px) {
-    padding: 4em;
+    padding: 8em 4em;
   }
 `;
 
