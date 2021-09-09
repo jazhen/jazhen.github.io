@@ -31,6 +31,7 @@ const Container = styled.div`
   margin: auto;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 `;
 
 const Logo = styled(Styled.TextLink)`
