@@ -15,7 +15,7 @@ const CS4K = () => {
 
   return (
     <Container>
-      <Styled.Img src="https://user-images.githubusercontent.com/6326660/130694761-5c39c660-6861-463d-b27f-1f0f847fda95.png" />
+      <Styled.Img src="https://user-images.githubusercontent.com/6326660/132752735-0f79deef-487f-4a60-99ed-2a17a51a5b37.png" />
       <Content>
         <div>
           <Overline>{overline}</Overline>
