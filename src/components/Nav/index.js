@@ -19,11 +19,11 @@ const Nav = () => (
 );
 
 const Section = styled.nav`
+  padding: 2em 1em;
   background-color: var(--color-white-900);
-  padding: 2em 3em;
 
   @media (min-width: 900px) {
-    padding: 2em 4em;
+    padding: 2em 3em;
   }
 `;
 

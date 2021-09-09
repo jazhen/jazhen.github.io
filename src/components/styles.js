@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  padding: 4em 2em;
+  padding: 4em 1em;
   background-color: var(--color-white-900);
 
   @media (min-width: 900px) {
