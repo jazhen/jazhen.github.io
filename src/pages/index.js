@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyles from "../components/GlobalStyles";
 import SEO from "../components/SEO";
 import Footer from "../components/V3/Footer";
+import Hero from "../components/V3/Hero";
 import Projects from "../components/V3/Projects";
 
 const darkTheme = {
@@ -39,6 +40,7 @@ const IndexPage = () => (
   <ThemeProvider theme={darkTheme}>
     <SEO />
     <GlobalStyles />
+    <Hero />
     <Projects />
     <Footer />
   </ThemeProvider>

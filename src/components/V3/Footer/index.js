@@ -17,8 +17,12 @@ const Footer = () => (
 );
 
 const Section = styled.section`
-  padding: 4em 2em;
+  padding: 8em 2em;
   background-color: #212121;
+
+  @media (min-width: 900px) {
+    padding: 8em 4em;
+  }
 `;
 
 const Container = styled.div`

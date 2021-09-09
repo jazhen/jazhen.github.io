@@ -83,6 +83,17 @@ export const TextButton = styled.button`
   }
 `;
 
+export const ContainedLink = styled(TextLink)`
+  padding: 0.75em 1.5em;
+  margin: 0.25em 0.5em;
+  background-color: ${({ theme }) => theme.color.primary};
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+`;
+
 export const Icon = styled.span`
   width: 1.25rem;
   height: auto;

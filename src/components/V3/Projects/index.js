@@ -7,7 +7,7 @@ import WaterTheTrees from "./projects/WaterTheTrees";
 const Projects = () => (
   <Section>
     <Container>
-      <H1>Featured Projects</H1>
+      <H1 id="projects">Featured Projects</H1>
       <WaterTheTrees />
       <Groovetown />
       <MamasHelper />
@@ -18,6 +18,10 @@ const Projects = () => (
 const Section = styled.section`
   padding: 4em 2em;
   background-color: #eeeeee;
+
+  @media (min-width: 900px) {
+    padding: 4em;
+  }
 `;
 
 const Container = styled.div`
