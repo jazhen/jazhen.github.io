@@ -61,7 +61,7 @@ const About = () => {
 
 const Section = styled.section`
   padding: 6em 2em;
-  background-color: #eeeeee;
+  background-color: var(--color-white-900);
 
   @media (min-width: 900px) {
     padding: 6em 4em 10em;

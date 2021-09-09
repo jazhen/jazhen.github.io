@@ -46,7 +46,7 @@ const Container = styled.div`
 `;
 
 const Link = styled(Styled.TextLink)`
-  color: var(--color-white-800);
+  color: var(--color-white-900);
 `;
 
 export default Profile;

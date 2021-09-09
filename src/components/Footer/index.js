@@ -18,7 +18,7 @@ const Footer = () => (
 
 const Section = styled.section`
   padding: 8em 2em;
-  background-color: #212121;
+  background-color: #000;
 
   @media (min-width: 900px) {
     padding: 8em 4em;
@@ -35,7 +35,7 @@ const H1 = styled.h1`
   font-size: var(--font-size-4);
   font-weight: 500;
   line-height: 1.2;
-  color: var(--color-white-800);
+  color: var(--color-white-900);
   margin-bottom: 0.25em;
 `;
 
@@ -44,7 +44,7 @@ const H3 = styled.h3`
   font-size: var(--font-size-1);
   font-weight: 300;
   line-height: 1.2;
-  color: var(--color-white-800);
+  color: var(--color-white-900);
   margin-bottom: 2em;
 `;
 

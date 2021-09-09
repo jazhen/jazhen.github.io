@@ -13,7 +13,7 @@ const Experience = () => (
 
 const Section = styled.section`
   padding: 4em 2em;
-  background-color: #eeeeee;
+  background-color: var(--color-white-900);
 
   @media (min-width: 900px) {
     padding: 4em;

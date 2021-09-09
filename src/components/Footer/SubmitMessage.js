@@ -33,11 +33,11 @@ const StyledCircleCheck = styled(CircleCheck)`
 `;
 
 const Header = styled(Styled.H3)`
-  color: var(--color-white-800);
+  color: var(--color-white-900);
 `;
 
 const Body = styled(Styled.BodyText)`
-  color: var(--color-white-800);
+  color: var(--color-white-900);
 `;
 
 const ContainedLink = styled(Styled.TextLink)`

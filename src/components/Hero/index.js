@@ -24,7 +24,7 @@ const Hero = () => (
 
 const Section = styled.section`
   padding: 6em 2em;
-  background: #eee;
+  background-color: var(--color-white-900);
 
   @media (min-width: 900px) {
     padding: 6em 4em;
