@@ -1,13 +1,13 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
+import About from "../components/About";
+import Experience from "../components/Experience";
+import Footer from "../components/Footer";
 import GlobalStyles from "../components/GlobalStyles";
+import Hero from "../components/Hero";
+import Nav from "../components/Nav";
+import Projects from "../components/Projects";
 import SEO from "../components/SEO";
-import About from "../components/V3/About";
-import Experience from "../components/V3/Experience";
-import Footer from "../components/V3/Footer";
-import Hero from "../components/V3/Hero";
-import Nav from "../components/V3/Nav";
-import Projects from "../components/V3/Projects";
 
 const darkTheme = {
   color: {
