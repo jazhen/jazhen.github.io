@@ -31,26 +31,28 @@ const MamasHelper = () => {
         </div>
         <div>
           <Styled.BodyText>{body}</Styled.BodyText>
-          <Styled.TextLink
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Styled.Icon>
-              <GithubIcon />
-            </Styled.Icon>
-            Code
-          </Styled.TextLink>
-          <Styled.TextLink
-            href={website}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Styled.Icon>
-              <ExternalLinkIcon />
-            </Styled.Icon>
-            Demo
-          </Styled.TextLink>
+          <Links>
+            <Styled.TextLink
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Styled.Icon>
+                <GithubIcon />
+              </Styled.Icon>
+              Code
+            </Styled.TextLink>
+            <Styled.TextLink
+              href={website}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Styled.Icon>
+                <ExternalLinkIcon />
+              </Styled.Icon>
+              Demo
+            </Styled.TextLink>
+          </Links>
         </div>
       </Content>
     </Container>
@@ -84,6 +86,11 @@ const Overline = styled.p`
   color: var(--color-black-900);
   text-transform: uppercase;
   margin-bottom: 0.5em;
+`;
+
+const Links = styled.ul`
+  display: flex;
+  gap: 2em;
 `;
 
 export default MamasHelper;

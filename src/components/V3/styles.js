@@ -46,10 +46,6 @@ export const TextLink = styled.a`
   &:focus {
     opacity: 0.76;
   }
-
-  & + a {
-    margin-left: 2em;
-  }
 `;
 
 export const TextButton = styled.button`

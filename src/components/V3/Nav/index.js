@@ -41,6 +41,7 @@ const Logo = styled(Styled.TextLink)`
 
 const NavList = styled.ul`
   display: flex;
+  gap: 2em;
 `;
 
 export default Nav;

@@ -38,19 +38,21 @@ const About = () => {
               During my free time I enjoy reading comic books and listening to
               Indie music.
             </Styled.BodyText>
-            <Styled.TextLink
-              href={resume}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              my résumé
-              <File />
-            </Styled.TextLink>
-            <Styled.TextLink href="#contact">
-              hire me
-              <ChevronsDown />
-            </Styled.TextLink>
-          </div>{" "}
+            <Links>
+              <Styled.TextLink
+                href={resume}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                my résumé
+                <File />
+              </Styled.TextLink>
+              <Styled.TextLink href="#contact">
+                hire me
+                <ChevronsDown />
+              </Styled.TextLink>
+            </Links>
+          </div>
         </Content>
       </Container>
     </Section>
@@ -83,10 +85,7 @@ const H1 = styled.h1`
 const Content = styled.div`
   display: grid;
   gap: 4em;
-
-  @media (max-width: 900px) {
-    justify-content: center;
-  }
+  place-items: center;
 
   @media (min-width: 900px) {
     grid-auto-flow: column;
@@ -97,6 +96,11 @@ const Content = styled.div`
 const Avatar = styled(Styled.Img)`
   border-radius: var(--border-radius);
   background-color: #5c6bc0;
+`;
+
+const Links = styled.ul`
+  display: flex;
+  gap: 2em;
 `;
 
 export default About;
