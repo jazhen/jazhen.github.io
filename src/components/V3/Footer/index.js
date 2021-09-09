@@ -44,7 +44,7 @@ const H3 = styled.h3`
   font-size: var(--font-size-1);
   font-weight: 300;
   line-height: 1.2;
-  color: var(--color-white-900);
+  color: var(--color-white-800);
   margin-bottom: 2em;
 `;
 

@@ -48,7 +48,7 @@ export const TextLink = styled.a`
   }
 
   & + a {
-    margin-left: 1em;
+    margin-left: 2em;
   }
 `;
 

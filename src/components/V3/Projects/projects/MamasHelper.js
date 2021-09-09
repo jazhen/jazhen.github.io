@@ -63,7 +63,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2em;
-  margin-bottom: 6rem;
 `;
 
 const Image = styled.div`

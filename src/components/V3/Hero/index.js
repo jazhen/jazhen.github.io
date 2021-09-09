@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import ChevronsDown from "../icons/chevrons-down.inline.svg";
 import * as Styled from "../styles";
-import ChevronsDown from "./chevrons-down.inline.svg";
 import SVG from "./hero.inline.svg";
 
 const Hero = () => (

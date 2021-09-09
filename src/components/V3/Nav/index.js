@@ -10,6 +10,7 @@ const Nav = () => (
       </Logo>
       <NavList>
         <Styled.TextLink href="#projects">projects</Styled.TextLink>
+        <Styled.TextLink href="#about">about</Styled.TextLink>
         <Styled.TextLink href="#contact">contact</Styled.TextLink>
       </NavList>
     </Container>
@@ -39,7 +40,6 @@ const Logo = styled(Styled.TextLink)`
 
 const NavList = styled.ul`
   display: flex;
-  gap: 1em;
 `;
 
 export default Nav;
