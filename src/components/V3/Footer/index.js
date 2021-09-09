@@ -6,7 +6,7 @@ import Profile from "./Profile";
 const Footer = () => (
   <Section>
     <Container>
-      <H1>Let&apos;s Chat</H1>
+      <H1 id="contact">Let&apos;s Chat</H1>
       <H3>Currently available for work opportunies.</H3>
       <Content>
         <Profile />
