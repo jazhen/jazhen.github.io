@@ -106,7 +106,7 @@ export const Icon = styled.span`
 `;
 
 export const Img = styled.img`
-  max-width: 100%;
-  height: auto;
   display: block;
+  height: 100%;
+  object-fit: none;
 `;

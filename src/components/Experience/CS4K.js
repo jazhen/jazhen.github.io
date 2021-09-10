@@ -15,7 +15,7 @@ const CS4K = () => {
 
   return (
     <Container>
-      <Styled.Img src="https://user-images.githubusercontent.com/6326660/132752735-0f79deef-487f-4a60-99ed-2a17a51a5b37.png" />
+      <Image src="https://user-images.githubusercontent.com/6326660/132777221-4cd5ecc8-0244-4055-a625-90235da84801.png" />
       <Content>
         <div>
           <Overline>{overline}</Overline>
@@ -33,6 +33,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2em;
+`;
+
+const Image = styled(Styled.Img)`
+  object-position: 84%;
 `;
 
 const Content = styled.div`
