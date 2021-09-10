@@ -83,7 +83,7 @@ const Content = styled.div`
   }
 `;
 
-const Avatar = styled(Styled.Img)`
+const Avatar = styled(Styled.ResponsiveImg)`
   background-color: #5c6bc0;
 `;
 
