@@ -6,6 +6,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
   :root {
     --font-family-primary: 'Lato', 'Helvetica', 'Arial', sans-serif;
+    --max-width: 71.25rem;
 
     --font-size--1: clamp(0.80rem, 0.58rem + 0.59vw, 1.00rem);
     --font-size-0: clamp(1.00rem, 0.72rem + 0.74vw, 1.25rem);

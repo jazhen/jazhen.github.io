@@ -26,7 +26,7 @@ const darkTheme = {
     bold: 700,
   },
   breakpoints: {
-    desktop: "900px",
+    desktop: "56.25rem",
   },
 };
 

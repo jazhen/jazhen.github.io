@@ -13,8 +13,8 @@ const Experience = () => (
 );
 
 const Container = styled.div`
-  max-width: 1140px;
-  margin: auto;
+  max-width: var(--max-width);
+  margin-inline: auto;
 `;
 
 const H1 = styled.h1`

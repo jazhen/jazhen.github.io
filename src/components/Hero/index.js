@@ -23,8 +23,8 @@ const Hero = () => (
 );
 
 const Container = styled.div`
-  max-width: 1140px;
-  margin: auto;
+  max-width: var(--max-width);
+  margin-inline: auto;
   display: grid;
   place-items: center;
   gap: 4em;

@@ -60,8 +60,8 @@ const WaterTheTrees = () => {
 };
 
 const Container = styled.div`
-  max-width: 1140px;
-  margin: auto;
+  max-width: var(--max-width);
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   gap: 2em;
