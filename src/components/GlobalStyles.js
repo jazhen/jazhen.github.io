@@ -16,6 +16,11 @@ const GlobalStyles = createGlobalStyle`
     --font-size-4: clamp(2.44rem, 1.76rem + 1.81vw, 3.05rem);
     --font-size-5: clamp(3.05rem, 2.20rem + 2.26vw, 3.82rem);
 
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
     --padding-inline-section: clamp(1em, -1.2222222222222223em + 5.9259259259259265vw, 3em);
     --padding-block-section: clamp(4em, 1.7777777777777777em + 5.9259259259259265vw, 6em);
 

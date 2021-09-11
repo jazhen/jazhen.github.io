@@ -19,7 +19,7 @@ const Projects = () => (
 const H1 = styled.h1`
   font-family: var(--font-family-primary);
   font-size: var(--font-size-4);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   line-height: 1.2;
   color: var(--color-black-900);
   margin-bottom: 2em;

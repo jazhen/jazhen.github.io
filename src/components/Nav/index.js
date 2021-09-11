@@ -33,7 +33,7 @@ const Container = styled(Styled.Container)`
 
 const Logo = styled(Styled.TextLink)`
   font-size: var(--font-size-1);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 `;
 
 const NavList = styled.ul`

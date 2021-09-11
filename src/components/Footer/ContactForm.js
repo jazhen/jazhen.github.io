@@ -51,7 +51,7 @@ const Label = styled.label`
   margin-bottom: 1em;
   font-family: var(--font-family-primary);
   font-size: var(--font-size-0);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
   color: var(--color-white-900);
 `;
 
@@ -63,12 +63,12 @@ const Input = styled.input`
   border: none;
   margin-bottom: 2em;
   font-family: var(--font-family-primary);
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: var(--font-size--1);
+  font-weight: var(--font-weight-regular);
   color: var(--color-black-900);
 
   &::placeholder {
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
   }
 `;
 
@@ -81,13 +81,13 @@ const TextArea = styled.textarea`
   resize: none;
   margin-bottom: 0.5em;
   font-family: var(--font-family-primary);
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: var(--font-size--1);
+  font-weight: var(--font-weight-regular);
   color: var(--color-black-900);
   margin-bottom: 2em;
 
   &::placeholder {
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
   }
 `;
 
@@ -105,7 +105,7 @@ const Button = styled(Styled.TextButton)`
   }
 
   &:disabled {
-    cursor: default;
+    cursor: not-allowed;
     background-color: #cccccc;
     color: #888888;
   }

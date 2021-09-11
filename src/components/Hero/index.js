@@ -44,7 +44,7 @@ const Content = styled.div`
 const Overline = styled.h2`
   font-family:var(--font-family-primary)};
   font-size: var(--font-size-1);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
   margin-bottom: 1em;
   color: var(--color-black-900);
 `;
@@ -52,7 +52,7 @@ const Overline = styled.h2`
 const Headline = styled.h1`
   font-family:var(--font-family-primary)};
   font-size: var(--font-size-4);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   letter-spacing: -0.0125em;
   line-height: 1.2;
   margin-bottom: 1em;

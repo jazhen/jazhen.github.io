@@ -80,7 +80,7 @@ const Content = styled.div`
 const Overline = styled.p`
   font-family: var(--font-family-primary);
   font-size: var(--font-size-0);
-  font-weight: 300;
+  font-weight: var(--font-weight-light);
   color: var(--color-black-900);
   text-transform: uppercase;
   margin-bottom: 0.5em;
