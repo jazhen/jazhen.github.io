@@ -41,17 +41,13 @@ const Content = styled.div`
   }
 `;
 
-const Overline = styled.h2`
-  font-family:var(--font-family-primary)};
+const Overline = styled(Styled.BodyText)`
   font-size: var(--font-size-1);
-  font-weight: var(--font-weight-regular);
-  margin-bottom: 1em;
-  color: var(--color-black-900);
 `;
 
 const Headline = styled.h1`
   font-family:var(--font-family-primary)};
-  font-size: var(--font-size-4);
+  font-size: var(--font-size-5);
   font-weight: var(--font-weight-medium);
   letter-spacing: -0.0125em;
   line-height: 1.2;

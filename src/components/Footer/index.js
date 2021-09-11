@@ -7,8 +7,8 @@ import Profile from "./Profile";
 const Footer = () => (
   <Section>
     <Styled.Container>
-      <H1 id="contact">Let&apos;s Chat</H1>
-      <H3>Currently available for work opportunies.</H3>
+      <H2 id="contact">Let&apos;s Chat</H2>
+      <H4>Currently available for work opportunies.</H4>
       <Content>
         <Profile />
         <ContactForm />
@@ -21,16 +21,12 @@ const Section = styled(Styled.Section)`
   background-color: var(--color-black-900);
 `;
 
-const H1 = styled.h1`
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-4);
-  font-weight: var(--font-weight-medium);
-  line-height: 1.2;
+const H2 = styled(Styled.H2)`
   color: var(--color-white-900);
   margin-bottom: 0.25em;
 `;
 
-const H3 = styled.h3`
+const H4 = styled.h4`
   font-family: var(--font-family-primary);
   font-size: var(--font-size-1);
   font-weight: var(--font-weight-light);

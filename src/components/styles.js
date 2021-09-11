@@ -14,16 +14,25 @@ export const Container = styled.div`
 export const BodyText = styled.p`
   font-family: var(--font-family-primary);
   font-size: var(--font-size-0);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
   max-width: 60ch;
   color: var(--color-black-900);
   margin-bottom: 1em;
 `;
 
+export const H2 = styled.h2`
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-4);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-black-900);
+  margin-bottom: 2em;
+`;
+
 export const H3 = styled.h3`
   font-family: var(--font-family-primary);
   font-size: var(--font-size-2);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   line-height: 1.2;
   color: var(--color-black-900);
   margin-bottom: 0.5em;
@@ -34,7 +43,7 @@ export const TextLink = styled.a`
   min-height: 3rem;
   font-family: var(--font-family-primary);
   font-size: var(--font-size--1);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   letter-spacing: 0.125em;
   text-transform: uppercase;
   text-decoration: none;
@@ -64,7 +73,7 @@ export const TextButton = styled.button`
   border: none;
   font-family: var(--font-family-primary);
   font-size: var(--font-size--1);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   letter-spacing: 0.025em;
   text-transform: uppercase;
   color: var(--color-white-900);
@@ -115,4 +124,8 @@ export const ResponsiveImg = styled.img`
   display: block;
   max-width: 100%;
   height: auto;
+`;
+
+export const UnorderedList = styled.ul`
+  list-style-type: none;
 `;

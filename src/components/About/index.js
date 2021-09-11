@@ -22,8 +22,8 @@ const About = () => {
 
   return (
     <Styled.Section>
-      <Styled.Container>
-        <H1 id="about">Who Am I</H1>
+      <Container>
+        <Styled.H2 id="about">Who Am I</Styled.H2>
         <Content>
           <Avatar src="https://user-images.githubusercontent.com/6326660/132674478-50a8fb86-eec7-4072-b887-d577cbf35cf3.png" />
           <div>
@@ -54,25 +54,21 @@ const About = () => {
             </Links>
           </div>
         </Content>
-      </Styled.Container>
+      </Container>
     </Styled.Section>
   );
 };
 
-const H1 = styled.h1`
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-4);
-  font-weight: var(--font-weight-medium);
-  line-height: 1.2;
-  color: var(--color-black-900);
-  margin-bottom: 2em;
+const Container = styled.div`
+  max-width: 1140px;
+  margin: auto;
 `;
 
 const Content = styled.div`
   display: grid;
   gap: 4em;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+  @media (min-width: 900px) {
     grid-auto-flow: column;
     grid-template-columns: auto 1fr;
   }
@@ -82,7 +78,7 @@ const Avatar = styled(Styled.ResponsiveImg)`
   background-color: #5c6bc0;
 `;
 
-const Links = styled.ul`
+const Links = styled.div`
   display: flex;
   gap: 2em;
 `;

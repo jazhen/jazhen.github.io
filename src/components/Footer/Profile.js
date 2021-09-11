@@ -6,47 +6,50 @@ import LinkedInIcon from "../icons/linkedin.inline.svg";
 import * as Styled from "../styles";
 
 const Profile = () => (
-  <Container>
-    <Link
-      href="mailto:jasonzhen.mail@gmail.com"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Styled.Icon>
-        <EmailIcon />
-      </Styled.Icon>
-      jasonzhen.mail@gmail.com
-    </Link>
-    <Link
-      href="https://www.linkedin.com/in/jazhen/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Styled.Icon>
-        <LinkedInIcon />
-      </Styled.Icon>
-      jazhen
-    </Link>
-    <Link
-      href="https://github.com/jazhen"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Styled.Icon>
-        <GithubIcon />
-      </Styled.Icon>
-      jazhen
-    </Link>
-  </Container>
+  <Styled.UnorderedList>
+    <li>
+      <Link
+        href="mailto:jasonzhen.mail@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Styled.Icon>
+          <EmailIcon />
+        </Styled.Icon>
+        jasonzhen.mail@gmail.com
+      </Link>
+    </li>
+    <li>
+      <Link
+        href="https://www.linkedin.com/in/jazhen/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Styled.Icon>
+          <LinkedInIcon />
+        </Styled.Icon>
+        jazhen
+      </Link>
+    </li>
+    <li>
+      <Link
+        href="https://github.com/jazhen"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Styled.Icon>
+          <GithubIcon />
+        </Styled.Icon>
+        jazhen
+      </Link>
+    </li>
+  </Styled.UnorderedList>
 );
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
 
 const Link = styled(Styled.TextLink)`
   color: var(--color-white-900);
+  text-transform: lowercase;
+  letter-spacing: 0;
 `;
 
 export default Profile;

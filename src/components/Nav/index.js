@@ -36,7 +36,7 @@ const Logo = styled(Styled.TextLink)`
   font-weight: var(--font-weight-bold);
 `;
 
-const NavList = styled.ul`
+const NavList = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 1em;

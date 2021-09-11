@@ -86,7 +86,7 @@ const Overline = styled.p`
   margin-bottom: 0.5em;
 `;
 
-const Links = styled.ul`
+const Links = styled.div`
   display: flex;
   gap: 2em;
 `;
