@@ -1,12 +1,9 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  padding: 4em 1em;
   background-color: var(--color-white-900);
-
-  @media (min-width: 900px) {
-    padding: 6em 3em;
-  }
+  padding-inline: var(--padding-inline-section);
+  padding-block: var(--padding-block-section);
 `;
 
 export const BodyText = styled.p`
@@ -30,7 +27,6 @@ export const H3 = styled.h3`
 export const TextLink = styled.a`
   min-width: 3rem;
   min-height: 3rem;
-  border-radius: var(--border-radius);
   font-family: var(--font-family-primary);
   font-size: var(--font-size--1);
   font-weight: 500;
@@ -61,7 +57,6 @@ export const TextButton = styled.button`
   min-width: 3rem;
   background: transparent;
   border: none;
-  border-radius: var(--border-radius);
   font-family: var(--font-family-primary);
   font-size: var(--font-size--1);
   font-weight: 500;

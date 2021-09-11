@@ -19,12 +19,9 @@ const Nav = () => (
 );
 
 const Section = styled.nav`
-  padding: 2em 1em;
   background-color: var(--color-white-900);
-
-  @media (min-width: 900px) {
-    padding: 2em 3em;
-  }
+  padding-block: 2em;
+  padding-inline: var(--padding-inline-section);
 `;
 
 const Container = styled.div`
