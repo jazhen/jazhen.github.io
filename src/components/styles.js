@@ -6,7 +6,7 @@ export const Section = styled.section`
   padding-block: var(--padding-block-section);
 `;
 
-export const Container = styled.div`
+export const MaxWidthContainer = styled.div`
   max-width: var(--max-width);
   margin-inline: auto;
 `;

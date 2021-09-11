@@ -24,7 +24,7 @@ const Section = styled.nav`
   padding-inline: var(--padding-inline-section);
 `;
 
-const Container = styled(Styled.Container)`
+const Container = styled(Styled.MaxWidthContainer)`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

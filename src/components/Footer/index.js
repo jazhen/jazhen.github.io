@@ -6,14 +6,14 @@ import Profile from "./Profile";
 
 const Footer = () => (
   <Section>
-    <Styled.Container>
+    <Styled.MaxWidthContainer>
       <H2 id="contact">Let&apos;s Chat</H2>
       <SubHeading>Currently available for work opportunies.</SubHeading>
       <TwoColumnContainer>
         <Profile />
         <ContactForm />
       </TwoColumnContainer>
-    </Styled.Container>
+    </Styled.MaxWidthContainer>
   </Section>
 );
 

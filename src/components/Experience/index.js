@@ -4,10 +4,10 @@ import CS4K from "./CS4K";
 
 const Experience = () => (
   <Styled.Section>
-    <Styled.Container>
+    <Styled.MaxWidthContainer>
       <Styled.H2 id="experience">Relevant Experience</Styled.H2>
       <CS4K />
-    </Styled.Container>
+    </Styled.MaxWidthContainer>
   </Styled.Section>
 );
 

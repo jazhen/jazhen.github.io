@@ -6,12 +6,12 @@ import WaterTheTrees from "./projects/WaterTheTrees";
 
 const Projects = () => (
   <Styled.Section>
-    <Styled.Container>
+    <Styled.MaxWidthContainer>
       <Styled.H2 id="projects">Featured Projects</Styled.H2>
       <WaterTheTrees />
       <Groovetown />
       <MamasHelper />
-    </Styled.Container>
+    </Styled.MaxWidthContainer>
   </Styled.Section>
 );
 

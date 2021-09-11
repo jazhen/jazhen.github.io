@@ -6,7 +6,7 @@ import SVG from "./hero.inline.svg";
 
 const Hero = () => (
   <Styled.Section>
-    <Styled.Container>
+    <Styled.MaxWidthContainer>
       <TwoColumnContainer>
         <div>
           <Styled.BodyTextLarge>
@@ -22,7 +22,7 @@ const Hero = () => (
         </div>
         <SVG />
       </TwoColumnContainer>
-    </Styled.Container>
+    </Styled.MaxWidthContainer>
   </Styled.Section>
 );
 

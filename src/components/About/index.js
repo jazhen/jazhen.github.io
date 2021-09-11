@@ -22,7 +22,7 @@ const About = () => {
 
   return (
     <Styled.Section>
-      <Styled.Container>
+      <Styled.MaxWidthContainer>
         <Styled.H2 id="about">Who Am I</Styled.H2>
         <TwoColumnContainer>
           <Avatar src="https://user-images.githubusercontent.com/6326660/132674478-50a8fb86-eec7-4072-b887-d577cbf35cf3.png" />
@@ -54,7 +54,7 @@ const About = () => {
             </Links>
           </div>
         </TwoColumnContainer>
-      </Styled.Container>
+      </Styled.MaxWidthContainer>
     </Styled.Section>
   );
 };
