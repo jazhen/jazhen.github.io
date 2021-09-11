@@ -19,10 +19,6 @@ const darkTheme = {
     primaryText: "rgba(255, 255, 255, 1)",
     secondaryText: "rgba(255, 255, 255, 0.87)",
   },
-  fontFamily: {
-    primary: "'Poppins', 'Helvetica', 'Arial', sans-serif",
-    secondary: "'Montserrat', 'Helvetica', 'Arial', sans-serif",
-  },
   fontWeight: {
     light: 300,
     regular: 400,
@@ -30,13 +26,8 @@ const darkTheme = {
     bold: 700,
   },
   breakpoints: {
-    tabletPortrait: "600px",
-    tabletLandscape: "900px",
-    desktop: "1200px",
-    desktopLarge: "1800px",
-    desktopExtraLarge: "2400px",
+    desktop: "900px",
   },
-  borderRadius: "4px",
 };
 
 const IndexPage = () => (

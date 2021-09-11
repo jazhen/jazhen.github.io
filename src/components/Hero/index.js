@@ -29,7 +29,7 @@ const Container = styled.div`
   place-items: center;
   gap: 4em;
 
-  @media (min-width: 900px) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr;
   }
@@ -38,7 +38,7 @@ const Container = styled.div`
 const Content = styled.div`
   text-align: center;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     text-align: initial;
   }
 `;

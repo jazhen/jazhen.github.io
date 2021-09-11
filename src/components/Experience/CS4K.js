@@ -40,7 +40,7 @@ const Image = styled(Styled.Img)`
 `;
 
 const Content = styled.div`
-  @media (min-width: 900px) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     display: grid;
     grid-auto-flow: column;
     gap: 6em;

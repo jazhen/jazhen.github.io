@@ -43,7 +43,7 @@ const NavList = styled.ul`
   flex-wrap: wrap;
   gap: 1em;
 
-  @media (min-width: 900px) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     gap: 2em;
   }
 `;

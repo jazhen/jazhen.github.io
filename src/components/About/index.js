@@ -77,7 +77,7 @@ const Content = styled.div`
   display: grid;
   gap: 4em;
 
-  @media (min-width: 900px) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     grid-auto-flow: column;
     grid-template-columns: auto 1fr;
   }
