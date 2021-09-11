@@ -11,6 +11,15 @@ export const Container = styled.div`
   margin-inline: auto;
 `;
 
+export const TwoColumnContainer = styled.div`
+  display: grid;
+  gap: 4em;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    grid-auto-flow: column;
+  }
+`;
+
 export const BodyText = styled.p`
   font-family: var(--font-family-primary);
   font-size: var(--font-size-0);
@@ -18,6 +27,10 @@ export const BodyText = styled.p`
   max-width: 60ch;
   color: var(--color-black-900);
   margin-bottom: 1em;
+`;
+
+export const BodyTextLarge = styled(BodyText)`
+  font-size: var(--font-size-1);
 `;
 
 export const H2 = styled.h2`

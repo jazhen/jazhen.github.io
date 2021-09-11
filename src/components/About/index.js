@@ -22,9 +22,9 @@ const About = () => {
 
   return (
     <Styled.Section>
-      <Container>
+      <Styled.Container>
         <Styled.H2 id="about">Who Am I</Styled.H2>
-        <Content>
+        <TwoColumnContainer>
           <Avatar src="https://user-images.githubusercontent.com/6326660/132674478-50a8fb86-eec7-4072-b887-d577cbf35cf3.png" />
           <div>
             <Styled.BodyText>
@@ -53,23 +53,14 @@ const About = () => {
               </Styled.TextLink>
             </Links>
           </div>
-        </Content>
-      </Container>
+        </TwoColumnContainer>
+      </Styled.Container>
     </Styled.Section>
   );
 };
 
-const Container = styled.div`
-  max-width: 1140px;
-  margin: auto;
-`;
-
-const Content = styled.div`
-  display: grid;
-  gap: 4em;
-
-  @media (min-width: 900px) {
-    grid-auto-flow: column;
+const TwoColumnContainer = styled(Styled.TwoColumnContainer)`
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     grid-template-columns: auto 1fr;
   }
 `;

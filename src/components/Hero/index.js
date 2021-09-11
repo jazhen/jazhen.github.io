@@ -6,43 +6,35 @@ import SVG from "./hero.inline.svg";
 
 const Hero = () => (
   <Styled.Section>
-    <Container>
-      <Content>
-        <Overline>👋 Hi, I&apos;m Jason Zhen</Overline>
-        <Headline>
-          Passionate about developing user-centered web experiences
-        </Headline>
-        <Styled.TextLink href="#projects">
-          View my projects
-          <ChevronsDown />
-        </Styled.TextLink>
-      </Content>
-      <SVG />
-    </Container>
+    <Styled.Container>
+      <TwoColumnContainer>
+        <div>
+          <Styled.BodyTextLarge>
+            👋 Hi, I&apos;m Jason Zhen
+          </Styled.BodyTextLarge>
+          <Headline>
+            Passionate about developing user-centered web experiences
+          </Headline>
+          <Styled.TextLink href="#projects">
+            View my projects
+            <ChevronsDown />
+          </Styled.TextLink>
+        </div>
+        <SVG />
+      </TwoColumnContainer>
+    </Styled.Container>
   </Styled.Section>
 );
 
-const Container = styled(Styled.Container)`
+const TwoColumnContainer = styled(Styled.TwoColumnContainer)`
   display: grid;
   place-items: center;
-  gap: 4em;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr;
-  }
-`;
-
-const Content = styled.div`
   text-align: center;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    grid-template-columns: 1fr 1fr;
     text-align: initial;
   }
-`;
-
-const Overline = styled(Styled.BodyText)`
-  font-size: var(--font-size-1);
 `;
 
 const Headline = styled.h1`

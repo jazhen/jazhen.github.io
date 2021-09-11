@@ -8,11 +8,11 @@ const Footer = () => (
   <Section>
     <Styled.Container>
       <H2 id="contact">Let&apos;s Chat</H2>
-      <H4>Currently available for work opportunies.</H4>
-      <Content>
+      <SubHeading>Currently available for work opportunies.</SubHeading>
+      <TwoColumnContainer>
         <Profile />
         <ContactForm />
-      </Content>
+      </TwoColumnContainer>
     </Styled.Container>
   </Section>
 );
@@ -26,21 +26,15 @@ const H2 = styled(Styled.H2)`
   margin-bottom: 0.25em;
 `;
 
-const H4 = styled.h4`
-  font-family: var(--font-family-primary);
+const SubHeading = styled(Styled.BodyTextLarge)`
   font-size: var(--font-size-1);
   font-weight: var(--font-weight-light);
-  line-height: 1.2;
   color: var(--color-white-900);
   margin-bottom: 2em;
 `;
 
-const Content = styled.div`
-  display: grid;
-  gap: 4em;
-
+const TwoColumnContainer = styled(Styled.TwoColumnContainer)`
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    grid-auto-flow: column;
     grid-template-columns: auto 1fr;
   }
 `;
