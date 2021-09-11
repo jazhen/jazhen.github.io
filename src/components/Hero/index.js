@@ -22,9 +22,7 @@ const Hero = () => (
   </Styled.Section>
 );
 
-const Container = styled.div`
-  max-width: var(--max-width);
-  margin-inline: auto;
+const Container = styled(Styled.Container)`
   display: grid;
   place-items: center;
   gap: 4em;

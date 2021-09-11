@@ -24,9 +24,7 @@ const Section = styled.nav`
   padding-inline: var(--padding-inline-section);
 `;
 
-const Container = styled.div`
-  max-width: var(--max-width);
-  margin-inline: auto;
+const Container = styled(Styled.Container)`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

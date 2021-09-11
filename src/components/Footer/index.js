@@ -6,24 +6,19 @@ import Profile from "./Profile";
 
 const Footer = () => (
   <Section>
-    <Container>
+    <Styled.Container>
       <H1 id="contact">Let&apos;s Chat</H1>
       <H3>Currently available for work opportunies.</H3>
       <Content>
         <Profile />
         <ContactForm />
       </Content>
-    </Container>
+    </Styled.Container>
   </Section>
 );
 
 const Section = styled(Styled.Section)`
   background-color: var(--color-black-900);
-`;
-
-const Container = styled.div`
-  max-width: var(--max-width);
-  margin-inline: auto;
 `;
 
 const H1 = styled.h1`

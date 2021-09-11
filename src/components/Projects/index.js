@@ -7,19 +7,14 @@ import WaterTheTrees from "./projects/WaterTheTrees";
 
 const Projects = () => (
   <Styled.Section>
-    <Container>
+    <Styled.Container>
       <H1 id="projects">Featured Projects</H1>
       <WaterTheTrees />
       <Groovetown />
       <MamasHelper />
-    </Container>
+    </Styled.Container>
   </Styled.Section>
 );
-
-const Container = styled.div`
-  max-width: var(--max-width);
-  margin-inline: auto;
-`;
 
 const H1 = styled.h1`
   font-family: var(--font-family-primary);

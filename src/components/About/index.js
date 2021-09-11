@@ -22,7 +22,7 @@ const About = () => {
 
   return (
     <Styled.Section>
-      <Container>
+      <Styled.Container>
         <H1 id="about">Who Am I</H1>
         <Content>
           <Avatar src="https://user-images.githubusercontent.com/6326660/132674478-50a8fb86-eec7-4072-b887-d577cbf35cf3.png" />
@@ -54,15 +54,10 @@ const About = () => {
             </Links>
           </div>
         </Content>
-      </Container>
+      </Styled.Container>
     </Styled.Section>
   );
 };
-
-const Container = styled.div`
-  max-width: var(--max-width);
-  margin-inline: auto;
-`;
 
 const H1 = styled.h1`
   font-family: var(--font-family-primary);

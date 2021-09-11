@@ -6,6 +6,11 @@ export const Section = styled.section`
   padding-block: var(--padding-block-section);
 `;
 
+export const Container = styled.div`
+  max-width: var(--max-width);
+  margin-inline: auto;
+`;
+
 export const BodyText = styled.p`
   font-family: var(--font-family-primary);
   font-size: var(--font-size-0);

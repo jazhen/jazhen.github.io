@@ -5,17 +5,12 @@ import CS4K from "./CS4K";
 
 const Experience = () => (
   <Styled.Section>
-    <Container>
+    <Styled.Container>
       <H1 id="experience">Relevant Experience</H1>
       <CS4K />
-    </Container>
+    </Styled.Container>
   </Styled.Section>
 );
-
-const Container = styled.div`
-  max-width: var(--max-width);
-  margin-inline: auto;
-`;
 
 const H1 = styled.h1`
   font-family: var(--font-family-primary);
