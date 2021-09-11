@@ -21,9 +21,7 @@ const MamasHelper = () => {
 
   return (
     <Container>
-      <Image>
-        <SVG />
-      </Image>
+      <StyledSVG />
       <Content>
         <div>
           <Overline>{overline}</Overline>
@@ -65,8 +63,8 @@ const Container = styled.div`
   gap: 2em;
 `;
 
-const Image = styled.div`
-  background-color: #e99a53;
+const StyledSVG = styled(SVG)`
+  background-color: #fce4ec;
 `;
 
 const Content = styled.div`

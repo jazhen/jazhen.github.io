@@ -36,7 +36,7 @@ export const BodyTextLarge = styled(BodyText)`
 export const H2 = styled.h2`
   font-family: var(--font-family-primary);
   font-size: var(--font-size-4);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   line-height: 1.2;
   color: var(--color-black-900);
   margin-bottom: 2em;
@@ -128,12 +128,6 @@ export const Icon = styled.span`
 `;
 
 export const Img = styled.img`
-  display: block;
-  height: 100%;
-  object-fit: none;
-`;
-
-export const ResponsiveImg = styled.img`
   display: block;
   max-width: 100%;
   height: auto;

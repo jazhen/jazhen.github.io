@@ -45,11 +45,15 @@ const About = () => {
                 rel="noopener noreferrer"
               >
                 my résumé
-                <File />
+                <Styled.Icon>
+                  <File />
+                </Styled.Icon>
               </Styled.TextLink>
               <Styled.TextLink href="#contact">
                 hire me
-                <ChevronsDown />
+                <Styled.Icon>
+                  <ChevronsDown />
+                </Styled.Icon>
               </Styled.TextLink>
             </Links>
           </div>
@@ -65,8 +69,8 @@ const TwoColumnContainer = styled(Styled.TwoColumnContainer)`
   }
 `;
 
-const Avatar = styled(Styled.ResponsiveImg)`
-  background-color: #5c6bc0;
+const Avatar = styled(Styled.Img)`
+  background-color: #b0bec5;
 `;
 
 const Links = styled.div`

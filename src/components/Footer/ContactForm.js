@@ -92,7 +92,7 @@ const TextArea = styled.textarea`
 `;
 
 const Error = styled(ValidationError)`
-  color: red;
+  color: #b00020;
   margin-bottom: 1em;
 `;
 
@@ -101,7 +101,7 @@ const Button = styled(Styled.TextButton)`
 
   &:hover,
   &:focus {
-    color: ${({ theme }) => theme.color.secondaryText};
+    color: var(--color-white-800);
   }
 
   &:disabled {

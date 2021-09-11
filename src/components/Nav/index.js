@@ -39,11 +39,7 @@ const Logo = styled(Styled.TextLink)`
 const NavList = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    gap: 2em;
-  }
+  gap: clamp(1em, -0.11111111111111116em + 2.9629629629629632vw, 2em);
 `;
 
 export default Nav;

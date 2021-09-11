@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import * as Styled from "../styles";
+import SVG from "./cs4k.inline.svg";
 
 const data = {
   header: "Computer Science For Kids",
   body: "I visited schools in the Davis and Woodland communities, introducing the fundamentals of computer science to middle school students through programming tools, such as Scratch MIT.",
   overline: "Computer Science Tutor",
-  thumbnail:
-    "https://user-images.githubusercontent.com/6326660/130694761-5c39c660-6861-463d-b27f-1f0f847fda95.png",
 };
 
 const CS4K = () => {
@@ -15,7 +14,7 @@ const CS4K = () => {
 
   return (
     <Container>
-      <Image src="https://user-images.githubusercontent.com/6326660/132777221-4cd5ecc8-0244-4055-a625-90235da84801.png" />
+      <StyledSVG />
       <Content>
         <div>
           <Overline>{overline}</Overline>
@@ -35,8 +34,8 @@ const Container = styled.div`
   gap: 2em;
 `;
 
-const Image = styled(Styled.Img)`
-  object-position: 84%;
+const StyledSVG = styled(SVG)`
+  background-color: #b2dfdb;
 `;
 
 const Content = styled.div`

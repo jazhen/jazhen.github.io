@@ -21,9 +21,7 @@ const WaterTheTrees = () => {
 
   return (
     <Container>
-      <Image>
-        <SVG />
-      </Image>
+      <StyledSVG />
       <Content>
         <div>
           <Overline>{overline}</Overline>
@@ -66,8 +64,8 @@ const Container = styled.div`
   margin-bottom: 6em;
 `;
 
-const Image = styled.div`
-  background-color: #bcaaa4;
+const StyledSVG = styled(SVG)`
+  background-color: #d7ccc8;
 `;
 
 const Content = styled.div`

@@ -17,7 +17,9 @@ const Hero = () => (
           </Headline>
           <Styled.TextLink href="#projects">
             View my projects
-            <ChevronsDown />
+            <Styled.Icon>
+              <ChevronsDown />
+            </Styled.Icon>
           </Styled.TextLink>
         </div>
         <SVG />

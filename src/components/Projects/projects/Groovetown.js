@@ -28,9 +28,7 @@ const Groovetown = () => {
 
   return (
     <Container>
-      <Image>
-        <SVG />
-      </Image>
+      <StyledSVG />
       <Content>
         <div>
           <Overline>{overline}</Overline>
@@ -73,8 +71,8 @@ const Container = styled.div`
   margin-bottom: 6rem;
 `;
 
-const Image = styled.div`
-  background-color: #ecc4d7;
+const StyledSVG = styled(SVG)`
+  background-color: #bbdefb;
 `;
 
 const Content = styled.div`

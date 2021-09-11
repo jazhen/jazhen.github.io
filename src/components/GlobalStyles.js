@@ -42,8 +42,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: ${({ theme }) => theme.color.background};
     line-height: 1.5;
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
   }
 `;
 
