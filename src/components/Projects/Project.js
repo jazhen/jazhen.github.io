@@ -1,23 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import ExternalLinkIcon from "../../icons/external-link.inline.svg";
-import GithubIcon from "../../icons/github.inline.svg";
-import * as Styled from "../../styles";
-import SVG from "./water-the-trees.inline.svg";
+import ExternalLinkIcon from "../icons/external-link.inline.svg";
+import GithubIcon from "../icons/github.inline.svg";
+import * as Styled from "../styles";
 
-const data = {
-  header: "Water The Trees",
-  body: "An open source tree mapping, planting, and maintenance platform partnered with Code for America, The Sierra Club, and Public Works.",
-  overline: "Open Source Contributor",
-  github: "https://github.com/waterthetrees",
-  website: "https://waterthetrees.com",
-  thumbnail:
-    "https://user-images.githubusercontent.com/6326660/130603096-36a7d113-ee72-4fb2-9b3b-d8eb094d6098.png",
-  technologies: ["React", "React-Query", "Node", "Mapbox", "Docker"],
-};
-
-const WaterTheTrees = () => {
-  const { overline, header, body, github, website } = data;
+const Project = ({
+  header,
+  body,
+  overline,
+  github,
+  website,
+  technologies,
+  SVG,
+  backgroundColor,
+}) => {
+  const StyledSVG = styled(SVG)`
+    background-color: ${backgroundColor};
+  `;
 
   return (
     <Container>
@@ -64,10 +63,6 @@ const Container = styled.div`
   margin-bottom: 6em;
 `;
 
-const StyledSVG = styled(SVG)`
-  background-color: #d7ccc8;
-`;
-
 const Content = styled.div`
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     display: grid;
@@ -90,4 +85,4 @@ const Links = styled.div`
   gap: 2em;
 `;
 
-export default WaterTheTrees;
+export default Project;

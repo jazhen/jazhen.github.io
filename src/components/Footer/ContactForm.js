@@ -99,17 +99,6 @@ const Error = styled(ValidationError)`
 
 const Button = styled(Styled.TextButton)`
   align-self: start;
-
-  &:hover,
-  &:focus {
-    color: var(--color-white-800);
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-    background-color: #cccccc;
-    color: #888888;
-  }
 `;
 
 export default ContactForm;

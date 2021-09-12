@@ -97,7 +97,7 @@ export const TextButton = styled.button`
   &:hover,
   &:focus {
     cursor: pointer;
-    color: ${({ theme }) => theme.color.primary};
+    color: var(--color-white-800);
     text-decoration: underline;
   }
 
@@ -108,16 +108,11 @@ export const TextButton = styled.button`
   &:focus {
     opacity: 0.76;
   }
-`;
 
-export const ContainedLink = styled(TextLink)`
-  padding: 0.75em 1.5em;
-  margin: 0.25em 0.5em;
-  background-color: ${({ theme }) => theme.color.primary};
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #cccccc;
+    color: #888888;
   }
 `;
 
