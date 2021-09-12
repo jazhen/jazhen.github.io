@@ -29,7 +29,9 @@ const Project = ({
         <div>
           <Technology>
             {technologies.map((technology) => (
-              <Styled.BodyTextSmall>{technology}</Styled.BodyTextSmall>
+              <Styled.BodyTextSmall key={technology}>
+                {technology}
+              </Styled.BodyTextSmall>
             ))}
           </Technology>
           <Styled.BodyText>{body}</Styled.BodyText>
