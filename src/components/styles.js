@@ -29,6 +29,11 @@ export const BodyText = styled.p`
   margin-bottom: 1em;
 `;
 
+export const BodyTextSmall = styled(BodyText)`
+  font-size: var(--font-size--1);
+  font-weight: var(--font-weight-light);
+`;
+
 export const BodyTextLarge = styled(BodyText)`
   font-size: var(--font-size-1);
 `;

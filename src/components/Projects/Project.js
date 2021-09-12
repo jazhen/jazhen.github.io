@@ -27,6 +27,11 @@ const Project = ({
           <Styled.H3>{header}</Styled.H3>
         </div>
         <div>
+          <Technology>
+            {technologies.map((technology) => (
+              <Styled.BodyTextSmall>{technology}</Styled.BodyTextSmall>
+            ))}
+          </Technology>
           <Styled.BodyText>{body}</Styled.BodyText>
           <Links>
             <Styled.TextLink
@@ -69,6 +74,12 @@ const Content = styled.div`
     grid-auto-flow: column;
     gap: 2em;
   }
+`;
+
+const Technology = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
 `;
 
 const Overline = styled.p`
