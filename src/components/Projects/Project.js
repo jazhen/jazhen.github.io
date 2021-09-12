@@ -79,7 +79,7 @@ const Content = styled.div`
 const Technology = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5em;
+  column-gap: 1.5em;
 `;
 
 const Overline = styled.p`
