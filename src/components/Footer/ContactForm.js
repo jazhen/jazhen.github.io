@@ -7,7 +7,6 @@ import SendIcon from "./send.inline.svg";
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("mnqllbqw");
-  return <SubmitMessage />;
 
   if (state.succeeded) {
     return <SubmitMessage />;
