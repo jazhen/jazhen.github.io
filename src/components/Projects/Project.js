@@ -67,7 +67,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2em;
-  margin-bottom: 6em;
+
+  &:not(:last-child) {
+    margin-bottom: 6em;
+  }
 `;
 
 const Content = styled.div`
