@@ -14,7 +14,9 @@ const SubmitMessage = () => (
       target="_blank"
       rel="noopener noreferrer"
     >
-      <LinkedInIcon />
+      <Styled.Icon>
+        <LinkedInIcon />
+      </Styled.Icon>
       Connect on LinkedIn
     </ContainedLink>
   </Container>
@@ -28,8 +30,9 @@ const Container = styled.div`
 `;
 
 const StyledCircleCheck = styled(CircleCheck)`
-  max-width: 40%;
+  max-width: 10rem;
   color: #4caf50;
+  margin-bottom: 2em;
 `;
 
 const Header = styled(Styled.H3)`
@@ -41,7 +44,7 @@ const Body = styled(Styled.BodyText)`
 `;
 
 const ContainedLink = styled(Styled.TextLink)`
-  padding: 0.75em 1.5em;
+  padding: 0.5em 1em;
   margin: 0.25em 0.5em;
   background-color: #2196f3;
 
