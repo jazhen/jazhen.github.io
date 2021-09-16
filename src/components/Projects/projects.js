@@ -7,7 +7,8 @@ const projects = [
     header: "Water The Trees",
     body: "An open source tree mapping, planting, and maintenance platform partnered with Code for America, The Sierra Club, and Public Works.",
     overline: "Open Source Contributor",
-    github: "https://github.com/waterthetrees",
+    github:
+      "https://github.com/waterthetrees/wtt_server/commits/development?author=jazhen",
     website: "https://waterthetrees.com",
     technologies: ["React-Query", "Node", "Material UI", "Mapbox", "Docker"],
     SVG: WaterTheTrees,
