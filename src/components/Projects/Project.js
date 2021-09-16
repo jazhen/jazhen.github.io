@@ -13,55 +13,49 @@ const Project = ({
   technologies,
   SVG,
   backgroundColor,
-}) => {
-  const StyledSVG = styled(SVG)`
-    background-color: ${backgroundColor};
-  `;
-
-  return (
-    <Container>
-      <StyledSVG />
-      <Content>
-        <div>
-          <Overline>{overline}</Overline>
-          <Styled.H3>{header}</Styled.H3>
-        </div>
-        <div>
-          <Technology>
-            {technologies.map((technology) => (
-              <Styled.BodyTextSmall key={technology}>
-                {technology}
-              </Styled.BodyTextSmall>
-            ))}
-          </Technology>
-          <Styled.BodyText>{body}</Styled.BodyText>
-          <Links>
-            <Styled.TextLink
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Styled.Icon>
-                <GithubIcon />
-              </Styled.Icon>
-              Code
-            </Styled.TextLink>
-            <Styled.TextLink
-              href={website}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Styled.Icon>
-                <ExternalLinkIcon />
-              </Styled.Icon>
-              Demo
-            </Styled.TextLink>
-          </Links>
-        </div>
-      </Content>
-    </Container>
-  );
-};
+}) => (
+  <Container>
+    <SVG style={{ backgroundColor }} />
+    <Content>
+      <div>
+        <Overline>{overline}</Overline>
+        <Styled.H3>{header}</Styled.H3>
+      </div>
+      <div>
+        <Technology>
+          {technologies.map((technology) => (
+            <Styled.BodyTextSmall key={technology}>
+              {technology}
+            </Styled.BodyTextSmall>
+          ))}
+        </Technology>
+        <Styled.BodyText>{body}</Styled.BodyText>
+        <Links>
+          <Styled.TextLink
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Styled.Icon>
+              <GithubIcon />
+            </Styled.Icon>
+            Code
+          </Styled.TextLink>
+          <Styled.TextLink
+            href={website}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Styled.Icon>
+              <ExternalLinkIcon />
+            </Styled.Icon>
+            Demo
+          </Styled.TextLink>
+        </Links>
+      </div>
+    </Content>
+  </Container>
+);
 
 const Container = styled.div`
   display: flex;
