@@ -28,7 +28,7 @@ const projects = [
     header: "Mama's Helper",
     body: "A management assistance tool that helps individuals and teams organize, track, and manage their work.",
     overline: "Front End Lead",
-    github: "https://github.com/jmcbgaston/mamas_helper",
+    github: "https://github.com/jmcbgaston/mamas_helper/commits?author=jazhen",
     website: "https://mamas-helper.herokuapp.com",
     technologies: ["React", "Redux", "Node", "MongoDB", "Sendgrid"],
     SVG: MamasHelper,
