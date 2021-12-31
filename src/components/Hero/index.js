@@ -67,6 +67,10 @@ const Avatar = styled(Styled.Img)`
 `;
 
 const LeftSection = styled.section`
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    padding-bottom: var(--padding-block-section);
+  }
+
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     grid-column: 2 / 8;
     grid-row: 1;
