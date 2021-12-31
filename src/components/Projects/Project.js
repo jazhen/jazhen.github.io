@@ -15,7 +15,7 @@ const Project = ({
   const [hoverRef, isHovered] = useHover();
 
   return (
-    <Container ref={hoverRef}>
+    <Container ref={hoverRef} href="#contact">
       <SVG
         style={{
           backgroundColor,
@@ -53,17 +53,14 @@ const Project = ({
   );
 };
 
-const Container = styled.div`
+const Container = styled.a`
   display: flex;
   flex-direction: column;
   gap: 2em;
+  text-decoration: none;
 
   &:not(:last-child) {
     margin-bottom: 6em;
-  }
-
-  :hover {
-    cursor: pointer;
   }
 `;
 
