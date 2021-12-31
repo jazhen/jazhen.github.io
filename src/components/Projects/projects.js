@@ -12,7 +12,6 @@ const projects = [
     website: "https://waterthetrees.com",
     technologies: ["React-Query", "Node", "Material UI", "Mapbox", "Docker"],
     SVG: WaterTheTrees,
-    backgroundColor: "#d7ccc8",
   },
   {
     header: "Groovetown",
@@ -22,7 +21,6 @@ const projects = [
     website: "https://groovetown.herokuapp.com",
     technologies: ["React", "Redux", "Ruby on Rails", "PostgreSQL", "AWS S3"],
     SVG: Groovetown,
-    backgroundColor: "#bbdefb",
   },
   {
     header: "Mama's Helper",
@@ -32,7 +30,6 @@ const projects = [
     website: "https://mamas-helper.herokuapp.com",
     technologies: ["React", "Redux", "Node", "MongoDB", "Sendgrid"],
     SVG: MamasHelper,
-    backgroundColor: "#fce4ec",
   },
 ];
 

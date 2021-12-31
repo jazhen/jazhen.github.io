@@ -18,7 +18,6 @@ const Project = ({
     <Container ref={hoverRef} href="#contact">
       <SVG
         style={{
-          backgroundColor,
           transform: isHovered ? "scale(1.03)" : false,
           transition: "all 0.3s ease-in-out",
         }}
