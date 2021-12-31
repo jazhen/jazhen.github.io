@@ -2,39 +2,44 @@ import React from "react";
 import styled from "styled-components";
 import ChevronsDown from "../icons/chevrons-down.inline.svg";
 import * as Styled from "../styles";
-import SVG from "./hero.inline.svg";
 
 const Hero = () => (
-  <Styled.Section>
-    <Styled.MaxWidthContainer>
-      <TwoColumnContainer>
-        <div>
-          <Styled.BodyTextLarge>
-            👋 Hi, I&apos;m Jason Zhen
-          </Styled.BodyTextLarge>
-          <Headline>
-            Passionate about developing user-centered web experiences
-          </Headline>
-          <Styled.TextLink href="#projects">
-            View my projects
-            <Styled.Icon>
-              <ChevronsDown />
-            </Styled.Icon>
-          </Styled.TextLink>
-        </div>
-        <SVG />
-      </TwoColumnContainer>
-    </Styled.MaxWidthContainer>
-  </Styled.Section>
+  <Section>
+    <Container>
+      <LeftSection>
+        <Styled.BodyTextLarge>👋 Hi, I&apos;m Jason Zhen</Styled.BodyTextLarge>
+        <Headline>
+          Passionate about developing user-centered web experiences
+        </Headline>
+        <Styled.TextLink href="#projects">
+          View my projects
+          <Styled.Icon>
+            <ChevronsDown />
+          </Styled.Icon>
+        </Styled.TextLink>
+      </LeftSection>
+      <Avatar src="https://user-images.githubusercontent.com/6326660/132674478-50a8fb86-eec7-4072-b887-d577cbf35cf3.png" />
+      <RightSection />
+    </Container>
+  </Section>
 );
 
-const TwoColumnContainer = styled(Styled.TwoColumnContainer)`
+const Section = styled(Styled.Section)`
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    padding: 0;
+  }
+`;
+
+const Container = styled.div`
   display: grid;
+  grid-auto-flow: row;
   place-items: center;
   text-align: center;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 85vh;
     text-align: initial;
   }
 `;
@@ -47,6 +52,39 @@ const Headline = styled.h1`
   line-height: 1.2;
   margin-bottom: 1em;
   color: var(--color-black-900);
+`;
+
+const Avatar = styled(Styled.Img)`
+  background-color: #b0bec5;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    grid-column: 8 / span 2;
+    grid-row: 1;
+    z-index: 1;
+    align-self: center;
+    justify-self: center;
+  }
+`;
+
+const LeftSection = styled.section`
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    grid-column: 2 / 8;
+    grid-row: 1;
+    align-self: center;
+    justify-self: right;
+    max-width: 50em;
+    margin: 2em;
+  }
+`;
+
+const RightSection = styled.section`
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    grid-column: 9 / -1;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+  }
 `;
 
 export default Hero;
