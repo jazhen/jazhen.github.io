@@ -56,6 +56,12 @@ export const H3 = styled.h3`
   margin-bottom: 0.5em;
 `;
 
+const TextLinkHovered = `
+  cursor: pointer;
+  text-decoration: underline 2px black;
+  text-underline-offset: 0.5em;
+`;
+
 export const TextLink = styled.a`
   min-width: 3rem;
   min-height: 3rem;
@@ -69,12 +75,7 @@ export const TextLink = styled.a`
   display: inline-flex;
   place-items: center;
   gap: 0.5em;
-
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    text-decoration: underline;
-  }
+  ${({ isHovered }) => isHovered && { TextLinkHovered }}
 
   &:hover {
     opacity: 0.92;

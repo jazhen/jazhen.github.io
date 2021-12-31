@@ -39,9 +39,7 @@ const Project = ({
           <Styled.BodyText>{body}</Styled.BodyText>
           <Links>
             <Styled.TextLink
-              style={{
-                borderBottom: isHovered ? "2px solid black" : false,
-              }}
+              isHovered={isHovered}
               href={github}
               target="_blank"
               rel="noopener noreferrer"
