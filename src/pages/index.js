@@ -1,6 +1,5 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import About from "../components/About";
 import Experience from "../components/Experience";
 import Footer from "../components/Footer";
 import GlobalStyles from "../components/GlobalStyles";
@@ -32,7 +31,6 @@ const IndexPage = () => (
     <Hero />
     <Projects />
     <Experience />
-    <About />
     <Footer />
   </ThemeProvider>
 );

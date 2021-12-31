@@ -9,8 +9,16 @@ const Hero = () => (
       <LeftSection>
         <Styled.BodyTextLarge>👋 Hi, I&apos;m Jason Zhen</Styled.BodyTextLarge>
         <Headline>
-          Passionate about developing user-centered web experiences
+          Full stack developer passionate about creating user-centered web
+          experiences
         </Headline>
+        <Styled.BodyText>
+          I&apos;m a graduate of UC Davis and App Academy. Currently, I&apos;m
+          contributing to an open source project called
+          Water&nbsp;The&nbsp;Trees, a platform that crowdsources tree mapping,
+          planting, and maintenance. In my free time I enjoy reading comic books
+          and listening to Indie music.
+        </Styled.BodyText>
         <Styled.TextLink href="#projects">
           View my projects
           <Styled.Icon>
@@ -33,8 +41,6 @@ const Section = styled(Styled.Section)`
 const Container = styled.div`
   display: grid;
   grid-auto-flow: row;
-  place-items: center;
-  text-align: center;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     display: grid;
@@ -56,13 +62,13 @@ const Headline = styled.h1`
 
 const Avatar = styled(Styled.Img)`
   background-color: #b0bec5;
+  align-self: center;
+  justify-self: center;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     grid-column: 8 / span 2;
     grid-row: 1;
     z-index: 1;
-    align-self: center;
-    justify-self: center;
   }
 `;
 
