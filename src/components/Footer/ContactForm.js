@@ -56,8 +56,6 @@ const Label = styled.label`
 `;
 
 const Input = styled.input`
-  min-width: 20ch;
-  max-width: 60ch;
   min-height: 3em;
   padding: 0.25em 0.5em;
   border: none;
@@ -73,8 +71,6 @@ const Input = styled.input`
 `;
 
 const TextArea = styled.textarea`
-  min-width: 20ch;
-  max-width: 60ch;
   min-height: 3em;
   padding: 0.25em 0.5em;
   border: none;
