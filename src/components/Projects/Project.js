@@ -1,61 +1,59 @@
 import React from "react";
 import styled from "styled-components";
-import ExternalLinkIcon from "../icons/external-link.inline.svg";
-import GithubIcon from "../icons/github.inline.svg";
 import * as Styled from "../styles";
+import useHover from "./useHover";
 
 const Project = ({
   header,
   body,
   overline,
   github,
-  website,
   technologies,
   SVG,
   backgroundColor,
-}) => (
-  <Container>
-    <SVG style={{ backgroundColor }} />
-    <Content>
-      <div>
-        <Overline>{overline}</Overline>
-        <Styled.H3>{header}</Styled.H3>
-      </div>
-      <div>
-        <Technology>
-          {technologies.map((technology) => (
-            <Styled.BodyTextSmall key={technology}>
-              {technology}
-            </Styled.BodyTextSmall>
-          ))}
-        </Technology>
-        <Styled.BodyText>{body}</Styled.BodyText>
-        <Links>
-          <Styled.TextLink
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Styled.Icon>
-              <GithubIcon />
-            </Styled.Icon>
-            Code
-          </Styled.TextLink>
-          <Styled.TextLink
-            href={website}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Styled.Icon>
-              <ExternalLinkIcon />
-            </Styled.Icon>
-            Demo
-          </Styled.TextLink>
-        </Links>
-      </div>
-    </Content>
-  </Container>
-);
+}) => {
+  const [hoverRef, isHovered] = useHover();
+
+  return (
+    <Container ref={hoverRef}>
+      <SVG
+        style={{
+          backgroundColor,
+          transform: isHovered ? "scale(1.03)" : false,
+          transition: "all 0.3s ease-in-out",
+        }}
+      />
+      <Content>
+        <div>
+          <Overline>{overline}</Overline>
+          <Styled.H3>{header}</Styled.H3>
+        </div>
+        <div>
+          <Technology>
+            {technologies.map((technology) => (
+              <Styled.BodyTextSmall key={technology}>
+                {technology}
+              </Styled.BodyTextSmall>
+            ))}
+          </Technology>
+          <Styled.BodyText>{body}</Styled.BodyText>
+          <Links>
+            <Styled.TextLink
+              style={{
+                borderBottom: isHovered ? "2px solid black" : false,
+              }}
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Project
+            </Styled.TextLink>
+          </Links>
+        </div>
+      </Content>
+    </Container>
+  );
+};
 
 const Container = styled.div`
   display: flex;
@@ -64,6 +62,10 @@ const Container = styled.div`
 
   &:not(:last-child) {
     margin-bottom: 6em;
+  }
+
+  :hover {
+    cursor: pointer;
   }
 `;
 
