@@ -3,22 +3,14 @@ import styled from "styled-components";
 import * as Styled from "../styles";
 import useHover from "./useHover";
 
-const Project = ({
-  header,
-  body,
-  overline,
-  github,
-  technologies,
-  SVG,
-  backgroundColor,
-}) => {
+const Project = ({ header, body, overline, technologies, SVG }) => {
   const [hoverRef, isHovered] = useHover();
 
   return (
-    <Container ref={hoverRef} href="#contact">
+    <Container ref={hoverRef} href="#">
       <SVG
         style={{
-          transform: isHovered ? "scale(1.03)" : false,
+          transform: isHovered && "scale(1.03)",
           transition: "all 0.3s ease-in-out",
         }}
       />
@@ -36,16 +28,7 @@ const Project = ({
             ))}
           </Technology>
           <Styled.BodyText>{body}</Styled.BodyText>
-          <Links>
-            <Styled.TextLink
-              isHovered={isHovered}
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Project
-            </Styled.TextLink>
-          </Links>
+          <CallToAction isHovered={isHovered}>View Project</CallToAction>
         </div>
       </Content>
     </Container>
@@ -86,9 +69,20 @@ const Overline = styled.p`
   margin-bottom: 0.5em;
 `;
 
-const Links = styled.div`
-  display: flex;
-  gap: 2em;
+const CallToActionHovered = `
+  cursor: pointer;
+  text-decoration: underline 2px black;
+  text-underline-offset: 0.5em;
+`;
+
+const CallToAction = styled.p`
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size--1);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.125em;
+  text-transform: uppercase;
+  color: var(--color-black-900);
+  ${({ isHovered }) => isHovered && { CallToActionHovered }}
 `;
 
 export default Project;
