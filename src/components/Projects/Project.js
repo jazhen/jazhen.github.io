@@ -3,11 +3,11 @@ import styled from "styled-components";
 import * as Styled from "../styles";
 import useHover from "./useHover";
 
-const Project = ({ header, body, overline, technologies, SVG }) => {
+const Project = ({ header, body, overline, website, technologies, SVG }) => {
   const [hoverRef, isHovered] = useHover();
 
   return (
-    <Container ref={hoverRef} href="#">
+    <Container ref={hoverRef} href={website}>
       <SVG
         style={{
           transform: isHovered && "scale(1.03)",
